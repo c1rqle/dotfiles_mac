@@ -1,0 +1,70 @@
+#!/usr/bin/env sh
+
+# Executing yabai --load-sa as root without entering pw. Details in /Guides/
+  yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+  sudo yabai --load-sa
+
+# Layout and spacing
+  yabai -m config layout          bsp
+  yabai -m config top_padding     18
+  yabai -m config bottom_padding  45
+  yabai -m config left_padding    18
+  yabai -m config right_padding   18
+  yabai -m config window_gap      12
+
+# Window appearance
+  yabai -m config menubar_opacity        0.95
+  yabai -m config window_opacity         on
+  yabai -m config active_window_opacity  1.0
+  yabai -m config normal_window_opacity  0.9
+  yabai -m config window_shadow          float
+
+# Animation
+  yabai -m config window_animation_duration  0.3
+  yabai -m config window_animation_easing    ease_out_quint
+
+# Focus (Options: off, autoraise, autofocus)
+  yabai -m config mouse_follows_focus     on
+  yabai -m window --focus                 mouse
+  yabai -m config focus_follows_mouse     autoraise
+
+# set mouse interaction modifier key to ctrl
+  yabai -m config mouse_modifier ctrl
+  yabai -m config mouse_action1 move
+  yabai -m config mouse_action2 resize
+
+# when window is dropped in center of another window, swap them (on edges it will split it)
+  yabai -m config mouse_drop_action stack
+
+# global settings
+  yabai -m config window_insertion_point       focused
+  yabai -m config window_zoom_persist          on             
+  yabai -m config insert_feedback_color        0xffd75f5f     
+  yabai -m config split_ratio                  0.50           
+  yabai -m config split_type                   auto           
+
+# Assign apps to specific spaces
+  yabai -m rule --add app="^(Ghostty|Kitty)$"   space=^1
+  yabai -m rule --add app="^(Arc)$"             space=^2
+  yabai -m rule --add app="^(Obsidian)$"        space=^3
+  yabai -m rule --add app="^(Tuta Mail|Mail)$"  space=^4
+  yabai -m rule --add app="^(Spotify)$"         space=^5
+  yabai -m rule --add app="^(Notion)$"          space=^7
+  yabai -m rule --add app="^(Shadow)$"          space=^6
+
+# Turn off auto-tiling for specific apps
+  yabai -m rule --add app='System Preferences'  manage=off
+  yabai -m rule --add app='Better Touch Tool'   manage=off
+  yabai -m rule --add app='System Settings'     manage=off
+  yabai -m rule --add app='Perplexity'          manage=off
+  yabai -m rule --add app='Bitwarden'           manage=off
+  yabai -m rule --add app='App Store'           manage=off
+  yabai -m rule --add app='Raycast'             manage=off
+  yabai -m rule --add app='Preview'             manage=off
+  yabai -m rule --add app='Finder'              manage=off
+  yabai -m rule --add app='VLC'                 manage=off
+
+  yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+  echo "yabai configuration loaded.."
+

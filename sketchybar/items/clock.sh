@@ -1,0 +1,15 @@
+#!/bin/bash
+
+  source "$CONFIG_DIR/colors.sh"
+
+  sketchybar --add item clock right                                               \
+             --set clock icon=                                                    \
+                            update_freq=30                                        \
+                            label.font="OperatorMono Nerd Font:BookItalic:16.0"   \
+                            icon.padding_left=0                                   \
+                            padding_left=10                                        \
+                            padding_right=0                                      \
+                            label.padding_left=0                                  \
+                            label.y_offset=0                                   \
+                            label.color="$MINT_100"                             \
+                            script="$PLUGIN_DIR/clock.sh"
