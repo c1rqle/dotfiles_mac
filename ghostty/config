@@ -1,0 +1,22 @@
+# # # List options 
+# Run `ghostty +show-config --default --docs`
+
+# === Configuration Management ===
+config-file = "keybinds"
+config-file = "cursor"
+config-file = "fonts"
+
+shell-integration = "detect"
+shell-integration-features = ""
+
+#______________________________
+# ENCON
+theme = 2024 Night
+window-padding-x = 22
+
+# === Additional Settings ===
+desktop-notifications = true
+bold-is-bright = true      
+term = "xterm-256color"     
+enquiry-response = ""       
+

@@ -1,0 +1,65 @@
+#_____________________________________
+# Possible values: never, auto, always
+  color:
+    when: auto
+    theme: default
+
+#_____________________________________
+# Possible values: fancy, unicode
+  icons:
+    when: always
+    theme: fancy
+    separator: " ⭬ "
+#⟵ 🡺 ⇨ ➩  ➟ ➟
+#_____________________________________
+# Whether to omit showing symlink targets
+  no-symlink: true
+  symlink-arrow: "⭪"
+  hyperlink: always
+#_____________________________________
+# Whether to add indicator characters to certain listed files.
+  indicators: true
+#_____________________________________
+# How lists are displayed
+  header: false
+  date: relative
+  size: short
+#_____________________________________
+# Whether to show quotes on filenames.
+  literal: true
+#_____________________________________
+# Possible values: grid, tree, oneline
+  layout: grid
+  total-size: false
+
+#_____________________________________
+# Possible column: extension, name, time, size, version
+# possible grouping: first, last, none
+  sorting:
+    column: time
+    reverse: true
+    dir-grouping: last
+
+#_____________________________________
+# List view column items.
+  blocks:
+    - size
+    - date
+    - name
+  # - git
+  ignore-globs:
+    - .git
+    - .bashrc
+    - .bash_profile
+    - .bash_history
+    - .bitwarden-ssh-agent.sock
+    - .npm
+    - .tldrc
+    - .aspnet
+    - .DS_Store
+    - .zcompdump-MacBookPro-5.9
+    - .zcompdump-MacBookPro-5.9.zwc
+    - .zsh_history
+    - .rustup
+    - .z
+

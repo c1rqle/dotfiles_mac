@@ -1,1 +1,1 @@
-# dotfiles_mac
+# My Mac dotfiles

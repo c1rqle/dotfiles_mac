@@ -1,0 +1,58 @@
+# .config/ghostty
+# ghostty +list-keybinds
+
+# ____________________________________________
+# This fixes some annoyances with keybindings for norwegian keyboards
+  macos-option-as-alt=false
+  keybind = alt+left=unbind
+  keybind = alt+right=unbind 
+# ____________________________________________
+# Keyboard shortcut to reload ghostty config. ctrl+x as prefix
+#  keybind = ctrl+x>r=unjind
+# ____________________________________________
+# --- Unbinding only because of personal preference
+# --- Originally: k: clear_screen. q: quit. a: select_all 
+  keybind = super+k=unbind
+  keybind = super+q=unbind
+  keybind = super+a=unbind
+  keybind = super+shift+comma=unbind
+  keybind = ctrl+tab=unbind
+  keybind = tab+ctrl=unbind
+# ____________________________________________
+# --- Tab navigation. ctrl+t=new_tab. ctrl+tab=cycle
+# --- Originally super instead of alt
+  keybind = ctrl+shift+physical:one=goto_tab:1
+  keybind = ctrl+shift+physical:two=goto_tab:2
+  keybind = ctrl+shift+physical:three=goto_tab:3
+  keybind = ctrl+shift+physical:four=goto_tab:4
+  keybind = ctrl+shift+physical:five=goto_tab:5
+  keybind = ctrl+shift+physical:six=goto_tab:6
+  keybind = ctrl+shift+physical:seven=goto_tab:7
+  keybind = ctrl+shift+physical:eight=goto_tab:8
+  keybind = ctrl+shift+physical:nine=last_tab
+#
+# ____________________________________________
+# --- Unbinds multiplexer related keybinds ---
+# --- Because tmux
+#
+# originally: goto_split
+  keybind = super+alt+right=unbind
+  keybind = super+alt+left=unbind
+  keybind = super+alt+down=unbind
+  keybind = super+alt+up=unbind
+#
+# originally: resize_split
+  keybind = super+ctrl+equal=unbind
+  keybind = super+ctrl+right=unbind
+  keybind = super+ctrl+down=unbind
+  keybind = super+ctrl+left=unbind
+  keybind = super+ctrl+up=unbind
+# Originally: new_split:right, new_split:down, toggle_split_zoom
+  keybind = super+d=unbind
+  keybind = super+shift+d=unbind
+  keybind = super+shift+enter=unbind
+#
+  keybind = alt+h=unbind
+  keybind = alt+j=unbind
+  keybind = alt+k=unbind
+  keybind = alt+l=unbind
