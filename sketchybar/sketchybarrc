@@ -30,7 +30,7 @@
     icon.color=$mint_60                           \
     icon.padding_right=5                          \
 #_________________________________________________\
-    label.font="$FONT_TEXT:MediumItalic:16.0"     \
+    label.font="$FONT_TEXT:Medium:16.0"     \
     label.color=$purple_80                        \
     label.padding_right=$PADDINGS                 \
     label.y_offset=1                              \
