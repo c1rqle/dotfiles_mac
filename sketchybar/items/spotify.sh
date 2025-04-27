@@ -1,57 +1,63 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
   SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
-POPUP_SCRIPT="sketchybar -m --set \$NAME popup.drawing=toggle"
+  POPUP_SCRIPT="sketchybar -m --set \$NAME popup.drawing=toggle"
 
-sketchybar --add       event           spotify_change $SPOTIFY_EVENT      \
-           --add       item            spotify.name center                \
-           --set       spotify.name    click_script="$POPUP_SCRIPT"       \
-                       label.font="OperatorMono Nerd Font:MediumItalic:18.0"     \
-                                       popup.horizontal=on                \
-                                       popup.align=center                 \
-                                       icon.drawing=off                   \
-                                                                          \
-           --add       item            spotify.back popup.spotify.name    \
-           --set       spotify.back    icon=􀊎                             \
-                                       icon.padding_left=5                \
-                                       icon.padding_right=5               \
-                                       script="$PLUGIN_DIR/spotify.sh"    \
-                                       label.drawing=off                  \
-           --subscribe spotify.back    mouse.clicked                      \
-                                                                          \
-           --add       item            spotify.play popup.spotify.name    \
-           --set       spotify.play    icon=􀊔                             \
-                                       icon.padding_left=5                \
-                                       icon.padding_right=5               \
-                                       updates=on                         \
-                                       label.drawing=off                  \
-                                       script="$PLUGIN_DIR/spotify.sh"    \
-           --subscribe spotify.play    mouse.clicked spotify_change       \
-                                                                          \
-           --add       item            spotify.next popup.spotify.name    \
-           --set       spotify.next    icon=􀊐                             \
-                                       icon.padding_left=5                \
-                                       icon.padding_right=10              \
-                                       label.drawing=off                  \
-                                       script="$PLUGIN_DIR/spotify.sh"    \
-           --subscribe spotify.next    mouse.clicked                      \
-                                                                          \
-           --add       item            spotify.shuffle popup.spotify.name \
-           --set       spotify.shuffle icon=􀊝                             \
-                                       icon.highlight_color=0xff1DB954    \
-                                       icon.padding_left=5                \
-                                       icon.padding_right=5               \
-                                       label.drawing=off                  \
-                                       script="$PLUGIN_DIR/spotify.sh"    \
-           --subscribe spotify.shuffle mouse.clicked                      \
-                                                                          \
-           --add       item            spotify.repeat popup.spotify.name  \
-           --set       spotify.repeat  icon=􀊞                             \
-                                       icon.highlight_color=$MINT_80    \
-                                       icon.padding_left=5                \
-                                       icon.padding_right=5               \
-                                       label.drawing=off                  \
-                                       script="$PLUGIN_DIR/spotify.sh"    \
-           --subscribe spotify.repeat  mouse.clicked¨
-
-#>
+sketchybar --add       event           spotify_change $SPOTIFY_EVENT              \
+           --add       item            spotify.name center                        \
+           --set       spotify.name    click_script="$POPUP_SCRIPT"               \
+                                       label.font="$FONT_TEXT:BoldItalic:14.0"    \
+                                       background.height=34                       \
+                                       background.corner_radius=4                 \
+                                       background.border_width=2                  \
+                                       background.border_color="$border_color"    \
+                                       background.color="$BG_1"                   \
+                                       label.color="$mint_100"                    \
+                                       label.padding_left=$PADDINGS               \
+                                       label.padding_right=$PADDINGS              \
+                                       popup.horizontal=on                        \
+                                       popup.align=center                         \
+                                       icon.drawing=off                           \
+                                                                                  \
+           --add       item            spotify.back popup.spotify.name            \
+           --set       spotify.back    icon=􀊎                                     \
+                                       icon.padding_left=25                       \
+                                       icon.padding_right=8                       \
+                                       script="$PLUGIN_DIR/spotify.sh"            \
+                                       label.drawing=off                          \
+           --subscribe spotify.back    mouse.clicked                              \
+                                                                                  \
+           --add       item            spotify.play popup.spotify.name            \
+           --set       spotify.play    icon=􀊔                                     \
+                                       icon.padding_left=8                        \
+                                       icon.padding_right=8                       \
+                                       updates=on                                 \
+                                       label.drawing=off                          \
+                                       script="$PLUGIN_DIR/spotify.sh"            \
+           --subscribe spotify.play    mouse.clicked spotify_change               \
+                                                                                  \
+           --add       item            spotify.next popup.spotify.name            \
+           --set       spotify.next    icon=􀊐                                     \
+                                       icon.padding_left=8                        \
+                                       icon.padding_right=8                       \
+                                       label.drawing=off                          \
+                                       script="$PLUGIN_DIR/spotify.sh"            \
+           --subscribe spotify.next    mouse.clicked                              \
+                                                                                  \
+           --add       item            spotify.shuffle popup.spotify.name         \
+           --set       spotify.shuffle icon=􀊝                                     \
+                                       icon.highlight_color=0xff1DB954            \
+                                       icon.padding_left=8                        \
+                                       icon.padding_right=8                       \
+                                       label.drawing=off                          \
+                                       script="$PLUGIN_DIR/spotify.sh"            \
+           --subscribe spotify.shuffle mouse.clicked                              \
+                                                                                  \
+           --add       item            spotify.repeat popup.spotify.name          \
+           --set       spotify.repeat  icon=􀊞                                     \
+                                       icon.highlight_color=0xff1DB954            \
+                                       icon.padding_left=8                        \
+                                       icon.padding_right=25                      \
+                                       label.drawing=off                          \
+                                       script="$PLUGIN_DIR/spotify.sh"            \
+           --subscribe spotify.repeat  mouse.clicked

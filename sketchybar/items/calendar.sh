@@ -1,13 +1,14 @@
 #!/bin/bash
 
-sketchybar --add item calendar right                                              \
-           --set calendar icon=                                                  \
-                          update_freq=30                                          \
-                          label.font="OperatorMono Nerd Font:BookItalic:16.0"   \
-                          padding_left=20                                      \
-                          padding_right=0                                     \
-                          icon.padding_right=0                                    \
-                          label.padding_right=0                                   \
-                          label.y_offset=0                                   \
-                          label.color="$MINT_100"                                 \
-                          script="$PLUGIN_DIR/calendar.sh"
+calendar=(
+  icon='􀉉 '
+  icon.padding_right=5
+  label.font="$FONT_TEXT:BoldItalic:16.0"
+  label.align=right
+  update_freq=30
+  script="$PLUGIN_DIR/calendar.sh"
+)
+
+sketchybar --add item calendar right       \
+           --set calendar "${calendar[@]}" \
+           --subscribe calendar system_woke

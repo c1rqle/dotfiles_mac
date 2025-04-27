@@ -4,25 +4,30 @@
 # 0x5efe918c
 # 0x33fe918c
 
-export BRACK_BG_1=0x3c9F38D7
-export BRACK_BG_2=0x72971255
-export BRACK_BG_3=0x5efe918c
+export transparent_color=0x00020100
+export highlight_color=0xffBF5AF2
+export border_color=0x9613101b
+export white_color=0xffffffff
+export dark_color=0xff13101b 
+export BG_1=0x22971255
+#___________________________________
+export BRACK_BG_1=0x1c9F38D7
+export BRACK_BG_2=0xd2971255
+export BRACK_BG_3=0x3efe918c
+export BRACK_BG_6=0x6efe918c
+#___________________________________
 # -- Shades of purple
-export PURPLE_100=0xffBF5AF2 # purple
-export PURPLE_80=0xff9F4EC8 # purple
-export PURPLE_60=0xff7F429D # purple
-export PURPLE_30=0xff4E305E # purple
-export PURPLE_TRANSPARENT=0x5cbf5af2
+export purple_100=0xffBF5AF2
+export purple_80=0xff9F4EC8 
+export purple_60=0xff7F429D 
+export purple_30=0xff4E305E 
+export purple_transparent=0x5cbf5af2
+#___________________________________
 # -- Shades of mint --
-export MINT_100=0xff00cccc # teal
-export MINT_80=0xff5BB9B5 # teal
-export MINT_60=0xff498D88 # teal
-export MINT_30=0xff345553 # teal
-export MINT_TRANSPARENT=0x33345553 # teal
+export mint_100=0xff00cccc
+export mint_80=0xff5BB9B5 
+export mint_60=0xff498D88 
+export mint_30=0xff345553 
+export mint_transparent=0x33345553
+#___________________________________
 #
-export TRANSPARENT_COLOR=0x00020100
-export BAR_COLOR=0xff001f30
-export WHITE=0xffffffff
-export ITEM_BG_COLOR=0x00020100
-export ACCENT_COLOR=0xffba3aa5 #Purple
-export DARK_COLOR=0xff13101b 

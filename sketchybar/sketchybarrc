@@ -1,45 +1,73 @@
 #!/bin/bash
 
-  source "$CONFIG_DIR/init.lua"
   source "$CONFIG_DIR/colors.sh"
+  source "$CONFIG_DIR/icons.sh" 
+  
+  ITEM_DIR="$CONFIG_DIR/items" 
   PLUGIN_DIR="$CONFIG_DIR/plugins"
-  ITEM_DIR="$CONFIG_DIR/items"
-
-##### Bar Appearance #####
-  sketchybar --bar position=bottom height=50 color=$TRANSPARENT_COLOR
+  
+  PADDINGS=20 
+  FONT_ICON="SF Pro"
+  FONT_TEXT="OperatorMono Nerd Font"
+  
+#_________________________________________________\
+  bar=(                                           \
+    height=40                                     \
+    position=bottom                               \
+    border_width=2                                \
+    border_color=$border_color                    \
+    shadow=on                                     \
+    sticky=on                                     \
+    topmost=window                                \ 
+  )                                               \
+#_________________________________________________\
+  defaults=(                                      \
+    background.height=26                          \
+    background.corner_radius=8                    \
+    background.border_width=2                     \
+#_________________________________________________\
+    icon.font="$FONT_ICON:Bold:14.0"              \
+    icon.color=$mint_60                           \
+    icon.padding_right=5                          \
+#_________________________________________________\
+    label.font="$FONT_TEXT:MediumItalic:16.0"     \
+    label.color=$purple_80                        \
+    label.padding_right=$PADDINGS                 \
+    label.y_offset=1                              \
+#_________________________________________________\
+    popup.background.border_width=2               \
+    popup.background.corner_radius=8              \
+    popup.background.border_color=$mint_80        \
+    popup.background.color=$dark_color            \
+    popup.blur_radius=12                          \
+    popup.background.shadow.drawing=on            \
+    updates=when_shown                            \
+    scroll_texts=on
+  )
+  
+  sketchybar --bar "${bar[@]}"
+  sketchybar --default "${defaults[@]}"
   sketchybar --animate sin 30 --bar y_offset=10 y_offset=0
-##### Changing Defaults #####
-# https://felixkratz.github.io/SketchyBar/config/items
-  default=(                                             \
-      icon.font="Symbols Nerd Font Mono:Regular:15.0"   \
-      label.font="OperatorMono Nerd Font:MediumItalic:15.0"     \
-      icon.color=$PURPLE_60                             \
-      label.color=$PURPLE_80                             \
-      icon.padding_left=2                               \
-      icon.padding_right=2                              \
-      label.padding_left=2                              \
-      label.padding_right=2                           
-    )
 
-  sketchybar --default "${default[@]}"
-
-# -- Left Side Items --
-  source $ITEM_DIR/spaces.sh
-  source $ITEM_DIR/front_app.sh
-
-# -- Center items --
-  source $ITEM_DIR/spotify.sh
-
-# --- Right Side Items ---
-#  #source $ITEM_DIR/weekday.sh
-#  source $ITEM_DIR/clock.sh
-#  source $ITEM_DIR/calendar.sh
-#  source $ITEM_DIR/volume.sh
-#  source $ITEM_DIR/battery.sh
-#  source $ITEM_DIR/cpu.sh
-
-#################### Finalizing Setup ####################
-
-sketchybar --hotload true
-
-sketchybar --update
+  # Left
+  source "$ITEM_DIR/apple.sh"
+  source "$ITEM_DIR/yabai.sh"
+  source "$ITEM_DIR/spaces.sh"
+  source "$ITEM_DIR/front_app.sh"
+  
+  # Center
+  source "$ITEM_DIR/spotify.sh"
+  
+  # Right
+  source "$ITEM_DIR/calendar.sh"
+  source "$ITEM_DIR/wifi.sh"
+  source "$ITEM_DIR/battery.sh"
+  source "$ITEM_DIR/volume.sh"
+  source "$ITEM_DIR/cpu.sh"
+  
+  # Forcing all item scripts to run (never do this outside of sketchybarrc)
+  sketchybar --update
+  sketchybar --hotload on
+  
+  echo "sketchybar configuation loaded.."
+  #

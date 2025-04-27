@@ -5,28 +5,32 @@
     theme: default
 
 #_____________________________________
-# Possible values: fancy, unicode
+# Possible values: fancy, unicode (in case i wanna switch ⟵ 🡺 ⇨ ➩  ➟ ➟)
   icons:
     when: always
     theme: fancy
     separator: " ⭬ "
-#⟵ 🡺 ⇨ ➩  ➟ ➟
+
 #_____________________________________
 # Whether to omit showing symlink targets
   no-symlink: true
   symlink-arrow: "⭪"
   hyperlink: always
+
 #_____________________________________
 # Whether to add indicator characters to certain listed files.
   indicators: true
+
 #_____________________________________
 # How lists are displayed
   header: false
   date: relative
   size: short
+
 #_____________________________________
 # Whether to show quotes on filenames.
   literal: true
+
 #_____________________________________
 # Possible values: grid, tree, oneline
   layout: grid
