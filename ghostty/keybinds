@@ -2,11 +2,6 @@
 # ghostty +list-keybinds
 
 # ____________________________________________
-# This fixes some annoyances with keybindings for norwegian keyboards
-  macos-option-as-alt=true
-  keybind = alt+left=unbind
-  keybind = alt+right=unbind 
-# ____________________________________________
 # --- Unbinding only because of personal preference
 # --- Originally: k: clear_screen. q: quit. a: select_all 
   keybind = super+k=unbind
