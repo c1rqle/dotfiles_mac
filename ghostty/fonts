@@ -1,10 +1,13 @@
 # /.config/ghostty/
 
+# _____________________________
+# For testing italics: echo -e "\e[3mitalic\e[0m"
 font-family = Operator Mono SSm
 font-style = Book
 font-style-italic = Book Italic
 font-style-bold = Bold
 font-style-bold-italic = Bold Italic
-
+# _____________________________
 font-size = 18
+adjust-font-baseline = 
 adjust-cell-height = 45%

@@ -11,7 +11,7 @@
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   
-  ZSH_THEME="tjkirch_mod"
+  ZSH_THEME="af-magic"
 #_____________________________________
 # Disable auto updates from brew 
   export HOMEBREW_NO_AUTO_UPDATE=1
