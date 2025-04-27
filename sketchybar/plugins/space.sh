@@ -1,25 +1,11 @@
 #!/bin/sh
 
-  source "$CONFIG_DIR/colors.sh"
- 
-  sketchybar --add bracket spaces space.1 space.2 space.3 space.4 space.5 space.6 space.7 space.8 space.9  \
-             --set         spaces background.color=$BG_1 \
-                           background.corner_radius=4  \
-                           background.height=23 \
-                           label.color=$mint_100 
-  
-  sketchybar --set $NAME icon.highlight=$MINT_100 \
-                           label.highlight=$MINT_100 \
-                           background.border_color=$MINT_30
-
-
-  set_space_label() {
-    if [ "$SELECTED" = "true" ]; then 
-      icon.color=$PURPLE_100
-      label.color=$PURPLE_100
+  update() {
+    if [ "$SELECTED" = "true" ]; then
+      sketchybar -m --set $SPACE_SIDS label.highlight=on icon.highlight=on background.drawing=on
+    else
+      sketchybar -m --set $SPACE_SIDS label.highlight=off icon.highlight=off background.drawing=off
     fi
-    sketchybar --set $NAME icon="$@"
-    icon.color=$PURPLE_100
   }
 
   mouse_clicked() {

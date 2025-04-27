@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
   SPACE_SIDS=(1 2 3 4 5 6 7 8 9)
   sid=0
   spaces=(0)
@@ -15,15 +16,16 @@
                 label.font="sketchybar-app-font:Regular:14.0"   \
                 label.padding_right=20                          \
                 label.y_offset=-1                               \
-                label.color=$mint_60                            \
+                label.color=$mint_30                            \
                 icon.color=$mint_30                             \
-                icon.highlight_color=$purple_100 
+                icon.highlight_color="$purple_100"              \
+                label.highlight_color="$purple_100" 
                 script="$PLUGIN_DIR/space.sh" 
   done
 
   sketchybar --add item space_separator left                    \
              --set space_separator icon="􀆊"                     \
-                icon.color=$purple_100                          \
+                icon.color=$purple_60                           \
                 icon.padding_left=0                             \
                 icon.padding_right=4                            \
                 label.drawing=off                               \
@@ -45,9 +47,11 @@
       label.drawing=on                                          \
       display=active                                            \
       click_script='yabai -m space --create'                    \
-      script="$PLUGIN_DIR/space_windows.sh"
+      script="$PLUGIN_DIR/space_windows.sh"                     \
+      script="$PLUGIN_DIR/space.sh"
   )
   
+
   sketchybar --add item space_creator left                      \
              --set space_creator "${space_creator[@]}"          \
              --subscribe space_creator space_windows_change

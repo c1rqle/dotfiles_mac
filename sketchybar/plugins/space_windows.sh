@@ -11,7 +11,7 @@
         icon_strip+=" $($CONFIG_DIR/plugins/icon_map_fn.sh "$app")"
       done <<< "${apps}"
     else
-      icon_strip="|"
+      icon_strip="."
     fi
   
     sketchybar --set space.$space label="$icon_strip"
