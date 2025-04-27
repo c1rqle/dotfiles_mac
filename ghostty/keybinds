@@ -3,12 +3,9 @@
 
 # ____________________________________________
 # This fixes some annoyances with keybindings for norwegian keyboards
-  macos-option-as-alt=false
+  macos-option-as-alt=true
   keybind = alt+left=unbind
   keybind = alt+right=unbind 
-# ____________________________________________
-# Keyboard shortcut to reload ghostty config. ctrl+x as prefix
-#  keybind = ctrl+x>r=unjind
 # ____________________________________________
 # --- Unbinding only because of personal preference
 # --- Originally: k: clear_screen. q: quit. a: select_all 
