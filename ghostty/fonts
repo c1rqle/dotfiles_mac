@@ -1,12 +1,10 @@
 # /.config/ghostty/
 
-font-family = OperatorMono Nerd Font
+font-family = Operator Mono SSm
+font-style = Book
+font-style-italic = Book Italic
+font-style-bold = Bold
+font-style-bold-italic = Bold Italic
+
 font-size = 18
 adjust-cell-height = 45%
-
-#U+ea60-U+ebeb,U+e0a0-U+e0c8,U+e0ca,U+e0cc-U+e0d4,U+e200-U+e2a9,U+e300-U+e3e3,U+e5fa-U+e6b1,U+e700-U+e7c5,U+f000-U+f2e0,U+f300-U+f372,U+f400-U+f532,U+f0001-U+f1af0 = Symbols Nerd Font
-## Symbols Nerd Font Mono
-# narrow_symbols U+E0A0-U+E0A3+U+E0C0-U+E0C7 = Symbols Nerd Font Mono
-
-#disable_ligatures never
-

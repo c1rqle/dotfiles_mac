@@ -1,22 +1,38 @@
-# # # List options 
-# Run `ghostty +show-config --default --docs`
-
-# === Configuration Management ===
-config-file = "keybinds"
-config-file = "cursor"
-config-file = "fonts"
-
-shell-integration = "detect"
-shell-integration-features = ""
-
-#______________________________
-# ENCON
-theme = 2024 Night
-window-padding-x = 22
-
-# === Additional Settings ===
-desktop-notifications = true
-bold-is-bright = true      
-term = "xterm-256color"     
-enquiry-response = ""       
+#___________________________
+# Configuration Management
+  config-file = "keybinds"
+  config-file = "cursor"
+  config-file = "fonts"
+#___________________________
+# Shell
+  shell-integration = detect
+  term = xterm-ghostty
+  confirm-close-surface = false
+  shell-integration-features = cursor
+#___________________________
+# Mac specific
+  macos-option-as-alt = false
+  macos-icon = official
+  macos-titlebar-proxy-icon = hidden
+  macos-titlebar-style = hidden
+#___________________________
+# Visuals
+  theme = ayu
+  window-padding-x = 32
+  window-padding-y = 32
+  window-theme = dark
+  window-colorspace = srgb
+  bold-is-bright = false      
+#___________________________
+# General settings
+  desktop-notifications = true
+  app-notifications = clipboard-copy
+  copy-on-select = true
+  focus-follows-mouse = true
+  clipboard-trim-trailing-spaces = true
+  clipboard-paste-protection = true
+  quit-after-last-window-closed = true
+#___________________________
+# General settings
+  enquiry-response = ""       
 
