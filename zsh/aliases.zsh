@@ -12,9 +12,10 @@
 #____________________________
 # I havent't decided between lsd or eza yet
   alias tr='lsd -A -F -X --tree'
-  alias tri='lsd -A -F -X --tree -I .git'
+  alias tr1='lsd -A -F -X --tree --depth 1'
+  alias tr2='lsd -A -F -X --tree --depth 2'
   alias lst='lsd -A -F -X --tree'
-  alias l='lsd -ltr -F -X' 
+  alias l='lsd -ltr -Z -F -X' 
   alias ll='lsd -ltr -F -A -X'
   alias ls='lsd -F -tr -X'
   alias la='lsd -F -tr -A -X'
