@@ -1,10 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-sketchybar --add item front_app left                                            \
-           --set front_app       background.color=$transparent_color            \
-                                 icon.font="sketchybar-app-font:Regular:14.0"   \
-                                 label.font="$FONT_TEXT:BoldItalic:16.0"        \
-                                 icon.color=$purple_60                          \
-                                 label.color=$purple_60                         \
-                                 script="$PLUGIN_DIR/front_app.sh"              \
-           --subscribe front_app front_app_switched
+COLOR="$WHITE"
+
+sketchybar \
+	--add item front_app left \
+	--set front_app script="$PLUGIN_DIR/front_app.sh" \
+	icon.drawing=off \
+	background.height=26 \
+	background.padding_left=0 \
+	background.padding_right=10 \
+	background.border_width="$BORDER_WIDTH" \
+	background.border_color="$RED_DARK" \
+	background.corner_radius="$CORNER_RADIUS" \
+	background.color="$purple_10" \
+  label.color="$DARK_BLUE" \
+	label.padding_left=15 \
+	label.padding_right=15 \
+	associated_display=active \
+	--subscribe front_app front_app_switched

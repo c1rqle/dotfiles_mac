@@ -21,6 +21,7 @@ export purple_100=0xffBF5AF2
 export purple_80=0xff9F4EC8 
 export purple_60=0xff7F429D 
 export purple_30=0xff4E305E 
+export purple_10=0x404e305e
 export purple_transparent=0x5cbf5af2
 #___________________________________
 # -- Shades of mint --

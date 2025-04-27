@@ -1,57 +1,43 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
+source "$HOME/.config/sketchybar/variables.sh" # Loads all defined colors
 
-  SPACE_SIDS=(1 2 3 4 5 6 7 8 9)
-  sid=0
-  spaces=(0)
-  for i in "${!SPACE_SIDS[@]}"
-  do
-    sid=$(($i+1)) 
-  for sid in "${SPACE_SIDS[@]}"
+sketchybar --add item spacer.1 left \
+	--set spacer.1 background.drawing=off \
+	label.drawing=off \
+	icon.drawing=off \
+	width=10
 
-  do
-  sketchybar --add space space.$sid left                        \
-             --set space.$sid space=$sid                        \
-                icon=$sid                                       \
-                label.font="sketchybar-app-font:Regular:14.0"   \
-                label.padding_right=20                          \
-                label.y_offset=-1                               \
-                label.color=$mint_30                            \
-                icon.color=$mint_30                             \
-                icon.highlight_color="$purple_100"              \
-                label.highlight_color="$purple_100" 
-                script="$PLUGIN_DIR/space.sh" 
-  done
+for i in "${!SPACE_ICONS[@]}"; do
+	sid=$((i + 1))
+	sketchybar --add space space.$sid left \
+		--set space.$sid associated_space=$sid \
+		label.drawing=off \
+		icon.padding_left=10 \
+		icon.padding_right=10 \
+		background.padding_left=-5 \
+		background.padding_right=-5 \
+		script="$PLUGIN_DIR/space.sh"
+done
 
-  sketchybar --add item space_separator left                    \
-             --set space_separator icon="􀆊"                     \
-                icon.color=$purple_60                           \
-                icon.padding_left=0                             \
-                icon.padding_right=4                            \
-                label.drawing=off                               \
-                background.drawing=off                          \
-                script="$PLUGIN_DIR/space_windows.sh"           \
-              --subscribe space_separator space_windows_change
+sketchybar --add item spacer.2 left \
+	--set spacer.2 background.drawing=off \
+	label.drawing=off \
+	icon.drawing=off \
+	width=5
 
-#_______________________________________
-# Destroy space on right click, focus space on left click.  New space by left clicking separator (>)
-  sketchybar --add space space.$sid left                        \
-             --set space.$sid "${space[@]}"                     \
-             --subscribe space.$sid mouse.clicked
-  done
-  
-  space_creator=(                                               \
-      icon.font="$FONT_TEXT:Regular:16.0"                       \
-      padding_left=10                                           \
-      padding_right=0                                           \
-      label.drawing=on                                          \
-      display=active                                            \
-      click_script='yabai -m space --create'                    \
-      script="$PLUGIN_DIR/space_windows.sh"                     \
-      script="$PLUGIN_DIR/space.sh"
-  )
-  
+sketchybar --add bracket spaces '/space.*/' \
+	--set spaces background.border_width="$BORDER_WIDTH" \
+  background.border_color="$RED_DARK" \
+	background.corner_radius="$CORNER_RADIUS" \
+	background.color="$purple_10" \
+	background.height=26 \
+	background.drawing=on
 
-  sketchybar --add item space_creator left                      \
-             --set space_creator "${space_creator[@]}"          \
-             --subscribe space_creator space_windows_change
+sketchybar --add item separator left \
+	icon.font="$FONT:Regular:14.0" \
+	background.padding_left=26 \
+	background.padding_right=15 \
+	label.drawing=off \
+	associated_display=active \
+	icon.color="$YELLOW" # --set separator icon= \

@@ -7,14 +7,15 @@ sketchybar --add       event           spotify_change $SPOTIFY_EVENT            
            --add       item            spotify.name center                        \
            --set       spotify.name    click_script="$POPUP_SCRIPT"               \
                                        label.font="$FONT_TEXT:BoldItalic:14.0"    \
-                                       background.height=34                       \
-                                       background.corner_radius=4                 \
-                                       background.border_width=2                  \
-                                       background.border_color="$border_color"    \
-                                       background.color="$BG_1"                   \
-                                       label.color="$mint_100"                    \
-                                       label.padding_left=$PADDINGS               \
-                                       label.padding_right=$PADDINGS              \
+                                       background.height=26                       \
+                                       background.color="$purple_10"              \
+                                       background.border_width="$BORDER_WIDTH"    \
+                                       background.border_color="$RED_DARK"        \
+                                       background.corner_radius="$CORNER_RADIUS"  \
+                                       background.padding_left=15                 \
+                                       background.padding_right=15                \
+                                       label.padding_left=15                      \
+                                       label.padding_right=15                     \
                                        popup.horizontal=on                        \
                                        popup.align=center                         \
                                        icon.drawing=off                           \
