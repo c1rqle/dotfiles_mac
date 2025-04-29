@@ -26,8 +26,8 @@
   bold-is-bright = false
 #___________________________
   window-theme = dark
-  window-padding-y = 45,25
-  window-padding-x = 65
+  window-padding-y = 0
+  window-padding-x = 0
   window-padding-color = background
   window-padding-balance = true
   window-inherit-font-size = true

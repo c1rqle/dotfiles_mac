@@ -1,6 +1,7 @@
 # .config/ghostty
 # ghostty +list-keybinds
 
+  keybind = super+ctrl+p=reload_config
   keybind = super+equal=unbind
   keybind = super+plus=unbind
   keybind = super+minus=unbind
@@ -15,10 +16,10 @@
 # ____________________________________________
 # --- Unbinding only because of personal preference
 # --- Originally: k: clear_screen. q: quit. a: select_all 
+  keybind = super+shift+comma=unbind
   keybind = super+k=unbind
   keybind = super+q=unbind
   keybind = super+a=unbind
-  keybind = super+shift+comma=unbind
   keybind = ctrl+tab=unbind
   keybind = tab+ctrl=unbind
 # ____________________________________________

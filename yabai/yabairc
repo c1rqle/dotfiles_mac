@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
-# --- Shortcut for reloading this config (changed in ~/.config/skhd/) ---
-# ctrl + alt + cmd - r : yabai --restart-service
+# Reloading Yabai: ctrl + alt + cmd - r
 
 # ____________________________________________
 # Executing yabai --load-sa as root without entering pw. Details in /Guides/
@@ -8,13 +7,19 @@
   sudo yabai --load-sa
 
 # ____________________________________________
+# Focus (Options: off, autoraise, autofocus)
+  yabai -m config mouse_follows_focus     on
+  yabai -m window --focus                 mouse
+  yabai -m config focus_follows_mouse     autoraise
+
+# ____________________________________________
 # Layout and spacing
-  yabai -m config external_bar all:0:32
+  yabai -m config external_bar all:32:0
   yabai -m config layout          bsp
   yabai -m config top_padding     18
-  yabai -m config bottom_padding  18
-  yabai -m config left_padding    18
-  yabai -m config right_padding   18
+  yabai -m config bottom_padding  12
+  yabai -m config left_padding    12
+  yabai -m config right_padding   12
   yabai -m config window_gap      12
 
 # ____________________________________________
@@ -22,20 +27,14 @@
   yabai -m config menubar_opacity        0.90
   yabai -m config window_opacity         on
   yabai -m config active_window_opacity  1.0
-  yabai -m config normal_window_opacity  0.98
+  yabai -m config normal_window_opacity  0.94
   yabai -m config window_shadow          float
 
 # ____________________________________________
 # Animation
   yabai -m config window_animation_duration  0.4
-  #yabai -m config window_animation_easing    ease_out_quint
+#  yabai -m config window_animation_easing    ease_out_quint
   yabai -m config window_animation_easing    cubic-bezier
-
-# ____________________________________________
-# Focus (Options: off, autoraise, autofocus)
-  yabai -m config mouse_follows_focus     on
-  yabai -m window --focus                 mouse
-  yabai -m config focus_follows_mouse     autoraise
 
 # ____________________________________________
  #set mouse interaction modifier key to ctrl
