@@ -1,6 +1,4 @@
 #____________________________
-  alias zz='cd ..'
-  alias ..='cd ..'
   alias c='z'
 #____________________________
   alias icat='kitty +kitten icat'
@@ -10,7 +8,11 @@
   alias gits='git status'
   alias gitm='git commit -m'
 #____________________________
-# I havent't decided between lsd or eza yet
+  alias ..='cd ..'
+  alias ..1='cd ..'
+  alias ..2='cd ...'
+  alias ..3='cd ....'
+#____________________________
   alias tr='lsd -A -F -X --tree'
   alias tr1='lsd -A -F -X --tree --depth 1'
   alias tr2='lsd -A -F -X --tree --depth 2 --git'
@@ -23,12 +25,4 @@
   alias la='lsd -F -tr -A -X --git'
   alias lstree='lsd -A -F --tree'
   alias lsx="lsd -X -R -A -F"
-
-#____________________________
-#  alias tr='eza -lT -L 3'
-#  alias l='eza -l -F -s modified --group-directories-first' 
-#  alias ll='eza -l -a -F -s modified --group-directories-first'
-#  alias ls='eza -G -F -x'
-#  alias la='eza -G -a -F -x'
-
 
