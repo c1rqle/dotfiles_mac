@@ -10,7 +10,7 @@
   keybind = ctrl+shift+minus=decrease_font_size:1
 # ____________________________________________
 # This fixes some annoyances with keybindings for norwegian keyboards
-#  macos-option-as-alt=true
+  macos-option-as-alt=true
   keybind = alt+left=unbind
   keybind = alt+right=unbind 
 # ____________________________________________
@@ -20,8 +20,8 @@
   keybind = super+k=unbind
   keybind = super+q=unbind
   keybind = super+a=unbind
-  keybind = ctrl+tab=unbind
-  keybind = tab+ctrl=unbind
+#  keybind = ctrl+tab=unbind
+#  keybind = tab+ctrl=unbind
 # ____________________________________________
 # --- Tab navigation. ctrl+t=new_tab. ctrl+tab=cycle
 # --- Originally super instead of alt
@@ -40,23 +40,23 @@
 # --- Because tmux
 #
 # originally: goto_split
-  keybind = super+alt+right=unbind
-  keybind = super+alt+left=unbind
-  keybind = super+alt+down=unbind
-  keybind = super+alt+up=unbind
+#  keybind = super+alt+right=unbind
+#  keybind = super+alt+left=unbind
+#  keybind = super+alt+down=unbind
+#  keybind = super+alt+up=unbind
 #
 # originally: resize_split
-  keybind = super+ctrl+equal=unbind
-  keybind = super+ctrl+right=unbind
-  keybind = super+ctrl+down=unbind
-  keybind = super+ctrl+left=unbind
-  keybind = super+ctrl+up=unbind
+#  keybind = super+ctrl+equal=unbind
+#  keybind = super+ctrl+right=unbind
+#  keybind = super+ctrl+down=unbind
+#  keybind = super+ctrl+left=unbind
+#  keybind = super+ctrl+up=unbind
 # Originally: new_split:right, new_split:down, toggle_split_zoom
-  keybind = super+d=unbind
-  keybind = super+shift+d=unbind
-  keybind = super+shift+enter=unbind
+#  keybind = super+d=unbind
+#  keybind = super+shift+d=unbind
+#  keybind = super+shift+enter=unbind
 #
-  keybind = alt+h=unbind
-  keybind = alt+j=unbind
-  keybind = alt+k=unbind
-  keybind = alt+l=unbind
+#  keybind = alt+h=unbind
+#  keybind = alt+j=unbind
+#  keybind = alt+k=unbind
+#  keybind = alt+l=unbind

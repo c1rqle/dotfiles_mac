@@ -23,7 +23,7 @@
   zstyle ':omz:update' mode auto      
 
 # Plugins
-  plugins=(z fzf themes git)
+  plugins=( fzf themes git)
 
 # fzf
 	export FZF_BASE=/run/current-system/sw/bin/fzf
@@ -46,3 +46,4 @@
   [ -f ~/.config/zsh_custom/aliases.zsh ] && source ~/.config/zsh_custom/aliases.zsh
 #
 
+eval "$(zoxide init zsh)"
