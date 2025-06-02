@@ -44,6 +44,7 @@
 #_____________________________________
 # Loading my aliases
   [ -f ~/.config/zsh_custom/aliases.zsh ] && source ~/.config/zsh_custom/aliases.zsh
-#
 
-eval "$(zoxide init zsh)"
+#_____________________________________
+# Activating zoxide
+  eval "$(zoxide init --cmd c zsh)"

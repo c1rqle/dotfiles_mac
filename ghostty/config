@@ -8,7 +8,7 @@
 # Shell
   shell-integration = detect
   term = xterm-ghostty
-  confirm-close-surface = false
+  confirm-close-surface = true
   #shell-integration-features = cursor
 
 #___________________________
@@ -17,37 +17,23 @@
   macos-icon = official
   macos-titlebar-proxy-icon = hidden
   macos-titlebar-style = hidden
-
 #___________________________
 # Visuals
-  theme = ayu
-  background-opacity = 1
-  minimum-contrast = 1
-  bold-is-bright = false
-#___________________________
-  window-theme = dark
-  window-padding-y = 0
-  window-padding-x = 0
-  window-padding-color = background
-  window-padding-balance = true
-  window-inherit-font-size = true
-#___________________________
+  theme = Monokai Remastered
+  background-opacity = 0.92
   background-blur = true
-#___________________________
-  cursor-style = underline
-  cursor-style-blink = false
-  #cursor-color = #D48485
-  #cursor-text = #D48486
-  cursor-opacity = 0.4
-# == Swap the foreground and background colors of the cell under the cursor
-  cursor-invert-fg-bg = true
-#___________________________
+  minimum-contrast = 1
+  bold-is-bright = true
   adjust-underline-thickness = 1
   adjust-underline-position = 2
+
 #___________________________
-# split-divider-color =
-# unfocused-split-fill =
-# unfocused-split-opacity = 0.7
+  window-padding-y = 0,10
+  window-padding-x = 20,20
+  window-padding-color = extend
+  window-padding-balance = false
+  window-inherit-font-size = true
+
 #___________________________
 # General settings
   desktop-notifications = true
@@ -59,5 +45,3 @@
   focus-follows-mouse = true
   enquiry-response = ""       
 #___________________________
-# 
-

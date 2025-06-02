@@ -1,28 +1,23 @@
 #____________________________
-  alias c='z'
+# Espanso handles git aliases (espanso edit)
 #____________________________
   alias icat='kitty +kitten icat'
   alias vim='nvim'
 #____________________________
-  alias git.='git add .'
-  alias gits='git status'
-  alias gitm='git commit -m'
-#____________________________
+  alias z='cd ..'
+  alias zz='cd ..'
   alias ..='cd ..'
   alias ..1='cd ..'
   alias ..2='cd ...'
   alias ..3='cd ....'
+# ___________________________ 
+# -X=sort by extension. F=classify type. t=Sort by time. r=reverse sort
+  alias ls='lsd -X -tr -F'
+  alias la='lsd -X -tr -A -F'
+  alias l='lsd -X -ltr -F' 
+  alias ll='lsd -X -A -ltr -F'
+  alias lg='lsd -X -ltr --git -F' 
+  alias tr='lsd -X -A --tree -F'
+  alias tr1='lsd -X -A --tree --depth 1 -F'
+  alias tr2='lsd -X -A --tree --depth 2 -F'
 #____________________________
-  alias tr='lsd -A -F -X --tree'
-  alias tr1='lsd -A -F -X --tree --depth 1'
-  alias tr2='lsd -A -F -X --tree --depth 2 --git'
-  alias lst='lsd -A -F -X --tree'
-  alias l='lsd -ltr -Z -F -X' 
-  alias lg='lsd -ltr -F -A -X --git'
-  alias ll='lsd -ltr -F -A -X'
-  alias llg='lsd -ltr -F -A -X --git'
-  alias ls='lsd -F -tr -X'
-  alias la='lsd -F -tr -A -X --git'
-  alias lstree='lsd -A -F --tree'
-  alias lsx="lsd -X -R -A -F"
-
