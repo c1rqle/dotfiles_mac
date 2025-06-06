@@ -6,10 +6,10 @@
 
 #___________________________
 # Shell
-  shell-integration = detect
+  shell-integration = zsh
   term = xterm-ghostty
   confirm-close-surface = true
-  #shell-integration-features = cursor
+  shell-integration-features = cursor
 
 #___________________________
 # Mac specific
@@ -17,9 +17,10 @@
   macos-icon = official
   macos-titlebar-proxy-icon = hidden
   macos-titlebar-style = hidden
+
 #___________________________
 # Visuals
-  theme = Monokai Remastered
+  theme = ENCOM
   background-opacity = 0.92
   background-blur = true
   minimum-contrast = 1

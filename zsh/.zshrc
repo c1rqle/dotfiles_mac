@@ -7,10 +7,14 @@
   export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
   export ZSH="$HOME/.oh-my-zsh"
-  #export LS_COLORS="$(vivid generate dracula)"
+  export LS_COLORS="$(vivid generate dracula)"
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   
+  if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
+  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+fi
+
   ZSH_THEME="af-magic"
 #_____________________________________
 # Disable auto updates from brew 
@@ -23,7 +27,7 @@
   zstyle ':omz:update' mode auto      
 
 # Plugins
-  plugins=( fzf themes git)
+  plugins=( fzf themes git starship)
 
 # fzf
 	export FZF_BASE=/run/current-system/sw/bin/fzf

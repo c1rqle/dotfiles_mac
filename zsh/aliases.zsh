@@ -3,6 +3,11 @@
 #____________________________
   alias icat='kitty +kitten icat'
   alias vim='nvim'
+
+# I'm way too used to pacman in Arch, so 🤷
+#____________________________
+  alias brew-ss='brew search'
+  alias brew-s='brew install'
 #____________________________
   alias z='cd ..'
   alias zz='cd ..'

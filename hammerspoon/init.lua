@@ -18,7 +18,7 @@ end
 myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")
 
-hs.hotkey.bind({ "cmd", "shift" }, "t", function()
+hs.hotkey.bind({ "cmd", "ctrl" }, "t", function()
 	hs.application.launchOrFocus("Ghostty.app")
 end)
 
@@ -80,7 +80,7 @@ hs.hotkey.bind({ "cmd", "ctrl" }, "b", function()
 end)
 
 ---------------------------------
--- Warp windows between displays
+-- switch places for windows
 hs.hotkey.bind({ "cmd", "alt" }, "h", function()
 	hs.execute(yabai .. " -m window --warp west")
 end)
