@@ -21,7 +21,7 @@
 #___________________________
 # Visuals
   theme = ENCOM
-  background-opacity = 0.92
+  background-opacity = 0.95
   background-blur = true
   minimum-contrast = 1
   bold-is-bright = true
