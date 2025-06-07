@@ -18,40 +18,51 @@ end
 myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")
 
-hs.hotkey.bind({ "cmd", "ctrl" }, "t", function()
+hs.hotkey.bind({ "alt" }, "return", function()
 	hs.application.launchOrFocus("Ghostty.app")
 end)
 
+hs.hotkey.bind({ "alt" }, "f", function()
+	hs.application.launchOrFocus("finder.app")
+end)
+
+-------------------------------
+-- Disable the default macOS hide functionality
+hs.hotkey.bind({"cmd"}, "h", function()
+    -- Get the current application
+    local app = hs.application.frontmostApplication()
+    -- You could replace this with your own function
+    hs.alert.show("Hide disabled for " .. app:name())
+end)
+
+hs.hotkey.bind({"alt" }, "-", function()
+    hs.application.frontmostApplication():hide()
+end)
 -------------------------------
 -- Yabai
--------------------------------
 local yabai = "/opt/homebrew/bin/yabai"
--- ------------------------------
--- Reload Yabai --
+
 hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "r", function()
 	hs.execute(yabai .. " --restart-service")
 end)
 
----------------------------------
--- Navigation between windows in the same space (Vim Keys) --
-hs.hotkey.bind({ "cmd", "ctrl" }, "h", function()
+-- -------------------------------
+-- Navigation
+hs.hotkey.bind({ "cmd" }, "h", function()
 	hs.execute(yabai .. " -m window --focus west")
 end)
-hs.hotkey.bind({ "cmd", "ctrl" }, "j", function()
+hs.hotkey.bind({ "cmd" }, "j", function()
 	hs.execute(yabai .. " -m window --focus south")
 end)
-hs.hotkey.bind({ "cmd", "ctrl" }, "k", function()
+hs.hotkey.bind({ "cmd" }, "k", function()
 	hs.execute(yabai .. " -m window --focus north")
 end)
-hs.hotkey.bind({ "cmd", "ctrl" }, "l", function()
+hs.hotkey.bind({ "cmd" }, "l", function()
 	hs.execute(yabai .. " -m window --focus east")
 end)
 
 ---------------------------------
 -- Window Manipulation & Layout --
----------------------------------
-
----------------------------------
 -- Float window and center
 hs.hotkey.bind({ "cmd", "ctrl" }, "c", function()
 	hs.execute(yabai .. " -m window --toggle float")
@@ -133,15 +144,29 @@ end
 -- Space Creation/Destruction
 -----------------------------
 -- Create new space with window
-hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "n", function()
-	hs.execute([[ /bin/bash -c '
-    yabai -m space --create
-    index=$(yabai -m query --spaces --display | jq "map(select(.\"is-native-fullscreen\" == false))[-1].index")
-    yabai -m window --space $index
-    yabai -m space --focus $index
-  ' ]])
+hs.hotkey.bind({"ctrl", "cmd"}, "n", function()
+    -- Get current space count before creating new one
+    local output, status = hs.execute("/usr/local/bin/yabai -m query --spaces")
+    
+    if status then
+        local spaces = hs.json.decode(output)
+        local prevCount = #spaces
+        
+        -- Create new space
+        hs.execute("/usr/local/bin/yabai -m space --create")
+        
+        -- Verify creation
+        output, status = hs.execute("/usr/local/bin/yabai -m query --spaces")
+        if status then
+            spaces = hs.json.decode(output)
+            if #spaces > prevCount then
+                hs.alert.show("Created space " .. spaces[#spaces].index)
+            end
+        end
+    else
+        hs.alert.show("Failed to create space")
+    end
 end)
-
 -- Destroy last space
 hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "w", function()
 	hs.execute([[ /bin/bash -c '
