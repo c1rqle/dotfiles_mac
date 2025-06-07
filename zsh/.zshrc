@@ -27,7 +27,7 @@ fi
   zstyle ':omz:update' mode auto      
 
 # Plugins
-  plugins=( fzf themes git starship)
+  plugins=( fzf themes git starship )
 
 # fzf
 	export FZF_BASE=/run/current-system/sw/bin/fzf

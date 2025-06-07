@@ -19,7 +19,7 @@ myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConf
 hs.alert.show("Config loaded")
 
 hs.hotkey.bind({ "alt" }, "return", function()
-	hs.application.launchOrFocus("Ghostty.app")
+	hs.application.launchOrFocus("kitty.app")
 end)
 
 hs.hotkey.bind({ "alt" }, "f", function()
@@ -35,7 +35,7 @@ hs.hotkey.bind({"cmd"}, "h", function()
     hs.alert.show("Hide disabled for " .. app:name())
 end)
 
-hs.hotkey.bind({"alt" }, "-", function()
+hs.hotkey.bind({"alt", "shift", }, "-", function()
     hs.application.frontmostApplication():hide()
 end)
 -------------------------------
