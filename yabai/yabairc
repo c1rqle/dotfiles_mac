@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Reloading Yabai: ctrl + alt + cmd - r
+# Reloading Yabai: ctrl + alt + cmd - r (handled by hammerspoon)
 
 # ____________________________________________
 # Executing yabai --load-sa as root without entering pw. Details in /Guides/
@@ -16,7 +16,7 @@
 # Layout and spacing
   yabai -m config external_bar all:32:0
   yabai -m config layout          bsp
-  yabai -m config top_padding     18
+  yabai -m config top_padding     12
   yabai -m config bottom_padding  12
   yabai -m config left_padding    12
   yabai -m config right_padding   12
@@ -33,7 +33,6 @@
 # ____________________________________________
 # Animation
   yabai -m config window_animation_duration  0.4
-#  yabai -m config window_animation_easing    ease_out_quint
   yabai -m config window_animation_easing    cubic-bezier
 
 # ____________________________________________

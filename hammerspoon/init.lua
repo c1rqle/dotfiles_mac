@@ -22,7 +22,7 @@ hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
 	hs.application.launchOrFocus("kitty.app")
 end)
 
-hs.hotkey.bind({ "alt" }, "f", function()
+hs.hotkey.bind({ "cmd", "ctrl" }, "f", function()
 	hs.application.launchOrFocus("finder.app")
 end)
 
@@ -35,7 +35,7 @@ hs.hotkey.bind({"cmd"}, "h", function()
     hs.alert.show("Hide disabled for " .. app:name())
 end)
 
-hs.hotkey.bind({"alt", "shift", }, "-", function()
+hs.hotkey.bind({"cmd", "shift", }, "-", function()
     hs.application.frontmostApplication():hide()
 end)
 -------------------------------
