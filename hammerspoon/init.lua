@@ -18,7 +18,7 @@ end
 myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")
 
-hs.hotkey.bind({ "alt" }, "return", function()
+hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
 	hs.application.launchOrFocus("kitty.app")
 end)
 

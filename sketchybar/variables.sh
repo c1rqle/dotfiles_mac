@@ -1,5 +1,20 @@
 #!/usr/bin/env sh
 
+# ______________________
+# borders= 
+#   rgba(249, 159, 175, 0.35) | #f99faf59
+# per item backgrounds: 
+#   rgba(0,0,0,.55) | #0000008c
+# standard color: 
+#   rgba(251, 197, 207, 1) | #fbc5cf
+# highlight color: 
+# rgb(247, 141, 160, .99) | #f78da0
+#
+  BORDERS=0xf99faf59
+  ITEM_BG=0x0000008c
+  COLOR_TXT=0xfbc5cffc
+  COLOR_HGHLGHT=0xf78da0fc
+
   BLACK=0xff24283b
   WHITE=0xffa9b1d6
   MAGENTA=0xffbb9af7
@@ -14,7 +29,8 @@
   RED_DARK=0x40f7768e
   BAR_COLOR=$transparent_color
   COMMENT=0xff565f89
-  DARK_BLUE=0xff8e96b8
+  #DARK_BLUE=0xff8e96b8
+  DARK_BLUE=0xffb4b9d0
   
   TRANSPARENT=0x00000000
   

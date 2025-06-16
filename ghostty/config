@@ -1,15 +1,14 @@
 #___________________________
 # Configuration Management
   config-file = "keybinds"
-  config-file = "cursor"
   config-file = "fonts"
 
 #___________________________
 # Shell
+  shell-integration-features = cursor
+  confirm-close-surface = true
   shell-integration = zsh
   term = xterm-ghostty
-  confirm-close-surface = true
-  shell-integration-features = cursor
 
 #___________________________
 # Mac specific
@@ -27,6 +26,15 @@
   bold-is-bright = true
   adjust-underline-thickness = 1
   adjust-underline-position = 2
+
+#___________________________
+# Cursor
+cursor-style = "underline"
+cursor-style-blink = false
+cursor-color = #f6f6f6
+cursor-text = #333444 
+cursor-opacity = .9
+
 
 #___________________________
   window-padding-y = 0,10

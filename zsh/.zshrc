@@ -1,13 +1,13 @@
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+ #export TERM=xterm
 
 # Path to Oh My Zsh instalsdtion.
   export PATH="/opt/homebrew/bin:$PATH >> ~/.zprofile && source ~/.zprofile"
-  #export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
   export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
   export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
   export ZSH="$HOME/.oh-my-zsh"
-  export LS_COLORS="$(vivid generate dracula)"
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   
@@ -16,6 +16,7 @@
 fi
 
   ZSH_THEME="af-magic"
+  export LS_COLORS="$(vivid generate dracula)"
 #_____________________________________
 # Disable auto updates from brew 
   export HOMEBREW_NO_AUTO_UPDATE=1
