@@ -19,11 +19,15 @@ myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConf
 hs.alert.show("Config loaded")
 
 hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
-	hs.application.launchOrFocus("kitty.app")
+	hs.application.launchOrFocus("ghostty.app")
 end)
 
 hs.hotkey.bind({ "cmd", "ctrl" }, "f", function()
 	hs.application.launchOrFocus("finder.app")
+end)
+
+hs.hotkey.bind({ "cmd", "ctrl" }, "å", function()
+  hs.application.launchOrFocus("ChatGPT.app")
 end)
 
 -------------------------------
