@@ -9,12 +9,12 @@
   icons:
     when: always
     theme: fancy
-    separator: " ⭬ "
+    separator: ""
 
 #_____________________________________
 # Whether to omit showing symlink targets
   no-symlink: false
-  symlink-arrow: "⭪"
+  symlink-arrow: "⤵︎"
   hyperlink: always
 
 #_____________________________________
