@@ -1,0 +1,24 @@
+# git commands
+
+  matches:
+
+  - trigger: "gits"
+    replace: "git status"
+
+  - trigger: "git."
+    replace: "git add ."
+
+  - trigger: "gitm"
+    replace: "git commit -m '$|$' "
+
+  - trigger: "gitp"
+    replace: "git push origin"
+  
+  - trigger: "gitmain"
+    replace: "git checkout main"
+    word: true
+
+  - trigger: "gittest"
+    replace: "git checkout test"
+    word: true
+

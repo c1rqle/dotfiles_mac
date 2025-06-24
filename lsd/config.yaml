@@ -13,7 +13,7 @@
 
 #_____________________________________
 # Whether to omit showing symlink targets
-  no-symlink: true
+  no-symlink: false
   symlink-arrow: "⭪"
   hyperlink: always
 

@@ -1,5 +1,4 @@
-#___________________________
-# Configuration Management
+# configuration Management
   config-file = "keybinds"
   config-file = "fonts"
 
@@ -12,14 +11,13 @@
 
 #___________________________
 # Mac specific
-  macos-option-as-alt = false
   macos-icon = official
   macos-titlebar-proxy-icon = hidden
   macos-titlebar-style = hidden
 
 #___________________________
 # Visuals
-  theme = ENCOM
+  theme = Wombat
   background-opacity = 0.95
   background-blur = true
   minimum-contrast = 1
@@ -29,15 +27,14 @@
 
 #___________________________
 # Cursor
-cursor-style = "underline"
-cursor-style-blink = false
-cursor-color = #f6f6f6
-cursor-text = #333444 
-cursor-opacity = .9
-
-
+  cursor-style = "underline"
+  cursor-style-blink = true
+  cursor-color = #f6f6f6
+  cursor-text = #333444 
+  cursor-opacity = .9
+  
 #___________________________
-  window-padding-y = 0,10
+  window-padding-y = 20,0
   window-padding-x = 20,20
   window-padding-color = extend
   window-padding-balance = false

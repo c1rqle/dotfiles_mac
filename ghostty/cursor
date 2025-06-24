@@ -1,9 +1,0 @@
-# /.config/ghostty/
-
-# === Cursor settings ===
-cursor-style = "underline"
-cursor-style-blink = false
-cursor-color = #f6f6f6
-cursor-text = #333444 
-cursor-opacity = .9
-

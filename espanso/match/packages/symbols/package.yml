@@ -1,0 +1,39 @@
+# Symbols
+
+  matches:
+
+  - trigger: ":arrowright"
+    replace: "→"
+
+  - trigger: ":arrowleft"
+    replace: "←"
+
+  - trigger: ":arrowup"
+    replace: "↑"
+
+  - trigger: ":arrowdown"
+    replace: "↓"
+
+  - trigger: ":arrowbent"
+    replace: "⤵︎"
+
+  - trigger: ":bullet"
+    replace: "•"
+
+  - trigger: ":minibullet"
+    replace: "·"
+
+  - trigger: ":pipe"
+    replace: "|"
+
+  - trigger: ":bar"
+    replace: "―"
+
+  - trigger: ":dots"
+    replace: "⋯"
+
+  - trigger: ":topbar"
+    replace: "‾‾"
+
+  - trigger: ":ca"
+    replace: "≈"

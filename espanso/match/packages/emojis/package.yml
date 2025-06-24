@@ -1,0 +1,67 @@
+# Emojis
+
+  matches:
+
+  - trigger: ":smile"
+    replace: "😊"
+
+  - trigger: ":sad"
+    replace: "😥"
+
+  - trigger: ":cry"
+    replace: "😭"
+  
+  - trigger: ":sweat"
+    replace: "😅"
+
+  - trigger: ":cool"
+    replace: "😎"
+
+  - trigger: ":salut"
+    replace: "🫡"
+
+  - trigger: ":xd"
+    replace: "😆"
+
+  - trigger: ":lol"
+    replace: "😂"
+
+  - trigger: ":hug"
+    replace: "🤗"
+
+  - trigger: ":happy"
+    replace: "😄"
+
+  - trigger: ":explode"
+    replace: "🤯"
+
+  - trigger: ":upsidedown"
+    replace: "🙃"
+
+  - trigger: ":shrug"
+    replace: "🤷"
+  
+  - trigger: ":raised"
+    replace: "🙌" 
+
+  - trigger: ":italian"
+    replace: "👌"
+
+  - trigger: ":wave"
+    replace: "👋"
+  
+  - trigger: ":seenoevil"
+    replace: "🙈"
+
+  - trigger: ":check:"
+    replace: "✓"
+
+  - trigger: ":cute"
+    replace: "•‿•"
+
+  - trigger: ":eyes"
+    replace: "👀"
+
+  - trigger: ":purpleheart"
+    replace: "💜"
+

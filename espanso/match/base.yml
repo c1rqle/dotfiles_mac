@@ -1,0 +1,69 @@
+# espanso match file 
+
+  matches:
+
+# ____________________________________________
+# scrcpy open external display + best keyboard/mouse options
+  - trigger: ":scrcpy-sdk"
+    replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display"
+
+  - trigger: ":bt"
+    replace: "bzmenu -l walker"
+
+# ____________________________________________
+# SSH
+  - trigger: "sshmac"
+    replace: "ssh tb@mbp.local"
+    word: true
+
+  - trigger: "scpfromssh"
+    replace: "scp tb@mbp.local:/Users/tb/$|$ /home/tb/ssh_files"
+    word: true
+
+  - trigger: "scptossh"
+    replace: "scp /home/tb/$|$ tb@mbp.local:/Users/tb/ssh_files/"
+    word: true
+
+  - trigger: ":torrent"
+    replace: "{{form1.file}}"
+    vars:
+      - name: files
+        type: shell
+        params:
+          cmd: "find ~/Downloads/torrents -maxdepth 1"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select file:
+            [[file]]
+          fields:
+            file:
+              type: list
+              values: "{{files}}"
+
+# ____________________________________________
+# Terminal 
+  - trigger: "icat"
+    replace: "kitty +kitten icat $|$"
+    word: true
+
+  - trigger: ":mkdir"
+    replace: "mkdir -p {{form1.folder}} && cd {{form1.folder}}"
+    vars:
+      - name: form1
+        type: form
+        params:
+          layout: "Folder name: [[folder]]"
+
+  - trigger: ":div"
+    replace: "<div>$|$</div> "
+
+  - trigger: ":grep"
+    replace: "| grep '$|$' "
+
+  - trigger: ":less"
+    replace: "| less "
+
+  - trigger: 'btctl'
+    replace: 'bluetoothctl'

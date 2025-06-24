@@ -1,8 +1,11 @@
+-------------------------------
+--- Enabling spoons
 hs.loadSpoon("ModalMgr", "HSKeybindings")
 local MiddleClickDragScroll = hs.loadSpoon("MiddleClickDragScroll"):start()
+local LeftRightHotkey = hs.loadSpoon("LeftRightHotkey"):start()
 
 -------------------------------
--- Reload Hammerspoon config at save --<D-j><D-j>
+--- Reload Hammerspoon config at save
 local function reloadConfig(files)
 	doReload = false
 	for _, file in pairs(files) do
@@ -18,6 +21,8 @@ end
 myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")
 
+-------------------------------
+--- App shortcuts
 hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
 	hs.application.launchOrFocus("ghostty.app")
 end)
@@ -33,150 +38,157 @@ end)
 -------------------------------
 -- Disable the default macOS hide functionality
 hs.hotkey.bind({"cmd"}, "h", function()
-    -- Get the current application
     local app = hs.application.frontmostApplication()
-    -- You could replace this with your own function
     hs.alert.show("Hide disabled for " .. app:name())
 end)
 
+-------------------------------
+-- And rebinding it ↑
 hs.hotkey.bind({"cmd", "shift", }, "-", function()
     hs.application.frontmostApplication():hide()
 end)
+
 -------------------------------
--- Yabai
-local yabai = "/opt/homebrew/bin/yabai"
+--- Yabai
+local yabai = "/Users/tb/.local/bin/yabai"
 
 hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "r", function()
 	hs.execute(yabai .. " --restart-service")
 end)
 
--- -------------------------------
--- Navigation
-hs.hotkey.bind({ "cmd" }, "h", function()
-	hs.execute(yabai .. " -m window --focus west")
-end)
-hs.hotkey.bind({ "cmd" }, "j", function()
-	hs.execute(yabai .. " -m window --focus south")
-end)
-hs.hotkey.bind({ "cmd" }, "k", function()
-	hs.execute(yabai .. " -m window --focus north")
-end)
-hs.hotkey.bind({ "cmd" }, "l", function()
-	hs.execute(yabai .. " -m window --focus east")
-end)
+---------------------------------
+--- Window navigation. Binding it to "left CMD" to not break any system shortcuts 
+  LeftRightHotkey:bind({ "lcmd" }, "h", function()
+    hs.execute(yabai .. " -m window --focus west")
+  end)
+----------
+  LeftRightHotkey:bind({ "lCmd" }, "j", function()
+  	hs.execute(yabai .. " -m window --focus south")
+  end)
+----------
+  LeftRightHotkey:bind({ "lCmd" }, "k", function()
+  	hs.execute(yabai .. " -m window --focus north")
+  end)
+----------
+  LeftRightHotkey:bind({ "lCmd" }, "l", function()
+  	hs.execute(yabai .. " -m window --focus east")
+  end)
 
 ---------------------------------
--- Window Manipulation & Layout --
--- Float window and center
-hs.hotkey.bind({ "cmd", "ctrl" }, "c", function()
-	hs.execute(yabai .. " -m window --toggle float")
-	hs.execute(yabai .. " -m window --grid 6:6:1:1:4:4")
-end)
+--- Window rules
 
 ---------------------------------
--- Fullscreen/parent/split toggles
-hs.hotkey.bind({ "cmd", "ctrl" }, "f", function()
-	hs.execute(yabai .. " -m window --toggle zoom-fullscreen")
-end)
-hs.hotkey.bind({ "cmd", "ctrl" }, "z", function()
-	hs.execute(yabai .. " -m window --toggle zoom-parent")
-end)
-hs.hotkey.bind({ "cmd", "ctrl" }, "x", function()
-	hs.execute(yabai .. " -m window --toggle split")
-end)
+--- Float window and center
+  hs.hotkey.bind({ "cmd", "shift" }, "c", function()
+  	hs.execute(yabai .. " -m window --toggle float")
+  	hs.execute(yabai .. " -m window --grid 6:6:1:1:4:4")
+  end)
+---------------------------------
+--- Sticky/pin to top
+  hs.hotkey.bind({ "cmd", "shift" }, "p", function()
+  	hs.execute(yabai .. " -m window --toggle sticky")
+  end)
+---------------------------------
+--- Fullscreen/parent/split toggles
+  hs.hotkey.bind({ "cmd", "shift" }, "f", function()
+  	hs.execute(yabai .. " -m window --toggle zoom-fullscreen")
+  end)
+----------
+  hs.hotkey.bind({ "cmd", "shift" }, "z", function()
+  	hs.execute(yabai .. " -m window --toggle zoom-parent")
+  end)
+----------
+  hs.hotkey.bind({ "cmd", "shift" }, "x", function()
+  	hs.execute(yabai .. " -m window --toggle split")
+  end)
 
 ---------------------------------
--- Sticky/pin to top and balance
-hs.hotkey.bind({ "cmd", "ctrl" }, "p", function()
-	hs.execute(yabai .. " -m window --toggle sticky")
-end)
-hs.hotkey.bind({ "cmd", "ctrl" }, "b", function()
-	hs.execute(yabai .. " -m space --balance")
-end)
+--- Make windows in a space equal size
+  hs.hotkey.bind({ "cmd", "shift" }, "b", function()
+  	hs.execute(yabai .. " -m space --balance")
+  end)
 
 ---------------------------------
--- switch places for windows
-hs.hotkey.bind({ "cmd", "alt" }, "h", function()
-	hs.execute(yabai .. " -m window --warp west")
-end)
-hs.hotkey.bind({ "cmd", "alt" }, "j", function()
-	hs.execute(yabai .. " -m window --warp south")
-end)
-hs.hotkey.bind({ "cmd", "alt" }, "k", function()
-	hs.execute(yabai .. " -m window --warp north")
-end)
-hs.hotkey.bind({ "cmd", "alt" }, "l", function()
-	hs.execute(yabai .. " -m window --warp east")
-end)
+--- Move apps around in space
+  hs.hotkey.bind({ "cmd", "alt" }, "h", function()
+  	hs.execute(yabai .. " -m window --warp west")
+  end)
+----------
+  hs.hotkey.bind({ "cmd", "alt" }, "j", function()
+  	hs.execute(yabai .. " -m window --warp south")
+  end)
+----------
+  hs.hotkey.bind({ "cmd", "alt" }, "k", function()
+  	hs.execute(yabai .. " -m window --warp north")
+  end)
+----------
+  hs.hotkey.bind({ "cmd", "alt" }, "l", function()
+  	hs.execute(yabai .. " -m window --warp east")
+  end)
 
 -------------------------
--- Space/Desktop Focus --
--------------------------
+--- Navigate the spaces with cmd+1-9
+  for i = 1, 9 do
+  	hs.hotkey.bind({ "cmd" }, tostring(i), function()
+  		hs.execute(yabai .. " -m space --focus " .. i)
+  	end)
+  end
 
--------------------------
--- Spaces 1-9 (universal)
-for i = 1, 9 do
-	hs.hotkey.bind({ "cmd" }, tostring(i), function()
-		hs.execute(yabai .. " -m space --focus " .. i)
-	end)
-end
+---------------------------------
+--- Move windows from space to space
+  for i = 1, 9 do
+  	hs.hotkey.bind({ "cmd", "shift" }, tostring(i), function()
+  		hs.execute(yabai .. " -m window --space " .. i .. " && " .. yabai .. " -m space --focus " .. i)
+  	end)
+  end
 
--- -- External monitor spaces (5-8)
--- hs.hotkey.bind({"cmd"}, "5", function()
---   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 5")
--- end)
--- hs.hotkey.bind({"cmd"}, "6", function()
---   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 6")
--- end)
--- hs.hotkey.bind({"cmd"}, "7", function()
---   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 7")
--- end)
--- hs.hotkey.bind({"cmd"}, "8", function()
---   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 8")
--- end)
---
 ---------------------------------
--- Window Movement Between Spaces (i.e cmd+shift+2 moves focused window to space 2)
----------------------------------
-for i = 1, 9 do
-	hs.hotkey.bind({ "cmd", "shift" }, tostring(i), function()
-		hs.execute(yabai .. " -m window --space " .. i .. " && " .. yabai .. " -m space --focus " .. i)
-	end)
-end
+--- Forcing space 5-8 to an external monitor if one is connected
+ hs.hotkey.bind({"cmd"}, "5", function()
+   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 5")
+ end)
+----------
+ hs.hotkey.bind({"cmd"}, "6", function()
+   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 6")
+ end)
+----------
+ hs.hotkey.bind({"cmd"}, "7", function()
+   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 7")
+ end)
+----------
+ hs.hotkey.bind({"cmd"}, "8", function()
+   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 8")
+ end)
 
 -----------------------------
--- Space Creation/Destruction
+--- Create new space and move to it
+  hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "n", function()
+      local output, status = hs.execute("/Users/tb/.local/bin/yabai -m query --spaces")
+      if status then
+          local spaces = hs.json.decode(output)
+          local prevCount = #spaces
+
+          hs.execute("/Users/tb/.local/bin/yabai -m space --create")
+
+          output, status = hs.execute("/Users/tb/.local/bin/yabai -m query --spaces")
+          if status then
+              spaces = hs.json.decode(output)
+              if #spaces > prevCount then
+                  hs.alert.show("Created space " .. spaces[#spaces].index)
+              end
+          end
+      else
+          hs.alert.show("Failed to create space")
+      end
+  end)
+
 -----------------------------
--- Create new space with window
-hs.hotkey.bind({"ctrl", "cmd"}, "n", function()
-    -- Get current space count before creating new one
-    local output, status = hs.execute("/usr/local/bin/yabai -m query --spaces")
-    
-    if status then
-        local spaces = hs.json.decode(output)
-        local prevCount = #spaces
-        
-        -- Create new space
-        hs.execute("/usr/local/bin/yabai -m space --create")
-        
-        -- Verify creation
-        output, status = hs.execute("/usr/local/bin/yabai -m query --spaces")
-        if status then
-            spaces = hs.json.decode(output)
-            if #spaces > prevCount then
-                hs.alert.show("Created space " .. spaces[#spaces].index)
-            end
-        end
-    else
-        hs.alert.show("Failed to create space")
-    end
-end)
--- Destroy last space
-hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "w", function()
-	hs.execute([[ /bin/bash -c '
-    index=$(yabai -m query --spaces | jq "map(select(.\"is-native-fullscreen\" == false))[-1].index")
-    yabai -m space --destroy $index
-    next_index=$(yabai -m query --spaces | jq "map(select(.\"is-native-fullscreen\" == false))[0].index")
-    yabai -m space --focus $next_index
-  ' ]])
-end)
+--- Remove last space added
+  hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "w", function()
+  	hs.execute([[ /bin/bash -c '
+      index=$(yabai -m query --spaces | jq "map(select(.\"is-native-fullscreen\" == false))[-1].index")
+      yabai -m space --destroy $index
+      next_index=$(yabai -m query --spaces | jq "map(select(.\"is-native-fullscreen\" == false))[0].index")
+      yabai -m space --focus $next_index
+    ' ]])
+  end)

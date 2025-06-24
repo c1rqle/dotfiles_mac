@@ -1,20 +1,17 @@
 #____________________________
-# Espanso handles git aliases (espanso edit)
+  alias z='cd ..'
+  alias z.='...'
+  alias ..='cd ..'
+  alias ..1='...'
+  alias ..2='....'
 #____________________________
   alias icat='kitty +kitten icat'
+  alias mkdir='mkdir -p'
   alias vim='nvim'
-
-# I'm way too used to pacman in Arch, so 🤷
 #____________________________
-  alias brew-ss='brew search'
-  alias brew-s='brew install'
-#____________________________
-  alias z='cd ..'
-  alias zz='cd ..'
-  alias ..='cd ..'
-  alias ..1='cd ..'
-  alias ..2='cd ...'
-  alias ..3='cd ....'
+  alias brewss='brew search'
+  alias brews='brew install'
+  alias brewi='brew info'
 # ___________________________ 
 # -X=sort by extension. F=classify type. t=Sort by time. r=reverse sort
   alias ls='lsd -X -tr -F'

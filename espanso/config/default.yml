@@ -1,0 +1,53 @@
+# espanso configuration file
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# ____________________________________________
+# Specify Norwegian keyboard. Solves a few bugs
+  keyboard_layout:
+    layout: "no"
+
+# ____________________________________________
+# Disable keyboard shortcut for the GUI window 
+  search_shortcut: off
+
+# ____________________________________________
+# Disable the icon in the menu
+  show_icon: false
+
+# ____________________________________________
+# Auto restart Espanso on file change
+  Auto-restart: true
+
+# ____________________________________________
+# Revert an expansion if clicking backspace
+  undo_backspace: true
+
+# ____________________________________________
+# How many backspace espanso tracks to correct misspelled keywordsMaximum number of backspace 
+# presses espanso keeps track of. For example, this is needed to correctly expand even if typos are typed.
+  backspace_limit: 10
+
+# ____________________________________________
+# If true, Espanso will attempt to preserve the previous clipboard content after an expansion has taken place.
+  preserve_clipboard: true
+
+# ____________________________________________
+# Toggle Espanso on/off
+  toggle_key: off
+
+# ____________________________________________
+# clipboard, inject or auto (auto is default)
+# Using clipboard backend for better Wayland/Hyprland compatibility
+  backend: auto
+
+# ____________________________________________
+# Espanso will first try injecting. If the expansion 
+# is longer than 100 characters - use clipboard instead
+# clipboard_threshold: 300
+
+# ____________________________________________
+# Wayland/Hyprland specific optimizations
+# Use a short delay for clipboard operations to ensure reliability
+  clipboard_delay: 100
+# Enable secure input detection for better Wayland compatibility
+  secure_input_notification: true

@@ -1,0 +1,48 @@
+# Spelling
+
+  matches:
+
+  - trigger: "dissapear"
+    replace: "disappear"
+    propagate_case: true
+
+  - trigger: "definately"
+    replace: "definitely"
+    propagate_case: true
+
+  - trigger: "definetly"
+    replace: "definitely"
+    propagate_case: true
+
+  - trigger: "calender"
+    replace: "calendar"
+    propagate_case: true
+
+  - trigger: "apparantly"
+    replace: "apparently"
+    propagate_case: true
+
+  - trigger: "appearence"
+    replace: "appearance"
+    propagate_case: true
+
+  - trigger: "pronounciation"
+    replace: "pronunciation"
+    propagate_case: true
+
+  - trigger: "seperate"
+    replace: "separate"
+    propagate_case: true
+
+  - trigger: "explenation"
+    replace: "explanation"
+    propagate_case: true
+
+  - trigger: "unfortunatly"
+    replace: "unfortunately"
+    propagate_case: true
+
+  - trigger: "appologize"
+    replace: "apologise"
+    propagate_case: true
+
