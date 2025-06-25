@@ -9,7 +9,7 @@
   icons:
     when: always
     theme: fancy
-    separator: ""
+    separator: " "
 
 #_____________________________________
 # Whether to omit showing symlink targets

@@ -6,8 +6,8 @@
 # Shell
   shell-integration-features = cursor
   confirm-close-surface = true
-  shell-integration = zsh
-  term = xterm-ghostty
+  shell-integration = detect
+#  term = ghostty
 
 #___________________________
 # Mac specific
@@ -17,7 +17,7 @@
 
 #___________________________
 # Visuals
-  theme = Wombat
+  theme = Abernathy
   background-opacity = 0.95
   background-blur = true
   minimum-contrast = 1
