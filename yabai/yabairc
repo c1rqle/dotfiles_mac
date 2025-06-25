@@ -31,7 +31,7 @@
 # ___________________________
 # Animation
   yabai -m config window_animation_duration  0.4
-  yabai -m config window_animation_easing    ease-in-out
+  yabai -m config window_animation_easing 
 
 # ___________________________
  # Enable window manipulation with the mouse
