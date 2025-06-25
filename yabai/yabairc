@@ -71,5 +71,5 @@
   echo "yabai configuration loaded.."
 
 # ___________________________
-# Activating JankyBorders
+# Activating JankyBorders (~/.config/borders/)
   borders &
