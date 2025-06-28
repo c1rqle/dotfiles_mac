@@ -64,7 +64,7 @@
 #_____________________________________
 # ZSH plugins
  ZSH_CUSTOM=~/.config/zsh_custom
- plugins=(git fzf starship colored-man-pages tmux zoxide)
+ plugins=(git fzf zsh-vi-mode starship colored-man-pages tmux zoxide)
 
 #_____________________________________
 # Loading my aliases

@@ -1,5 +1,3 @@
-# for this to work you must configure sudo such that
-# it will be able to run the command without password
 # ___________________________
   yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
   sudo yabai --load-sa
@@ -7,8 +5,8 @@
 # ___________________________
 # Focus (Options: off, autoraise, autofocus)
   yabai -m config focus_follows_mouse     autoraise
-  yabai -m config mouse_follows_focus     on
   yabai -m window --focus                 mouse
+  yabai -m config mouse_follows_focus     on
 
 # ___________________________
 # Layout and spacing
@@ -22,34 +20,35 @@
 
 #___________________________
 # Window appearance
-  yabai -m config menubar_opacity        0.80
-  yabai -m config window_opacity         on
-  yabai -m config active_window_opacity  1.0
-  yabai -m config normal_window_opacity  0.94
   yabai -m config window_shadow          float
+  yabai -m config menubar_opacity        0.80
+  yabai -m config normal_window_opacity  0.88
+  yabai -m config active_window_opacity  1.0
+  yabai -m config window_opacity         on
 
 # ___________________________
 # Animation
-  yabai -m config window_animation_duration  0.4
-  yabai -m config window_animation_easing 
+  yabai -m config window_animation_easing     ease_out_quint
+  yabai -m config window_animation_duration   0.5
+  window_animation_duration                   0.5
 
 # ___________________________
  # Enable window manipulation with the mouse
+  yabai -m config mouse_action2 resize
   yabai -m config mouse_modifier cmd
   yabai -m config mouse_action1 move
-  yabai -m config mouse_action2 resize
 
 # ___________________________
 # Dragging windows on top of each other creates stacking mode (instead of tiling)
-  yabai -m config mouse_drop_action stack
+  yabai -m config mouse_drop_action swap
 
 # ___________________________
 # global settings
-  yabai -m config window_insertion_point       focused
-  yabai -m config window_zoom_persist          on             
   yabai -m config insert_feedback_color        0xffd75f5f     
-  yabai -m config split_ratio                  0.50           
+  yabai -m config window_insertion_point       focused
   yabai -m config split_type                   auto           
+  yabai -m config split_ratio                  0.50           
+  yabai -m config window_zoom_persist          on             
 
 # ___________________________
 # Turn off auto-tiling for specific apps
