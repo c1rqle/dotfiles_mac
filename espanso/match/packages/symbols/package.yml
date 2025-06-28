@@ -2,38 +2,47 @@
 
   matches:
 
-  - trigger: ":arrowright"
-    replace: "→"
+  - trigger: ':arrowright'
+    replace: '→'
 
-  - trigger: ":arrowleft"
-    replace: "←"
+  - trigger: ':arrowleft'
+    replace: '←'
 
-  - trigger: ":arrowup"
-    replace: "↑"
+  - trigger: ':arrowup'
+    replace: '↑'
 
-  - trigger: ":arrowdown"
-    replace: "↓"
+  - trigger: ':arrowdown'
+    replace: '↓'
 
-  - trigger: ":arrowbent"
-    replace: "⤵︎"
+  - trigger: ':arrowbent'
+    replace: '⤵︎'
 
-  - trigger: ":bullet"
-    replace: "•"
+  - trigger: ':bullet'
+    replace: '•'
 
-  - trigger: ":minibullet"
-    replace: "·"
+  - trigger: ':minibullet'
+    replace: '·'
 
-  - trigger: ":pipe"
-    replace: "|"
+  - trigger: ':bar'
+    replace: '―'
 
-  - trigger: ":bar"
-    replace: "―"
+  - trigger: ':dots'
+    replace: '⋯'
 
-  - trigger: ":dots"
-    replace: "⋯"
+  - trigger: ':topbar'
+    replace: '‾‾'
 
-  - trigger: ":topbar"
-    replace: "‾‾"
+  - trigger: ':ca'
+    replace: '≈'
 
-  - trigger: ":ca"
-    replace: "≈"
+  - trigger: ':tild'
+    replace: '~'
+  
+  - trigger: ':pipe'
+    replace: '|'
+
+  - trigger: ':backslash'
+    replace: '\'
+
+  - trigger: ':forwardslash'
+    replace: '/'
