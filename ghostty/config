@@ -18,7 +18,7 @@
 #___________________________
 # Visuals
   theme = Abernathy
-  background-opacity = 0.95
+  background-opacity = 0.88
   background-blur = true
   minimum-contrast = 1
   bold-is-bright = true

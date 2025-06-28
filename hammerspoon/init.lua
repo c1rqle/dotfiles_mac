@@ -142,24 +142,6 @@ end)
   	end)
   end
 
----------------------------------
---- Forcing space 5-8 to an external monitor if one is connected
- hs.hotkey.bind({"cmd"}, "5", function()
-   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 5")
- end)
-----------
- hs.hotkey.bind({"cmd"}, "6", function()
-   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 6")
- end)
-----------
- hs.hotkey.bind({"cmd"}, "7", function()
-   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 7")
- end)
-----------
- hs.hotkey.bind({"cmd"}, "8", function()
-   hs.execute(yabai .. " -m display --focus 2 && " .. yabai .. " -m space --focus 8")
- end)
-
 -----------------------------
 --- Create new space and move to it
   hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "n", function()

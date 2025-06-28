@@ -1,14 +1,15 @@
 #!/bin/bash
 # #D56D9F, ##7F9BB1
-#
+# #DEA2CB
   options=(
   	style=round
-  	width=5.0
+  	width=2.0
     blur_radius=12
   	hidpi=on
     ax_focus=on
     order=above
-    active_color="gradient(top_left=0xffCA6478,bottom_right=0xff7F9BB1),glow=(0xffA98252)" 
+    active_color="gradient(top_left=0xffDEA2CB,bottom_right=0xff7F9BB1)"
     inactive_color="gradient(top_right=0xff222222,bottom_left=0xff222222"
+    glow"(0xffA98252)"
   )
   borders "${options[@]}"
