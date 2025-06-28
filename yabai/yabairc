@@ -30,7 +30,6 @@
 # Animation
   yabai -m config window_animation_easing     ease_out_quint
   yabai -m config window_animation_duration   0.5
-  window_animation_duration                   0.5
 
 # ___________________________
  # Enable window manipulation with the mouse
@@ -68,7 +67,3 @@
 
 # ___________________________
   echo "yabai configuration loaded.."
-
-# ___________________________
-# Activating JankyBorders (~/.config/borders/)
-  borders &

@@ -72,9 +72,9 @@
 
 #_____________________________________
 # fzf
-	export FZF_BASE=/run/current-system/sw/bin/fzf
+#	export FZF_BASE=/run/current-system/sw/bin/fzf
+  set rtp+=/opt/homebrew/opt/fzf
   source $ZSH/oh-my-zsh.sh
-
 #_____________________________________
 # Preferred editor for local and remote sessions
   if [[ -n $SSH_CONNECTION ]]; then
