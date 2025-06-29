@@ -14,7 +14,7 @@
 #_____________________________________
 # Whether to omit showing symlink targets
   no-symlink: false
-  symlink-arrow: "⤵︎"
+  symlink-arrow: "􀉤 "
   hyperlink: always
 
 #_____________________________________

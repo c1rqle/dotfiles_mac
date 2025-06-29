@@ -1,9 +1,7 @@
 #____________________________
-  alias z='cd ..'
-  alias z.='...'
   alias ..='cd ..'
-  alias ..1='...'
-  alias ..2='....'
+  alias .2='...'
+  alias .3='....'
 #____________________________
   alias icat='kitty +kitten icat'
   alias mkdir='mkdir -p'
@@ -22,4 +20,3 @@
   alias tr='lsd -X -A --tree -F'
   alias tr1='lsd -X -A --tree --depth 1 -F'
   alias tr2='lsd -X -A --tree --depth 2 -F'
-#____________________________
