@@ -52,11 +52,11 @@
 # ___________________________
 # Turn off auto-tiling for specific apps
   yabai -m rule --add app='System Preferences'  manage=off
+  yabai -m rule --add app='QuickTime player'    manage=off
   yabai -m rule --add app='BetterTouchTool'     manage=off
   yabai -m rule --add app='System Settings'     manage=off
   yabai -m rule --add app='Shadow PC Beta'      manage=off
   yabai -m rule --add app='Perplexity'          manage=off
-  yabai -m rule --add app='Font Book'           manage=off
   yabai -m rule --add app='Bitwarden'           manage=off
   yabai -m rule --add app='App Store'           manage=off
   yabai -m rule --add app='Raycast'             manage=off
