@@ -12,7 +12,7 @@
     replace: "git commit -m '$|$' "
 
   - trigger: "gitp"
-    replace: "git push origin"
+    replace: "git push"
   
   - trigger: "gitmain"
     replace: "git checkout main"

@@ -12,37 +12,6 @@
 
   - trigger: ":shizuku-start"
     replace: "adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
-# ____________________________________________
-# SSH
-  - trigger: "sshmac"
-    replace: "ssh tb@mbp.local"
-    word: true
-
-  - trigger: "scpfromssh"
-    replace: "scp tb@mbp.local:/Users/tb/$|$ /home/tb/ssh_files"
-    word: true
-
-  - trigger: "scptossh"
-    replace: "scp /home/tb/$|$ tb@mbp.local:/Users/tb/ssh_files/"
-    word: true
-
-  - trigger: ":torrent"
-    replace: "{{form1.file}}"
-    vars:
-      - name: files
-        type: shell
-        params:
-          cmd: "find ~/Downloads/torrents -maxdepth 1"
-      - name: form1
-        type: form
-        params:
-          layout: |
-            Select file:
-            [[file]]
-          fields:
-            file:
-              type: list
-              values: "{{files}}"
 
 # ____________________________________________
 # Terminal 

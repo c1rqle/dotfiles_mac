@@ -2,6 +2,19 @@
 
   matches:
 
+  - trigger: "youre"
+    replace: "you're"
+    propagate_case: true
+
+  - trigger: "im"
+    replace: "I'm"
+    propagate_case: true
+    word: true
+
+  - trigger: "yall"
+    replace: "y'all"
+    propagate_case: true
+
   - trigger: "dissapear"
     replace: "disappear"
     propagate_case: true
