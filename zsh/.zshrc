@@ -64,7 +64,7 @@
 #_____________________________________
 # ZSH plugins
  ZSH_CUSTOM=~/.config/zsh_custom
- plugins=(git fzf zsh-vi-mode starship colored-man-pages tmux zoxide)
+ plugins=(git fzf colored-man-pages tmux zoxide)
 
 #_____________________________________
 # Loading my aliases
@@ -91,3 +91,4 @@
 #_____________________________________
 # Activating zoxide
   eval "$(zoxide init --cmd c zsh)"
+  eval "$(starship init zsh)"

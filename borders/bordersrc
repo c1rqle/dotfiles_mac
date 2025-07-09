@@ -3,7 +3,7 @@
 # #DEA2CB
   options=(
   	style=round
-  	width=6.0
+  	width=4.0
   	hidpi=off
     ax_focus=on
     order=above
