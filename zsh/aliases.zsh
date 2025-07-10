@@ -1,7 +1,8 @@
 #____________________________
   alias ..='cd ..'
-  alias .2='...'
-  alias .3='....'
+  alias z='cd ..'
+  alias zz='...'
+  alias zzz='....'
 #____________________________
   alias icat='kitty +kitten icat'
   alias mkdir='mkdir -p'

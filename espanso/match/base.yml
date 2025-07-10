@@ -13,6 +13,11 @@
   - trigger: ":shizuku-start"
     replace: "adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
 
+  - trigger: ":uber"
+    replace: "cd /Users/tb/Library/'Application Support'/Übersicht"
+
+  - trigger: ":bar"
+    replace: "cd /Users/tb/Library/'Application Support'/Übersicht/widgets/simple-bar"
 # ____________________________________________
 # Terminal 
   - trigger: "icat"

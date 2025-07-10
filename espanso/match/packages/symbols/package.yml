@@ -23,7 +23,7 @@
   - trigger: ':minibullet'
     replace: '·'
 
-  - trigger: ':bar'
+  - trigger: ':border'
     replace: '―'
 
   - trigger: ':dots'
@@ -46,3 +46,6 @@
 
   - trigger: ':forwardslash'
     replace: '/'
+
+  - trigger: ':cmd'
+    replace: '􀆔'
