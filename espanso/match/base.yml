@@ -3,7 +3,7 @@
   matches:
 
 # ____________________________________________
-# scrcpy open external display + best keyboard/mouse options
+# Android related
   - trigger: ":scrcpy-sdk"
     replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display"
 
@@ -13,6 +13,8 @@
   - trigger: ":shizuku-start"
     replace: "adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
 
+# ____________________________________________
+# Shortcuts (basically Aliases, but I prefer these)
   - trigger: ":uber"
     replace: "cd /Users/tb/Library/'Application Support'/Übersicht"
 
@@ -25,15 +27,12 @@
     word: true
 
   - trigger: ":mkdir"
-    replace: "mkdir -p {{form1.folder}} && cd {{form1.folder}}"
+    replace: "mkdir -p {{newfolder.folder}} && cd {{newfolder.folder}}"
     vars:
-      - name: form1
+      - name: newfolder
         type: form
         params:
           layout: "Folder name: [[folder]]"
-
-  - trigger: ":div"
-    replace: "<div>$|$</div> "
 
   - trigger: ":grep"
     replace: "| grep '$|$' "
@@ -41,5 +40,51 @@
   - trigger: ":less"
     replace: "| less "
 
-  - trigger: 'btctl'
-    replace: 'bluetoothctl'
+# ____________________________________________
+# html (wip)
+  - trigger: ":html5"
+    replace: |
+      <!DOCTYPE html>
+      <html lang='en'>
+        <head>
+          <meta charset="UTF-8">
+          <meta name='viewport' content='width=device-width, initial-scale=1'>
+          <title>Title</title>
+          <link href='css/style.css' rel='stylesheet'>
+        </head>
+        <body>
+          $|$
+        </body>
+      </html>
+
+  - trigger: ":h1"
+    replace: <h1>$|$</h1>
+  
+  - trigger: ":h2"
+    replace: <h2>$|$</h2>
+  
+  - trigger: ":h3"
+    replace: <h3>$|$</h3>
+  
+  - trigger: ":p"
+    replace: <p>$|$</p>
+
+  - trigger: ":div"
+    replace: |
+      <div>
+      $|$
+      </div>
+
+# ____________________________________________
+# CSS (wip)
+  - trigger: ":cssclass"
+    replace: |
+      .
+
+  - trigger: ":class"
+    replace: ".{{cssclass.cssclass}} {$|$} "
+    vars:
+      - name: cssclass
+        type: form
+        params:
+          layout: "Class name: [[cssclass]]"
