@@ -24,7 +24,7 @@ hs.alert.show("Config loaded")
 -------------------------------
 --- App shortcuts
 hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
-	hs.application.launchOrFocus("kitty.app")
+	hs.application.launchOrFocus("Ghostty.app")
 end)
 
 hs.hotkey.bind({ "cmd", "ctrl" }, "f", function()

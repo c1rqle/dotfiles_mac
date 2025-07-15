@@ -60,10 +60,8 @@
   yabai -m rule --add app='Shadow PC Beta'      manage=off
   yabai -m rule --add app='Perplexity'          manage=off
   yabai -m rule --add app='Bitwarden'           manage=off
-  yabai -m rule --add app='App Store'           manage=off
   yabai -m rule --add app='Raycast'             manage=off
   yabai -m rule --add app='Preview'             manage=off
-  yabai -m rule --add app='ChatGPT'             manage=off
   yabai -m rule --add app='Finder'              manage=off
   yabai -m rule --add app='VLC'                 manage=off
 

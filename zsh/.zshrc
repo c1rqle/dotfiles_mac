@@ -2,12 +2,12 @@
   export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
   export PATH="/opt/homebrew/bin:$PATH >> ~/.zprofile && source ~/.zprofile"
   export ZSH="$HOME/.oh-my-zsh"
-#_________________________ 
-  export PATH=/opt/homebrew/opt/rustup/bin:$PATH 
+
 #_________________________ 
   export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH
   export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
   export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+  export PATH=/opt/homebrew/opt/rustup/bin:$PATH 
   
 #_________________________ 
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -49,9 +49,21 @@
   zstyle ':omz:update' mode reminder
   zstyle ':omz:update' frequency 13
 
+#  Ctrl	'^'. Alt	'^['
+#  bindkey '^[l' forward-char    # Alt+L → Move forward one letter
+#  bindkey '^[h' backward-char   # Alt+H → Move backward one letter
+#  bindkey '^[l' forward-word    # Alt+L → Move forward one word
+#  bindkey '^[h' backward-word   # Alt+H → Move backward one word
+#
+# Move by letter (Alt+H = left, Alt+L = right)
+bindkey '^[h' backward-char    # Alt+H → move left (like Vim 'h')
+bindkey '^[l' forward-char     # Alt+L → move right (like Vim 'l')
 
-  bindkey '^[[1;9C' forward-word
-  bindkey '^[[1;9D' backward-word
+# Move by word (Ctrl+Alt+H = left, Ctrl+Alt+L = right)
+bindkey '^[^h' backward-word   # Ctrl+Alt+H → move back a word
+bindkey '^[^l' forward-word    # Ctrl+Alt+L → move forward a word
+ # bindkey '^[[1;9C' forward-word
+ # bindkey '^[[1;9D' backward-word
 
 #_____________________________________
 # Disable autocorrect. I find it incredibly annoying.
