@@ -54,6 +54,7 @@
   ignore-globs:
     - .git
     - .bashrc
+    - .lesshst
     - .bash_profile
     - .bash_history
     - .bitwarden-ssh-agent.sock
@@ -61,9 +62,14 @@
     - .tldrc
     - .aspnet
     - .DS_Store
-    - .zcompdump-MacBookPro-5.9
-    - .zcompdump-MacBookPro-5.9.zwc
     - .zsh_history
     - .rustup
     - .z
+    - .zcompdump
+    - .zcompdump-MacBookPro-5.9
+    - .zcompdump-MacBookPro-5.9.zwc
+    - .zcompdump-mbp-5.9
+    - .zcompdump-mbp-5.9.zwc
+    - .zcompdump-tb-mbp-5.9 
+    - .zcompdump-tb-mbp-5.9.zwc
 

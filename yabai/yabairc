@@ -62,6 +62,7 @@
   yabai -m rule --add app='Bitwarden'           manage=off
   yabai -m rule --add app='Raycast'             manage=off
   yabai -m rule --add app='Preview'             manage=off
+  yabai -m rule --add app='qView'               manage=off
   yabai -m rule --add app='Finder'              manage=off
   yabai -m rule --add app='VLC'                 manage=off
 
