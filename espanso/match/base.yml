@@ -2,7 +2,7 @@
 
   matches:
 
-# ____________________________________________
+# ____________________
 # Android related
   - trigger: ":scrcpy-sdk"
     replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display"
@@ -13,49 +13,7 @@
   - trigger: ":shizuku-start"
     replace: "adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
 
-# ____________________________________________
-# Shortcuts (basically Aliases, but I prefer these)
-  - trigger: ":uber"
-    replace: "cd /Users/tb/Library/'Application Support'/Übersicht"
-
-  - trigger: ":bar"
-    replace: "cd /Users/tb/Library/'Application Support'/Übersicht/widgets/simple-bar"
-
-  - trigger: ":dune"
-    replace: "dune awakening"
-# ____________________________________________
-# Terminal 
-  - trigger: "icat"
-    replace: "kitty +kitten icat $|$"
-    word: true
-
-  - trigger: "ghthemes"
-    replace: "ghostty +list-themes"
-
-  - trigger: "ghkey"
-    replace: "ghostty +list-keybinds | less"
-
-  - trigger: "ghfonts"
-    replace: "ghostty +list-fonts | less"
-
-  - trigger: "ghactions"
-    replace: "ghostty +list-actions | less"
-
-  - trigger: ":mkdir"
-    replace: "mkdir -p {{newfolder.folder}} && cd {{newfolder.folder}}"
-    vars:
-      - name: newfolder
-        type: form
-        params:
-          layout: "Folder name: [[folder]]"
-
-  - trigger: ":grep"
-    replace: "| grep '$|$' "
-
-  - trigger: ":less"
-    replace: "| less "
-
-# ____________________________________________
+# ____________________
 # html (wip)
   - trigger: "/html5"
     replace: |
@@ -90,7 +48,7 @@
       $|$
       </div>
 
-# ____________________________________________
+# ____________________
 # CSS (wip)
   - trigger: "/cssclass"
     replace: |
