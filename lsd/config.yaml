@@ -23,7 +23,7 @@
 
 #_____________________________________
 # How lists are displayed
-  header: false
+  header: true
   date: relative
   size: short
 
