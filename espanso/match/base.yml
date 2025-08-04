@@ -15,7 +15,7 @@
 
 # ____________________
 # html (wip)
-  - trigger: "/html5"
+  - trigger: ":html5"
     replace: |
       <!DOCTYPE html>
       <html lang='en'>
@@ -30,19 +30,19 @@
         </body>
       </html>
 
-  - trigger: "/h1"
+  - trigger: ":h1"
     replace: <h1>$|$</h1>
   
-  - trigger: "/h2"
+  - trigger: ":h2"
     replace: <h2>$|$</h2>
   
-  - trigger: "/h3"
+  - trigger: ":h3"
     replace: <h3>$|$</h3>
   
-  - trigger: "/p"
+  - trigger: ":p"
     replace: <p>$|$</p>
 
-  - trigger: "/div"
+  - trigger: ":div"
     replace: |
       <div>
       $|$
@@ -50,11 +50,11 @@
 
 # ____________________
 # CSS (wip)
-  - trigger: "/cssclass"
+  - trigger: ":cssclass"
     replace: |
       .
 
-  - trigger: "/class"
+  - trigger: ":class"
     replace: ".{{cssclass.cssclass}} {$|$} "
     vars:
       - name: cssclass

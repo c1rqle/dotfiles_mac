@@ -11,5 +11,6 @@
     active_color="gradient(top_left=0xffDEA2CB,bottom_right=0xff7F9BB1)"
     inactive_color="gradient(top_right=0xff222222,bottom_left=0xff222222"
     glow"(0xffA98252)"
+    blacklist="VLC"
   )
   borders "${options[@]}"
