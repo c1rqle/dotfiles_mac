@@ -1,0 +1,39 @@
+# Terminal
+  matches:
+
+  - trigger: ":simple"
+    replace: "cd /Users/tb/Library/'Application Support'/Übersicht/widgets/simple-bar"
+#
+  - trigger: "icat"
+    replace: "kitty +kitten icat "
+    word: true
+
+# ____________________
+# Ghostty related
+  - trigger: "ghthemes"
+    replace: "ghostty +list-themes"
+
+  - trigger: "ghkey"
+    replace: "ghostty +list-keybinds | less"
+
+  - trigger: "ghfonts"
+    replace: "ghostty +list-fonts | less"
+
+  - trigger: "ghactions"
+    replace: "ghostty +list-actions | less"
+
+# ____________________
+# 
+  - trigger: ":mkdir"
+    replace: "mkdir -p {{newfolder.folder}} && cd {{newfolder.folder}}"
+    vars:
+      - name: newfolder
+        type: form
+        params:
+          layout: "Folder name: [[folder]]"
+
+  - trigger: ":grep"
+    replace: "| grep '$|$' "
+
+  - trigger: ":less"
+    replace: "| less "
