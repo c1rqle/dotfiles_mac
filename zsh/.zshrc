@@ -49,15 +49,9 @@
   zstyle ':omz:update' mode reminder
   zstyle ':omz:update' frequency 13
 
-#  Ctrl	'^'. Alt	'^['
-#  bindkey '^[l' forward-char    # Alt+L → Move forward one letter
-#  bindkey '^[h' backward-char   # Alt+H → Move backward one letter
-#  bindkey '^[l' forward-word    # Alt+L → Move forward one word
-#  bindkey '^[h' backward-word   # Alt+H → Move backward one word
-#
 # Move by letter (Alt+H = left, Alt+L = right)
-bindkey '^[h' backward-char    # Alt+H → move left (like Vim 'h')
-bindkey '^[l' forward-char     # Alt+L → move right (like Vim 'l')
+bindkey '^[h' backward-char    # Alt+H → move left
+bindkey '^[l' forward-char     # Alt+L → move right
 
 # Move by word (Ctrl+Alt+H = left, Ctrl+Alt+L = right)
 bindkey '^[^h' backward-word   # Ctrl+Alt+H → move back a word
