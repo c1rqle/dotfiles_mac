@@ -1,0 +1,28 @@
+# .config/ghostty
+# ghostty +list-keybinds
+
+  keybind = ctrl+shift+g=reload_config
+
+# ____________________________________________
+  macos-option-as-alt=left
+  keybind = alt+left=unbind
+  keybind = alt+right=unbind 
+
+# ____________________________________________
+# Originally: ,=open config k=clear_screen. q=quit. a=select_all 
+  keybind = ctrl+comma=unbind
+  keybind = super+k=unbind
+  keybind = super+q=unbind
+  keybind = super+a=unbind
+
+# ____________________________________________
+# Tab navigation. ctrl+shift+t=new_tab. ctrl+tab=cycle
+  keybind = ctrl+shift+physical:one=goto_tab:1
+  keybind = ctrl+shift+physical:two=goto_tab:2
+  keybind = ctrl+shift+physical:three=goto_tab:3
+  keybind = ctrl+shift+physical:four=goto_tab:4
+  keybind = ctrl+shift+physical:five=goto_tab:5
+  keybind = ctrl+shift+physical:six=goto_tab:6
+  keybind = ctrl+shift+physical:seven=goto_tab:7
+  keybind = ctrl+shift+physical:eight=goto_tab:8
+  keybind = ctrl+shift+physical:nine=last_tab

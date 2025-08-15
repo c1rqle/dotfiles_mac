@@ -1,0 +1,23 @@
+# __________________________
+# Configuration Management
+  config-file = "appearance"
+  config-file = "keybinds"
+  config-file = "fonts"
+
+#___________________________
+# Shell
+  confirm-close-surface = false
+  shell-integration = detect
+  term = xterm-ghostty
+
+#___________________________
+# General settings
+  clipboard-trim-trailing-spaces = true
+  quit-after-last-window-closed = true
+  app-notifications = clipboard-copy
+  clipboard-paste-protection = true
+  desktop-notifications = true
+  focus-follows-mouse = true
+  copy-on-select = true
+  enquiry-response = ""       
+#___________________________

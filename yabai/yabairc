@@ -41,7 +41,7 @@
 
 # ___________________________
 # Dragging windows on top of each other creates stacking mode (instead of tiling)
-  yabai -m config mouse_drop_action swap
+  yabai -m config mouse_drop_action stack
 
 # ___________________________
 # global settings
