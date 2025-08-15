@@ -49,16 +49,6 @@
   zstyle ':omz:update' mode reminder
   zstyle ':omz:update' frequency 13
 
-# Move by letter (Alt+H = left, Alt+L = right)
-bindkey '^[h' backward-char    # Alt+H → move left
-bindkey '^[l' forward-char     # Alt+L → move right
-
-# Move by word (Ctrl+Alt+H = left, Ctrl+Alt+L = right)
-bindkey '^[^h' backward-word   # Ctrl+Alt+H → move back a word
-bindkey '^[^l' forward-word    # Ctrl+Alt+L → move forward a word
- # bindkey '^[[1;9C' forward-word
- # bindkey '^[[1;9D' backward-word
-
 #_____________________________________
 # Disable autocorrect. I find it incredibly annoying.
   ENABLE_CORRECTION="false"
