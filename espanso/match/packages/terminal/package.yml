@@ -8,6 +8,12 @@
     replace: "kitty +kitten icat "
     word: true
 
+  - trigger: "estart"
+    replace: "espanso start"
+
+  - trigger: "estop"
+    replace: "espanso stop"
+
 # ____________________
 # Ghostty related
   - trigger: "ghthemes"

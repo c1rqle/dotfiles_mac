@@ -11,6 +11,10 @@
     replace: "you'll"
     propagate_case: true
 
+  - trigger: "whats"
+    replace: "what's"
+    propagate_case: true
+
   - trigger: "youre"
     replace: "you're"
     propagate_case: true

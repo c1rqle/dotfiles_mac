@@ -1,4 +1,8 @@
 #____________________________
+  alias reboot='sudo reboot'
+  alias poweroff='sudo poweroff'
+
+#____________________________
   alias ..='cd ..'
   alias z='cd ..'
   alias zz='...'

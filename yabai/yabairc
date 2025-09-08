@@ -57,7 +57,7 @@
   yabai -m rule --add app='QuickTime player'    manage=off
   yabai -m rule --add app='BetterTouchTool'     manage=off
   yabai -m rule --add app='System Settings'     manage=off
-  yabai -m rule --add app='Shadow PC Beta'      manage=off
+  yabai -m rule --add app='Shadow PC'      manage=off
   yabai -m rule --add app='Perplexity'          manage=off
   yabai -m rule --add app='Bitwarden'           manage=off
   yabai -m rule --add app='Raycast'             manage=off
