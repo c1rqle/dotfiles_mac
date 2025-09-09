@@ -27,7 +27,7 @@ hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
 	hs.application.launchOrFocus("ghostty.app")
 end)
 
-hs.hotkey.bind({ "cmd", "ctrl" }, "f", function()
+hs.hotkey.bind({ "cmd", "ctrl" }, "e", function()
 	hs.application.launchOrFocus("finder.app")
 end)
 
