@@ -20,7 +20,7 @@
 
 #_____________________________________
 # Starship is handling the shell functionality. LS_COLORS and LSD are for bonus colours :)
-  export LS_COLORS="$(vivid generate tokyonight-night)"
+  export LS_COLORS="$(vivid generate jellybeans)"
 
 #_____________________________________
   setopt autocd extendedglob nomatch notify

@@ -1,31 +1,36 @@
 # Terminal
   matches:
 
-  - trigger: ":simple"
+  - trigger: ":simplebar"
     replace: "cd /Users/tb/Library/'Application Support'/Übersicht/widgets/simple-bar"
 #
+  - trigger: ":gr"
+    replace: "| grep '$|$' "
+    word: true
+
+  - trigger: ":le"
+    replace: "| less "
+    word: true
+
   - trigger: "icat"
     replace: "kitty +kitten icat "
     word: true
-
-  - trigger: "estart"
-    replace: "espanso start"
 
   - trigger: "estop"
     replace: "espanso stop"
 
 # ____________________
 # Ghostty related
-  - trigger: "ghthemes"
+  - trigger: "gh-theme"
     replace: "ghostty +list-themes"
 
-  - trigger: "ghkey"
+  - trigger: "gh-keys"
     replace: "ghostty +list-keybinds | less"
 
-  - trigger: "ghfonts"
+  - trigger: "gh-fonts"
     replace: "ghostty +list-fonts | less"
 
-  - trigger: "ghactions"
+  - trigger: "gh-actions"
     replace: "ghostty +list-actions | less"
 
 # ____________________
@@ -38,8 +43,3 @@
         params:
           layout: "Folder name: [[folder]]"
 
-  - trigger: ":grep"
-    replace: "| grep '$|$' "
-
-  - trigger: ":less"
-    replace: "| less "

@@ -79,7 +79,7 @@ end)
 
 ---------------------------------
 --- Float window and center
-  hs.hotkey.bind({ "cmd", "shift" }, "c", function()
+  hs.hotkey.bind({ "cmd", "shift" }, "f", function()
   	hs.execute(yabai .. " -m window --toggle float")
   	hs.execute(yabai .. " -m window --grid 6:6:1:1:4:4")
   end)

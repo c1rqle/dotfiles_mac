@@ -15,9 +15,9 @@
   alias q='open '
 
 #____________________________
-  alias brewss='brew search'
-  alias brews='brew install'
-  alias brewi='brew info'
+  alias brew-Ss='brew search'
+  alias brew-S='brew install'
+  alias brew-I='brew info'
 
 # ___________________________ 
 # -X=sort by extension. F=classify type. t=Sort by time. r=reverse sort
