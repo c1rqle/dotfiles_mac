@@ -48,6 +48,6 @@
 # ____________________________________________
 # Wayland/Hyprland specific optimizations
 # Use a short delay for clipboard operations to ensure reliability
-  clipboard_delay: 100
+#  clipboard_delay: 100
 # Enable secure input detection for better Wayland compatibility
-  secure_input_notification: true
+#  secure_input_notification: true

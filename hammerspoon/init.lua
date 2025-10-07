@@ -3,6 +3,13 @@
 hs.loadSpoon("ModalMgr", "HSKeybindings")
 local MiddleClickDragScroll = hs.loadSpoon("MiddleClickDragScroll"):start()
 local LeftRightHotkey = hs.loadSpoon("LeftRightHotkey"):start()
+local FnMate = hs.loadSpoon("FnMate")
+
+local module = require("hs.libosascript")
+local module = require("hs.osascript")
+local fnutils = require("hs.fnutils")
+
+local module = require("hs.spaces")
 
 -------------------------------
 --- Reload Hammerspoon config at save
@@ -31,8 +38,8 @@ hs.hotkey.bind({ "cmd", "ctrl" }, "e", function()
 	hs.application.launchOrFocus("finder.app")
 end)
 
-hs.hotkey.bind({ "cmd", "ctrl" }, "å", function()
-  hs.application.launchOrFocus("ChatGPT.app")
+hs.hotkey.bind({ "cmd", "ctrl" }, "i", function()
+	hs.application.launchOrFocus("arc.app")
 end)
 
 -------------------------------
@@ -52,25 +59,25 @@ end)
 --- Yabai
 local yabai = "/Users/tb/.local/bin/yabai"
 
-hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "r", function()
+hs.hotkey.bind({ "cmd", "alt" }, "r", function()
 	hs.execute(yabai .. " --restart-service")
 end)
 
 ---------------------------------
 --- Window navigation. Binding it to "left CMD" to not break any system shortcuts 
-  LeftRightHotkey:bind({ "lcmd" }, "h", function()
+  LeftRightHotkey:bind({ "lalt" }, "h", function()
     hs.execute(yabai .. " -m window --focus west")
   end)
 ----------
-  LeftRightHotkey:bind({ "lCmd" }, "j", function()
+  LeftRightHotkey:bind({ "lalt" }, "j", function()
   	hs.execute(yabai .. " -m window --focus south")
   end)
 ----------
-  LeftRightHotkey:bind({ "lCmd" }, "k", function()
+  LeftRightHotkey:bind({ "lalt" }, "k", function()
   	hs.execute(yabai .. " -m window --focus north")
   end)
 ----------
-  LeftRightHotkey:bind({ "lCmd" }, "l", function()
+  LeftRightHotkey:bind({ "lalt" }, "l", function()
   	hs.execute(yabai .. " -m window --focus east")
   end)
 
@@ -85,12 +92,12 @@ end)
   end)
 ---------------------------------
 --- Sticky/pin to top
-  hs.hotkey.bind({ "cmd", "shift" }, "p", function()
+  hs.hotkey.bind({ "cmd", "shift" }, "s", function()
   	hs.execute(yabai .. " -m window --toggle sticky")
   end)
 ---------------------------------
 --- Fullscreen/parent/split toggles
-  hs.hotkey.bind({ "cmd", "shift" }, "f", function()
+  hs.hotkey.bind({ "cmd", "shift" }, "o", function()
   	hs.execute(yabai .. " -m window --toggle zoom-fullscreen")
   end)
 ----------
@@ -102,8 +109,6 @@ end)
   	hs.execute(yabai .. " -m window --toggle split")
   end)
 
----------------------------------
---- Make windows in a space equal size
   hs.hotkey.bind({ "cmd", "shift" }, "b", function()
   	hs.execute(yabai .. " -m space --balance")
   end)
@@ -129,7 +134,7 @@ end)
 -------------------------
 --- Navigate the spaces with cmd+1-9
   for i = 1, 9 do
-  	hs.hotkey.bind({ "cmd" }, tostring(i), function()
+  	hs.hotkey.bind({ "alt" }, tostring(i), function()
   		hs.execute(yabai .. " -m space --focus " .. i)
   	end)
   end
@@ -144,7 +149,7 @@ end)
 
 -----------------------------
 --- Create new space and move to it
-  hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "n", function()
+  hs.hotkey.bind({ "cmd", "alt" }, "n", function()
       local output, status = hs.execute("/Users/tb/.local/bin/yabai -m query --spaces")
       if status then
           local spaces = hs.json.decode(output)
@@ -166,7 +171,7 @@ end)
 
 -----------------------------
 --- Remove last space added
-  hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "w", function()
+  hs.hotkey.bind({ "cmd", "alt" }, "w", function()
   	hs.execute([[ /bin/bash -c '
       index=$(yabai -m query --spaces | jq "map(select(.\"is-native-fullscreen\" == false))[-1].index")
       yabai -m space --destroy $index

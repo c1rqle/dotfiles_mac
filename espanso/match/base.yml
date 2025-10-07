@@ -32,15 +32,19 @@
 
   - trigger: ":h1"
     replace: <h1>$|$</h1>
+    word: true
   
   - trigger: ":h2"
     replace: <h2>$|$</h2>
+    word: true
   
   - trigger: ":h3"
     replace: <h3>$|$</h3>
+    word: true
   
   - trigger: ":p"
     replace: <p>$|$</p>
+    word: true
 
   - trigger: ":div"
     replace: |

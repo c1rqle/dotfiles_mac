@@ -2,73 +2,102 @@
 
   matches:
 
+  - trigger: "im"
+    replace: "I'm "
+    propagate_case: true
+    word: true
+
+  - trigger: "illl"
+    replace: "I'll "
+    propagate_case: true
+    word: true
+
+  - trigger: "welll"
+    replace: "we'll "
+    propagate_case: true
+    word: true
+
+  - trigger: "weree"
+    replace: "we're "
+    propagate_case: true
+    word: true
+
   - trigger: "its"
-    replace: "it's"
+    replace: "it's "
     propagate_case: true
     word: true
 
   - trigger: "youll"
-    replace: "you'll"
+    replace: "you'll "
     propagate_case: true
+    word: true
 
   - trigger: "whats"
     replace: "what's"
     propagate_case: true
+    word: true
 
   - trigger: "youre"
     replace: "you're"
-    propagate_case: true
-
-  - trigger: "im"
-    replace: "I'm"
     propagate_case: true
     word: true
 
   - trigger: "yall"
     replace: "y'all"
     propagate_case: true
+    word: true
 
   - trigger: "dissapear"
     replace: "disappear"
     propagate_case: true
+    word: true
 
   - trigger: "definately"
     replace: "definitely"
     propagate_case: true
+    word: true
 
   - trigger: "definetly"
     replace: "definitely"
     propagate_case: true
+    word: true
 
   - trigger: "calender"
     replace: "calendar"
     propagate_case: true
+    word: true
 
   - trigger: "apparantly"
     replace: "apparently"
     propagate_case: true
+    word: true
 
   - trigger: "appearence"
     replace: "appearance"
     propagate_case: true
+    word: true
 
   - trigger: "pronounciation"
     replace: "pronunciation"
     propagate_case: true
+    word: true
 
   - trigger: "seperate"
     replace: "separate"
     propagate_case: true
+    word: true
 
   - trigger: "explenation"
     replace: "explanation"
     propagate_case: true
+    word: true
 
   - trigger: "unfortunatly"
     replace: "unfortunately"
     propagate_case: true
+    word: true
 
   - trigger: "appologize"
     replace: "apologise"
     propagate_case: true
-
+    word: true
