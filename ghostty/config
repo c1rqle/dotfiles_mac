@@ -6,18 +6,18 @@
 
 #___________________________
 # Shell
-  confirm-close-surface = false
-  shell-integration = detect
-  term = xterm-ghostty
+  confirm-close-surface   = false
+  shell-integration       = zsh
+  term                    = xterm-ghostty
 
 #___________________________
 # General settings
-  clipboard-trim-trailing-spaces = true
-  quit-after-last-window-closed = true
-  app-notifications = clipboard-copy
-  clipboard-paste-protection = true
-  desktop-notifications = true
-  focus-follows-mouse = true
-  copy-on-select = true
-  enquiry-response = ""       
+  copy-on-select                  = true
+  clipboard-paste-protection      = true
+  clipboard-trim-trailing-spaces  = true
+  quit-after-last-window-closed   = true
+  app-notifications               = clipboard-copy
+  desktop-notifications           = true
+  focus-follows-mouse             = true
+  enquiry-response                = ""       
 #___________________________

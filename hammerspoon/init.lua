@@ -1,15 +1,19 @@
--------------------------------
+-----------------------------
 --- Enabling spoons
-hs.loadSpoon("ModalMgr", "HSKeybindings")
+ hs.loadSpoon("ModalMgr", "HSKeybindings", "FnMate", "ReloadConfiguration", "fnutils")
+--
 local MiddleClickDragScroll = hs.loadSpoon("MiddleClickDragScroll"):start()
 local LeftRightHotkey = hs.loadSpoon("LeftRightHotkey"):start()
-local FnMate = hs.loadSpoon("FnMate")
 
 local module = require("hs.libosascript")
 local module = require("hs.osascript")
-local fnutils = require("hs.fnutils")
-
 local module = require("hs.spaces")
+
+-------------------------------
+--- hs.ipc. enables the use of the hs commmand in the terminal
+local USERDATA_TAG = "hs.ipc"
+local module = require("hs.libipc")
+local module = require("hs.ipc")
 
 -------------------------------
 --- Reload Hammerspoon config at save
@@ -39,29 +43,57 @@ hs.hotkey.bind({ "cmd", "ctrl" }, "e", function()
 end)
 
 hs.hotkey.bind({ "cmd", "ctrl" }, "i", function()
-	hs.application.launchOrFocus("arc.app")
+	hs.application.launchOrFocus("Zen.app")
+end)
+
+hs.hotkey.bind({ "cmd", "ctrl" }, "m", function()
+	hs.application.launchOrFocus("Spotify.app")
 end)
 
 -------------------------------
 -- Disable the default macOS hide functionality
-hs.hotkey.bind({"cmd"}, "h", function()
-    local app = hs.application.frontmostApplication()
-    hs.alert.show("Hide disabled for " .. app:name())
-end)
-
+  hs.hotkey.bind({"cmd"}, "h", function()
+      local app = hs.application.frontmostApplication()
+  end)
 -------------------------------
 -- And rebinding it ↑
-hs.hotkey.bind({"cmd", "shift", }, "-", function()
-    hs.application.frontmostApplication():hide()
+  hs.hotkey.bind({"cmd", "shift", }, "-", function()
+      hs.application.frontmostApplication():hide()
+  end)
+
+-------------------------------
+-- Disable default Cmd+Q quit
+local eventtap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
+    local flags = event:getFlags()
+    local keyCode = event:getKeyCode()
+    -- keyCode 12 corresponds to 'q'
+    if keyCode == 12 and flags.cmd and not flags.shift then
+        -- suppress Cmd+Q default action
+        return true
+    end
+    return false
 end)
+eventtap:start()
+-------------------------------
+-- Bind Cmd+Shift+Q to quit the frontmost app
+hs.hotkey.bind({"cmd", "shift"}, "q", function()
+    local app = hs.application.frontmostApplication()
+    if app then
+        app:kill()
+    end
+end)
+
+ LeftRightHotkey:bind({ "lcmd", "lalt" }, "h", function()
+    hs.execute("osascript -e 'tell application id 'tracesOf.Uebersicht' to refresh' ")
+  end)
 
 -------------------------------
 --- Yabai
-local yabai = "/Users/tb/.local/bin/yabai"
-
-hs.hotkey.bind({ "cmd", "alt" }, "r", function()
-	hs.execute(yabai .. " --restart-service")
-end)
+  local yabai = "/Users/tb/.local/bin/yabai"
+  
+  hs.hotkey.bind({ "cmd", "alt" }, "r", function()
+  	hs.execute(yabai .. " --restart-service")
+  end)
 
 ---------------------------------
 --- Window navigation. Binding it to "left CMD" to not break any system shortcuts 
@@ -92,7 +124,7 @@ end)
   end)
 ---------------------------------
 --- Sticky/pin to top
-  hs.hotkey.bind({ "cmd", "shift" }, "s", function()
+  hs.hotkey.bind({ "cmd", "shift" }, "p", function()
   	hs.execute(yabai .. " -m window --toggle sticky")
   end)
 ---------------------------------
@@ -134,7 +166,7 @@ end)
 -------------------------
 --- Navigate the spaces with cmd+1-9
   for i = 1, 9 do
-  	hs.hotkey.bind({ "alt" }, tostring(i), function()
+  	hs.hotkey.bind({ "cmd" }, tostring(i), function()
   		hs.execute(yabai .. " -m space --focus " .. i)
   	end)
   end
@@ -148,8 +180,8 @@ end)
   end
 
 -----------------------------
---- Create new space and move to it
-  hs.hotkey.bind({ "cmd", "alt" }, "n", function()
+----- Create new space and move to it
+  hs.hotkey.bind({ "cmd", "ctrl", "alt" }, "n", function()
       local output, status = hs.execute("/Users/tb/.local/bin/yabai -m query --spaces")
       if status then
           local spaces = hs.json.decode(output)
@@ -168,14 +200,11 @@ end)
           hs.alert.show("Failed to create space")
       end
   end)
-
+--
 -----------------------------
 --- Remove last space added
-  hs.hotkey.bind({ "cmd", "alt" }, "w", function()
-  	hs.execute([[ /bin/bash -c '
-      index=$(yabai -m query --spaces | jq "map(select(.\"is-native-fullscreen\" == false))[-1].index")
-      yabai -m space --destroy $index
-      next_index=$(yabai -m query --spaces | jq "map(select(.\"is-native-fullscreen\" == false))[0].index")
-      yabai -m space --focus $next_index
-    ' ]])
+  hs.hotkey.bind({ "cmd", "ctrl", "alt" }, "w", function()
+    hs.execute("/Users/tb/.local/bin/yabai -m space --destroy")
   end)
+
+

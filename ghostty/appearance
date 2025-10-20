@@ -1,27 +1,28 @@
 #___________________________
 # Margins and paddings
-  window-inherit-font-size = true
-  window-padding-balance = false
-  window-padding-color = extend
-  window-padding-x = 25,25
-  window-padding-y = 2,2
+  window-inherit-font-size  = true
+  window-padding-balance    = false
+  window-padding-color      = extend
+  window-padding-x          = 45,45
+  window-padding-y          = 5,5
 
 #___________________________
 # Visuals
-  #theme = citruszest
   theme = Hardcore
-  adjust-underline-thickness = 1
-  adjust-underline-position = 2
-  background-opacity = 0.90
-  background-blur = true
-  bold-is-bright = true
-  minimum-contrast = 1
+  adjust-underline-thickness  = 1
+  adjust-underline-position   = 2
+  background-opacity          = 0.94
+  background-blur             = true
+  bold-is-bright              = true
+  minimum-contrast            = 1
 
 #___________________________
 # Cursor
-  cursor-style = "underline" 
-  cursor-style-blink = true
-  shell-integration-features = no-cursor
-  cursor-color = #6AD3D3
-  cursor-text = #111111
-  cursor-opacity = 1
+  cursor-style             = bar
+  adjust-cursor-thickness  = 2
+  adjust-cursor-height     = 2
+  cursor-opacity           = 1
+  cursor-style-blink       = true
+  cursor-color             = #FFC7FF
+  cursor-text              = #2F092E
+ # shell-integration-features = no-cursor

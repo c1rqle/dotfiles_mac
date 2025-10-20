@@ -1,7 +1,4 @@
 # ___________________________
-  osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
-
-# ___________________________
   yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
   sudo yabai --load-sa
 
@@ -15,16 +12,16 @@
 # Layout and spacing
   yabai -m config external_bar all:32:0
   yabai -m config layout          bsp
-  yabai -m config top_padding     16
-  yabai -m config bottom_padding  18
-  yabai -m config left_padding    18
-  yabai -m config right_padding   18
-  yabai -m config window_gap      14
+  yabai -m config top_padding     12
+  yabai -m config bottom_padding  12
+  yabai -m config left_padding    12
+  yabai -m config right_padding   12
+  yabai -m config window_gap      10
 
 #___________________________
 # Window appearance
   yabai -m config window_shadow          float
-  yabai -m config menubar_opacity        0.80
+  yabai -m config menubar_opacity        0.0
   yabai -m config normal_window_opacity  0.88
   yabai -m config active_window_opacity  1.0
   yabai -m config window_opacity         on
@@ -32,7 +29,7 @@
 # ___________________________
 # Animation
   yabai -m config window_animation_easing     ease_out_quint
-  yabai -m config window_animation_duration   0.5
+  yabai -m config window_animation_duration   0.4
 
 # ___________________________
  # Enable window manipulation with the mouse
@@ -43,10 +40,10 @@
 # ___________________________
 # Dragging windows on top of each other creates stacking mode (instead of tiling)
   yabai -m config mouse_drop_action stack
-
-  yabai -m space 1 --label 1
-  yabai -m space 2 --label 2
-  yabai -m space 3 --label 3
+#
+  yabai -m space 1 --label ">"
+  yabai -m space 2 --label "Zen"
+  yabai -m space 3 --label "♪"
 
 # ___________________________
 # global settings
@@ -59,17 +56,36 @@
 # ___________________________
 # Turn off auto-tiling for specific apps
   yabai -m rule --add app='System Preferences'  manage=off
-  yabai -m rule --add app='QuickTime player'    manage=off
+  yabai -m rule --add app='QuickTime Player'    manage=off
   yabai -m rule --add app='BetterTouchTool'     manage=off
   yabai -m rule --add app='System Settings'     manage=off
+  yabai -m rule --add app='Tuta Mail'           manage=off
   yabai -m rule --add app='Shadow PC'           manage=off
-  yabai -m rule --add app='Perplexity'          manage=off
   yabai -m rule --add app='Bitwarden'           manage=off
   yabai -m rule --add app='Raycast'             manage=off
   yabai -m rule --add app='Preview'             manage=off
   yabai -m rule --add app='qView'               manage=off
   yabai -m rule --add app='Finder'              manage=off
   yabai -m rule --add app='VLC'                 manage=off
+
+# ___________________________
+# Helper settings for Uebersicht/simple-bar
+  yabai -m signal --add event=window_focused action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows when focused application changes"
+  yabai -m signal --add event=window_resized action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows when a window is resized"
+  yabai -m signal --add event=window_destroyed action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-ba spaces & windows when an application window is closed"
+  yabai -m signal --add event=space_changed action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows on space change"
+  yabai -m signal --add event=display_changed action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows on display focus change"
+  yabai -m signal --add event=window_title_changed action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows when current window title changes"
+  yabai -m signal --add event=space_destroyed action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows on space removal"
+  yabai -m signal --add event=space_created action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows on space creation"
+  yabai -m signal --add event=application_activated action="curl http://localhost:7776/yabai/spaces/refresh && curl http://localhost:7776/yabai/windows/refresh" label="Refresh simple-bar spaces & windows when application is activated"
+  yabai -m signal --add event=display_added action="curl http://localhost:7776/yabai/displays/refresh" label="Refresh simple-bar displays when a new dispay is added"
+  yabai -m signal --add event=display_removed action="curl http://localhost:7776/yabai/displays/refresh" label="Refresh simple-bar displays when a dispay is removed"
+  yabai -m signal --add event=display_moved action="curl http://localhost:7776/yabai/displays/refresh" label="Refresh simple-bar displays when a dispay is moved"
+  
+# ___________________________
+# This makes Übersicht refresh whenever Yabai is refreshed
+  osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
 
 # ___________________________
   echo "yabai configuration loaded.."

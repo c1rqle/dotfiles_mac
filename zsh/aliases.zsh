@@ -12,12 +12,12 @@
   alias icat='kitty +kitten icat'
   alias mkdir='mkdir -p'
   alias vim='nvim'
-  alias q='open '
+  alias q='open'
 
 #____________________________
-  alias brew-Ss='brew search'
-  alias brew-S='brew install'
-  alias brew-I='brew info'
+  alias brewss='brew search'
+  alias brews='brew install'
+  alias brewi='brew info'
 
 # ___________________________ 
 # -X=sort by extension. F=classify type. t=Sort by time. r=reverse sort
