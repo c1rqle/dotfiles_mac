@@ -16,12 +16,12 @@
   yabai -m config bottom_padding  12
   yabai -m config left_padding    12
   yabai -m config right_padding   12
-  yabai -m config window_gap      10
+  yabai -m config window_gap      14
 
 #___________________________
 # Window appearance
   yabai -m config window_shadow          float
-  yabai -m config menubar_opacity        0.0
+  yabai -m config menubar_opacity        0.4
   yabai -m config normal_window_opacity  0.88
   yabai -m config active_window_opacity  1.0
   yabai -m config window_opacity         on
@@ -42,7 +42,7 @@
   yabai -m config mouse_drop_action stack
 #
   yabai -m space 1 --label ">"
-  yabai -m space 2 --label "Zen"
+  yabai -m space 2 --label "Z"
   yabai -m space 3 --label "♪"
 
 # ___________________________

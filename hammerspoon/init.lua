@@ -32,22 +32,46 @@ end
 myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")
 
--------------------------------
---- App shortcuts
+--- App shortcuts ---
+
+-----------------------
+--- Ghostty terminal
 hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
 	hs.application.launchOrFocus("ghostty.app")
 end)
 
+-----------------------
+--- Finder
 hs.hotkey.bind({ "cmd", "ctrl" }, "e", function()
 	hs.application.launchOrFocus("finder.app")
 end)
 
+-----------------------
+--- Zen Browser
 hs.hotkey.bind({ "cmd", "ctrl" }, "i", function()
 	hs.application.launchOrFocus("Zen.app")
 end)
 
+-----------------------
+--- Spotify
 hs.hotkey.bind({ "cmd", "ctrl" }, "m", function()
 	hs.application.launchOrFocus("Spotify.app")
+end)
+
+-----------------------
+--- Reload KdeConnect
+hs.hotkey.bind({"cmd", "ctrl"}, "K", function()
+    -- Try to quit KDE Connect if it's running
+    local app = hs.application.get("KDE Connect")
+    if app then
+        app:kill()
+        hs.timer.doAfter(1, function()
+            hs.application.open("KDE Connect")
+        end)
+    else
+        hs.application.open("KDE Connect")
+    end
+    hs.alert.show("Restarted KDE Connect")
 end)
 
 -------------------------------
@@ -83,17 +107,46 @@ hs.hotkey.bind({"cmd", "shift"}, "q", function()
     end
 end)
 
- LeftRightHotkey:bind({ "lcmd", "lalt" }, "h", function()
-    hs.execute("osascript -e 'tell application id 'tracesOf.Uebersicht' to refresh' ")
-  end)
+-- Toggle Übersicht visibility + adjust Yabai padding (with smooth delay)
+hs.hotkey.bind({ "cmd", "ctrl", "alt" }, "m", function()
+    local script = [[
+        tell application "Übersicht"
+            set isHidden to hidden of widget id "simple-bar-index-jsx"
+            if isHidden then
+                set hidden of every widget to false
+            else
+                set hidden of every widget to true
+            end if
+            return (hidden of widget id "simple-bar-index-jsx") as string
+        end tell
+    ]]
 
+    local ok, result = hs.osascript.applescript(script)
+    local yabai = "/Users/tb/.local/bin/yabai"
+
+    if ok then
+        if result == "true" then
+            -- Übersicht is hidden → remove top padding (after short delay)
+            hs.timer.doAfter(0.15, function()
+                hs.execute(yabai .. " -m config external_bar all:32:0")
+            end)
+        else
+            -- Übersicht is visible → restore top padding (after short delay)
+            hs.timer.doAfter(0.15, function()
+                hs.execute(yabai .. " -m config external_bar all:0:0")
+            end)
+        end
+    else
+        hs.alert.show("Übersicht toggle failed")
+    end
+end)
 -------------------------------
 --- Yabai
   local yabai = "/Users/tb/.local/bin/yabai"
   
-  hs.hotkey.bind({ "cmd", "alt" }, "r", function()
-  	hs.execute(yabai .. " --restart-service")
-  end)
+--  hs.hotkey.bind({ "cmd", "alt" }, "r", function()
+--  	hs.execute(yabai .. " --restart-service")
+--  end)
 
 ---------------------------------
 --- Window navigation. Binding it to "left CMD" to not break any system shortcuts 
