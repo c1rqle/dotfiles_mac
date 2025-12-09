@@ -42,7 +42,7 @@ end)
 
 -----------------------
 --- Finder
-hs.hotkey.bind({ "cmd", "ctrl" }, "e", function()
+hs.hotkey.bind({ "cmd", "ctrl" }, "f", function()
 	hs.application.launchOrFocus("finder.app")
 end)
 
@@ -56,6 +56,12 @@ end)
 --- Spotify
 hs.hotkey.bind({ "cmd", "ctrl" }, "m", function()
 	hs.application.launchOrFocus("Spotify.app")
+end)
+
+-----------------------
+--- Finder
+hs.hotkey.bind({ "cmd", "ctrl" }, "y", function()
+	hs.application.launchOrFocus("bitwarden.app")
 end)
 
 -----------------------

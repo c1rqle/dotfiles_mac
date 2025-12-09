@@ -21,8 +21,8 @@
 #___________________________
 # Window appearance
   yabai -m config window_shadow          float
-  yabai -m config menubar_opacity        0.4
-  yabai -m config normal_window_opacity  0.88
+  yabai -m config menubar_opacity        0.8
+  yabai -m config normal_window_opacity  1
   yabai -m config active_window_opacity  1.0
   yabai -m config window_opacity         on
 

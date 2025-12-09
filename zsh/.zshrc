@@ -40,7 +40,7 @@
 
 #_____________________________________
 # oh-my-zsh update behaviour
-  zstyle ':omz:update' mode reminder
+  zstyle ':omz:update' mode auto
   zstyle ':omz:update' frequency 4
 
 #_____________________________________
@@ -82,3 +82,4 @@
 # Activating Zoxide and Starship
   eval "$(zoxide init --cmd c zsh)"
   eval "$(starship init zsh)"
+  export STARSHIP_CONFIG=~/.config/starship/starship.toml
