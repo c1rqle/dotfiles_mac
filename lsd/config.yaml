@@ -47,10 +47,10 @@
 #_____________________________________
 # List view column items.
   blocks:
-    - size
+#   - size
     - date
     - name
-  # - git
+#   - git
   ignore-globs:
     - .git
     - .bashrc

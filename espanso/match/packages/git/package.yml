@@ -5,13 +5,19 @@
   - trigger: "gits"
     replace: "git status"
 
-  - trigger: "git."
+  - trigger: "gadd"
     replace: "git add ."
 
-  - trigger: "gitm"
+  - trigger: "gcm"
     replace: "git commit -m '$|$' "
 
-  - trigger: "gitp"
+  - trigger: "gcup"
+    replace: "git commit -m 'update' "
+
+  - trigger: "gcfix"
+    replace: "git commit -m 'fix' "
+
+  - trigger: "gpush"
     replace: "git push"
   
   - trigger: "gitmain"

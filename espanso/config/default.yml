@@ -8,7 +8,7 @@
 
 # ____________________________________________
 # Disable keyboard shortcut for the GUI window 
-  search_shortcut: off
+  search_shortcut: META+ALT+ENTER
 
 # ____________________________________________
 # Disable the icon in the menu

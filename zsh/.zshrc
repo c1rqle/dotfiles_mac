@@ -49,11 +49,11 @@
 
 #_____________________________________
 # ZSH plugins
- ZSH_CUSTOM=~/.config/zsh_custom
- plugins=(git fzf starship colored-man-pages tmux zoxide)
- 
- source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
- source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  ZSH_CUSTOM=~/.config/zsh_custom
+  plugins=(git fzf starship colored-man-pages tmux zoxide)
+  
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #_____________________________________
 # Loading my aliases

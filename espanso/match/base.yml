@@ -12,61 +12,41 @@
 
   - trigger: "ubersicht"
     replace: "Übersicht"
+  
   - trigger: ":uber"
     replace: "Übersicht"
-
-  - trigger: ":shizuku-start"
-    replace: "adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
-
-# ____________________
-# html (wip)
-  - trigger: ":html5"
-    replace: |
-      <!DOCTYPE html>
-      <html lang='en'>
-        <head>
-          <meta charset="UTF-8">
-          <meta name='viewport' content='width=device-width, initial-scale=1'>
-          <title>Title</title>
-          <link href='css/style.css' rel='stylesheet'>
-        </head>
-        <body>
-          $|$
-        </body>
-      </html>
-
-  - trigger: ":h1"
-    replace: <h1>$|$</h1>
-    word: true
   
-  - trigger: ":h2"
-    replace: <h2>$|$</h2>
-    word: true
-  
-  - trigger: ":h3"
-    replace: <h3>$|$</h3>
-    word: true
-  
-  - trigger: ":p"
-    replace: <p>$|$</p>
+    # ____________________________________________
+  # Terminal
+  - trigger: ":logout"
+    replace: "loginctl kill-user tb"
+
+  - trigger: ":bt"
+    replace: "bzmenu -l walker"
+
+  - trigger: "icat"
+    replace: "kitty +kitten icat $|$"
     word: true
 
-  - trigger: ":div"
-    replace: |
-      <div>
-      $|$
-      </div>
-
-# ____________________
-# CSS (wip)
-  - trigger: ":cssclass"
-    replace: |
-      .
-
-  - trigger: ":class"
-    replace: ".{{cssclass.cssclass}} {$|$} "
+  - trigger: ":mkdir"
+    replace: "mkdir -p {{form1.folder}} && cd {{form1.folder}}"
     vars:
-      - name: cssclass
+      - name: form1
         type: form
         params:
-          layout: "Class name: [[cssclass]]"
+          layout: "Folder name: [[folder]]"
+
+  - trigger: ":div"
+    replace: "<div>$|$</div> "
+
+  - trigger: ":grep"
+    replace: "| grep '$|$' "
+
+  - trigger: ":less"
+    replace: "| less "
+
+  - trigger: ":btctl"
+    replace: "bluetoothctl"
+
+  - trigger: ":cht"
+    replace: "curl cheat.sh/"

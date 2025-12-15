@@ -176,11 +176,17 @@ end)
 --- Window rules
 
 ---------------------------------
---- Float window and center
+--- Center window
   hs.hotkey.bind({ "cmd", "shift" }, "f", function()
-  	hs.execute(yabai .. " -m window --toggle float")
   	hs.execute(yabai .. " -m window --grid 6:6:1:1:4:4")
   end)
+
+---------------------------------
+--- Toggle floating/pinned window
+  hs.hotkey.bind({ "cmd", "shift" }, "t", function()
+    hs.execute(yabai .. " -m window --toggle float")
+  end)
+
 ---------------------------------
 --- Sticky/pin to top
   hs.hotkey.bind({ "cmd", "shift" }, "p", function()
