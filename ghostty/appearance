@@ -8,8 +8,9 @@
 
 #___________________________
 # Visuals
-  theme = Everblush
-  adjust-underline-thickness  = 1
+#theme = Everblush
+  theme = SeaShells
+  adjust-underline-thickness  = 2
   adjust-underline-position   = 2
   background-opacity          = 0.94
   background-blur             = true

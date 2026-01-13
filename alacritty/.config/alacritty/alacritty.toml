@@ -1,7 +1,7 @@
+#    "~/.config/alacritty/themes/themes/ayu_dark.toml"
+
   general.import = [
-  #    "~/.config/alacritty/keybindings.toml",
-    #"/home/tb/.config/alacritty/themes/themes/aura.toml"
-      "~/.config/alacritty/themes/themes/ayu_dark.toml"
+    "/home/tb/.config/alacritty/themes/themes/aura.toml"
   ]
 
 # Reload this config on save
@@ -15,11 +15,12 @@
   decorations_theme_variant   = "Dark"
   dynamic_padding             = true
   dynamic_title               = true
-  opacity                     = 0.96
+  opacity                     = 0.92
   startup_mode                = "Windowed"
   title                       = "alacritty"
   blur                        = true
   resize_increments           = false
+  option_as_alt               = "OnlyLeft"
 
   [window.dimensions]
   columns = 0
@@ -37,29 +38,29 @@
   size                = 16
 
   [font.normal]
-  family = "OperatorMono Nerd Font"
-  style  = "Book"
+  family = "Operator Mono"
+  style  = "Light"
 
   [font.italic]
-  family = "OperatorMono Nerd Font"
-  style  = "Book Italic"
+  family = "Operator Mono"
+  style  = "Light Italic"
 
   [font.bold]
-  family = "OperatorMono Nerd Font"
+  family = "Operator Mono"
   style  = "Bold"
 
   [font.bold_italic]
-  family = "OperatorMono Nerd Font"
+  family = "Operator Mono"
   style  = "Bold Italic"
 
   [font.glyph_offset]
-  x = 2
+  x = 3
   y = 1
 
   [font.offset]
-  x = 1
-  y = 3
-  #
+  x = 3
+  y = 5
+  
   [bell]
   animation = "EaseOutExpo"
   color     = "#C0C5CE"
@@ -76,19 +77,17 @@
   vi_mode_style 	  = "None"
 
   [mouse]
-  hide_when_typing  = true
+  hide_when_typing  = false
 
-  [[hints.enabled]]
-  command           = "xdg-open" # On Linux/BSD
-  hyperlinks	      = true
-  post_processing	  = true
-  persist		        = false
-  mouse.enabled	    = true
-  binding		        = { key = "O", mods = "Control|Shift" }
-  regex		          = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
-
-
-
+#  [[hints.enabled]]
+#  command           = "xdg-open" # On Linux/BSD
+#  hyperlinks	      = true
+#  post_processing	  = true
+#  persist		        = false
+#  mouse.enabled	    = true
+#  binding		        = { key = "O", mods = "Control|Shift" }
+#  regex		          = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+#
   [debug]
   highlight_damage   = false
   log_level          = "Warn"

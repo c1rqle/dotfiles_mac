@@ -1,12 +1,15 @@
 # Terminal
   matches:
 
-  - trigger: ":simplebar"
-    replace: "cd /Users/tb/Library/'Application Support'/Übersicht/widgets/simple-bar"
+  - trigger: "sshpi"
+    replace: "ssh tb@192.168.10.169"
 
-  - trigger: :reuber
-    replace: osascript -e 'tell application id "tracesOf.Uebersicht" to refresh' 
-#
+  - trigger: "cdesp"
+    replace: "cd /Users/tb/Library/'Application Support'/espanso/match/"
+
+  - trigger: ":tmnew"
+    replace: "tmux new -s "
+  
   - trigger: ":gr"
     replace: "| grep '$|$' "
     word: true
@@ -17,7 +20,6 @@
 
   - trigger: "icat"
     replace: "kitty +kitten icat "
-    word: true
 
   - trigger: "estop"
     replace: "espanso stop"
@@ -45,4 +47,3 @@
         type: form
         params:
           layout: "Folder name: [[folder]]"
-

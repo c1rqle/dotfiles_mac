@@ -1,8 +1,8 @@
 #_________________________ 
   export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
   export PATH="/opt/homebrew/bin:$PATH >> ~/.zprofile && source ~/.zprofile"
+#  export PATH="/Users/tb/Library/Caches/.wasm-pack/.wasm-bindgen-cargo-install-0.2.106/bin"
   export ZSH="$HOME/.oh-my-zsh"
-
 #_____________________________________
 # Starship is handling the shell functionality. LS_COLORS and LSD are for bonus colours :)
   export LS_COLORS="$(vivid generate snazzy)"

@@ -12,10 +12,10 @@
   alias vim='nvim'
 
 #____________________________
-  alias brew-up='brew update; brew upgrade'
-  alias brew-Ss='brew search'
-  alias brew-S='brew install'
-  alias brew-i='brew info'
+  alias brewup='brew update; brew upgrade'
+  alias brewSs='brew search'
+  alias brewS='brew install'
+  alias brewi='brew info'
 
 # ___________________________ 
 # -X=sort by extension. F=classify type. t=Sort by time. r=reverse sort

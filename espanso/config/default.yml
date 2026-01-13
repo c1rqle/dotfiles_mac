@@ -20,12 +20,12 @@
 
 # ____________________________________________
 # Revert an expansion if clicking backspace
-  undo_backspace: true
+  undo_backspace: false
 
 # ____________________________________________
 # How many backspace espanso tracks to correct misspelled keywordsMaximum number of backspace 
 # presses espanso keeps track of. For example, this is needed to correctly expand even if typos are typed.
-  backspace_limit: 10
+  backspace_limit: 910
 
 # ____________________________________________
 # If true, Espanso will attempt to preserve the previous clipboard content after an expansion has taken place.

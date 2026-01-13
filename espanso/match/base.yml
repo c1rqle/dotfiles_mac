@@ -24,10 +24,6 @@
   - trigger: ":bt"
     replace: "bzmenu -l walker"
 
-  - trigger: "icat"
-    replace: "kitty +kitten icat $|$"
-    word: true
-
   - trigger: ":mkdir"
     replace: "mkdir -p {{form1.folder}} && cd {{form1.folder}}"
     vars:
