@@ -22,7 +22,7 @@ function apps.init()
     -- App shortcuts
     hs.hotkey.bind({ "cmd", "ctrl" }, "return", function() toggleApp("Ghostty") end)
     hs.hotkey.bind({ "cmd", "ctrl" }, "f", function() toggleApp("Finder") end)
-    hs.hotkey.bind({ "cmd", "ctrl" }, "i", function() toggleApp("Zen Browser") end)
+    hs.hotkey.bind({ "cmd", "ctrl" }, "i", function() toggleApp("Zen") end)
     hs.hotkey.bind({ "cmd", "ctrl" }, "m", function() toggleApp("Spotify") end)
     hs.hotkey.bind({ "cmd", "ctrl" }, "u", function() toggleApp("Bitwarden") end)
     hs.hotkey.bind({ "cmd", "ctrl" }, "p", function() toggleApp("Perplexity") end)
