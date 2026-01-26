@@ -47,7 +47,7 @@
 #_____________________________________
 # List view column items.
   blocks:
-#   - size
+    - size
     - date
     - name
  #   - git

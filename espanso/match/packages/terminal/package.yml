@@ -18,7 +18,7 @@
     replace: "| less "
     word: true
 
-  - trigger: "icat"
+  - trigger: ":icat"
     replace: "kitty +kitten icat "
 
   - trigger: "estop"
