@@ -38,19 +38,19 @@
   size                = 16
 
   [font.normal]
-  family = "Operator Mono"
-  style  = "Light"
+  family = "OperatorMono Nerd Font"
+  style  = "Book"
 
   [font.italic]
-  family = "Operator Mono"
-  style  = "Light Italic"
+  family = "OperatorMono Nerd Font"
+  style  = "Book Italic"
 
   [font.bold]
-  family = "Operator Mono"
+  family = "OperatorMono Nerd Font"
   style  = "Bold"
 
   [font.bold_italic]
-  family = "Operator Mono"
+  family = "OperatorMono Nerd Font"
   style  = "Bold Italic"
 
   [font.glyph_offset]

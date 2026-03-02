@@ -7,22 +7,16 @@
   - trigger: ":scrcpy-sdk"
     replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display"
 
-  - trigger: ":bt"
-    replace: "bzmenu -l walker"
-
   - trigger: "ubersicht"
     replace: "Übersicht"
   
   - trigger: ":uber"
     replace: "Übersicht"
   
-    # ____________________________________________
-  # Terminal
+# ____________________________________________
+# Terminal
   - trigger: ":logout"
     replace: "loginctl kill-user tb"
-
-  - trigger: ":bt"
-    replace: "bzmenu -l walker"
 
   - trigger: ":mkdir"
     replace: "mkdir -p {{form1.folder}} && cd {{form1.folder}}"
@@ -46,3 +40,8 @@
 
   - trigger: ":cht"
     replace: "curl cheat.sh/"
+
+# ____________________________________________
+# Gaming
+  - trigger: ":arc"
+    replace: "Arc Raiders"

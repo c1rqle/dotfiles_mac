@@ -13,7 +13,7 @@
 
 #____________________________
   alias brewup='brew update; brew upgrade'
-  alias brewSs='brew search'
+  alias brewss='brew search'
   alias brewS='brew install'
   alias brewi='brew info'
 
@@ -26,5 +26,6 @@
 # ~/.config/lsd/config.yaml
   alias lg='lsd -X -ltr --git -F' 
   alias tr='lsd -X -A --tree -F'
+  alias tl='lsd -X -A --tree -l -F'
   alias tr1='lsd -X -A --tree --depth 1 -F'
   alias tr2='lsd -X -A --tree --depth 2 -F'

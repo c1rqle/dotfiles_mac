@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(do echo:*)",
+      "Bash(git:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "memory",
+    "browser-server"
+  ]
+}
