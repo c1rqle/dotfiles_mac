@@ -1,0 +1,20 @@
+# Stow ignore patterns - files that should NOT be symlinked
+.git
+.gitignore
+.gitattributes
+README.md
+LICENSE
+*.md
+*.txt
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.sh
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+.claude
+__pycache__
