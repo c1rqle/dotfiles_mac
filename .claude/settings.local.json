@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(do echo:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(__NEW_LINE_a6259300b191942e__ cd:*)"
     ]
   },
   "enabledMcpjsonServers": [
