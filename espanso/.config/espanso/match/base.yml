@@ -1,20 +1,19 @@
-# espanso match file 
+# espanso match file
 
-  matches:
-
-# ____________________
-# Android related
+matches:
+  # ____________________
+  # Android related
   - trigger: ":scrcpy-sdk"
     replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display"
 
   - trigger: "ubersicht"
     replace: "Übersicht"
-  
+
   - trigger: ":uber"
     replace: "Übersicht"
-  
-# ____________________________________________
-# Terminal
+
+  # ____________________________________________
+  # Terminal
   - trigger: ":logout"
     replace: "loginctl kill-user tb"
 
@@ -40,8 +39,3 @@
 
   - trigger: ":cht"
     replace: "curl cheat.sh/"
-
-# ____________________________________________
-# Gaming
-  - trigger: ":arc"
-    replace: "Arc Raiders"
