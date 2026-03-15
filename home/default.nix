@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./git.nix
+  ];
+
   home.username = "tb";
   home.homeDirectory = "/Users/tb";
 
