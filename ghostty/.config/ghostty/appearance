@@ -1,15 +1,15 @@
 #___________________________
 # Margins and paddings
-  window-inherit-font-size  = true
-  window-padding-balance    = false
-  window-padding-color      = extend
-  window-padding-x          = 45,45
-  window-padding-y          = 5,8
+  window-inherit-font-size    = true
+  window-padding-balance      = false
+  window-padding-color        = extend
+  window-padding-x            = 45,45
+  window-padding-y            = 5,8
 
 #___________________________
 # Visuals
-#theme = Everblush
-  theme = SeaShells
+# theme = SeaShells
+  theme                       = LiquidCarbonTransparentInverse
   adjust-underline-thickness  = 2
   adjust-underline-position   = 2
   background-opacity          = 0.94
@@ -19,11 +19,11 @@
 
 #___________________________
 # Cursor
-  cursor-style             = bar
-  adjust-cursor-thickness  = 2
-  adjust-cursor-height     = 2
-  cursor-opacity           = 1
-  cursor-style-blink       = true
-  cursor-color             = #FFC7FF
-  cursor-text              = #2F092E
- # shell-integration-features = no-cursor
+  cursor-style                = bar
+  adjust-cursor-thickness     = 2
+  adjust-cursor-height        = 2
+  cursor-opacity              = 1
+  cursor-style-blink          = true
+  cursor-color                = #FFC7FF
+  cursor-text                 = #2F092E
+  shell-integration-features = no-cursor
