@@ -1,7 +1,6 @@
 { pkgs, self, ... }:
 {
-  # Homebrew module (populated in a later task)
-  # imports = [ ./homebrew.nix ];
+  imports = [ ./homebrew.nix ];
 
   environment.systemPackages = [
     pkgs.vim
