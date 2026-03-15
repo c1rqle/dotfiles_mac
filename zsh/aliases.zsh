@@ -17,6 +17,8 @@
   alias brewS='brew install'
   alias brewi='brew info'
 
+  alias nix='nix --extra-experimental-features nix-command --extra-experimental-features flakes'
+
 # ___________________________ 
 # -X=sort by extension. F=classify type. t=Sort by time. r=reverse sort
   alias ls='lsd -X -tr -F'

@@ -3,14 +3,13 @@
   export PATH="/opt/homebrew/bin:$PATH >> ~/.zprofile && source ~/.zprofile"
 #  export PATH="/Users/tb/Library/Caches/.wasm-pack/.wasm-bindgen-cargo-install-0.2.106/bin"
   export ZSH="$HOME/.oh-my-zsh"
+  export PATH=/opt/homebrew/opt/rustup/bin:$PATH 
+  export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH
+
 #_____________________________________
 # Starship is handling the shell functionality. LS_COLORS and LSD are for bonus colours :)
-  export LS_COLORS="$(vivid generate snazzy)"
+  export LS_COLORS="$(vivid generate tokyonight-night)"
 
-#_________________________ 
-  export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH
-  export PATH=/opt/homebrew/opt/rustup/bin:$PATH 
-  
 #_________________________ 
   if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
   source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
@@ -51,7 +50,7 @@
 # ZSH plugins
   ZSH_CUSTOM=~/.config/zsh_custom
   plugins=(git fzf starship colored-man-pages tmux zoxide)
-  
+
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -64,6 +63,7 @@
   set rtp+=/opt/homebrew/opt/fzf
   source <(fzf --zsh)
   source $ZSH/oh-my-zsh.sh
+
 #_____________________________________
 # Preferred editor for local and remote sessions
   if [[ -n $SSH_CONNECTION ]]; then
@@ -77,9 +77,10 @@
   export ARCHFLAGS="-arch $(uname -m)"
   export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
   export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
-  
+
 #_____________________________________
 # Activating Zoxide and Starship
   eval "$(zoxide init --cmd c zsh)"
   eval "$(starship init zsh)"
   export STARSHIP_CONFIG=~/.config/starship/starship.toml
+  eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
