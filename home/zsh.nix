@@ -44,8 +44,8 @@
         export PATH="/opt/homebrew/bin:$PATH"
         export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
         # Ruby gems — path is version-dependent; only add if dir exists
-        for _ruby_gems_dir in /opt/homebrew/lib/ruby/gems/*/bin; do
-          [[ -d "$_ruby_gems_dir" ]] && export PATH="$_ruby_gems_dir:$PATH"
+        for _ruby_gems_dir in /opt/homebrew/lib/ruby/gems/*/bin(/N); do
+          export PATH="$_ruby_gems_dir:$PATH"
         done
         unset _ruby_gems_dir
 
@@ -97,7 +97,7 @@
         eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
         # Aliases (user-managed, not migrated to Nix yet)
-        [[ -f "$HOME/.config/zsh_custom/aliases.zsh" ]] && source "$HOME/.config/zsh_custom/aliases.zsh"
+        [[ -f "$HOME/.config/zsh_custom/aliases" ]] && source "$HOME/.config/zsh_custom/aliases"
       ''
     ];
   };
