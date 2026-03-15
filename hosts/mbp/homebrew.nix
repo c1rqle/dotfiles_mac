@@ -184,8 +184,6 @@
       # Media / entertainment
       "spotify"
       "stolendata-mpv"
-      "biglybt"
-      "qbittorrent"
 
       # Utilities
       "aldente"          # battery charge limiter
