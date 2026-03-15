@@ -9,7 +9,7 @@
 #___________________________
 # Visuals
 # theme = SeaShells
-  theme                       = LiquidCarbonTransparentInverse
+  theme                       = Dracula
   adjust-underline-thickness  = 2
   adjust-underline-position   = 2
   background-opacity          = 0.94
