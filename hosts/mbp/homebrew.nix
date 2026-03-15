@@ -89,7 +89,6 @@
       # Media
       "ffmpeg"
       "imagemagick"
-      "mpv"
       "yt-dlp"
 
       # Multiplexer
@@ -184,7 +183,7 @@
 
       # Media / entertainment
       "spotify"
-      "mpv"             # also as cask if you prefer the .app
+      "stolendata-mpv"
       "biglybt"
       "qbittorrent"
 

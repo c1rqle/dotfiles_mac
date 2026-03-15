@@ -12,6 +12,10 @@
   # tb must be in trusted-users for Home Manager binary cache substitution
   nix.settings.trusted-users = [ "root" "tb" ];
 
+  # Required for user-facing options (homebrew, etc.) since nix-darwin
+  # now runs all system activation as root
+  system.primaryUser = "tb";
+
   # Declare the user so Home Manager can find the home directory
   users.users.tb = {
     name = "tb";
