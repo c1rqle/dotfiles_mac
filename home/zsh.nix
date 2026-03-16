@@ -8,7 +8,7 @@
       enable = true;
 
       # fzf, starship, zoxide removed — each has its own programs.* block below
-      plugins = [ "git" "colored-man-pages" "tmux" ];
+      plugins = [ "fzf" "git" "colored-man-pages" "tmux" "zoxide" ];
 
       # Points to user-managed custom plugins/aliases dir
       custom = "$HOME/.config/zsh_custom";
