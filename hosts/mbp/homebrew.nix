@@ -81,7 +81,6 @@
       "lsd"           # ls replacement
       "vivid"         # LS_COLORS generator
       "translate-shell"
-      "xdg-ninja"     # audits $HOME for XDG compliance
 
       # File management
       "nnn"
@@ -96,9 +95,6 @@
 
       # Neovim
       "neovim"
-
-      # Kubernetes
-      "click"
 
       # Network
       "cloudflared"
@@ -116,7 +112,6 @@
       # Misc
       "man-db"
       "mas"           # Mac App Store CLI
-      "stow"
       "powerline-go"
 
       # Services
@@ -153,9 +148,6 @@
 
       # Dev tools
       "vscodium"
-      "docker-desktop"
-      "android-platform-tools"
-      "github"           # GitHub Desktop
 
       # AI tools
       "claude"
