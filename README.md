@@ -17,3 +17,19 @@ and simple-bar for the added Waybar feel
 ---
 
 All the other dotfiles is for making my terminal pretty.
+
+## Nix
+
+The repo flake is the canonical source of truth now.
+
+- Main config: [`/Users/tb/dotfiles_mac/flake.nix`](/Users/tb/dotfiles_mac/flake.nix)
+- Host module: [`/Users/tb/dotfiles_mac/hosts/mbp/default.nix`](/Users/tb/dotfiles_mac/hosts/mbp/default.nix)
+- Home Manager entry: [`/Users/tb/dotfiles_mac/home/default.nix`](/Users/tb/dotfiles_mac/home/default.nix)
+
+Typical rebuild:
+
+```bash
+darwin-rebuild switch --flake ~/dotfiles_mac#mbp
+```
+
+`/etc/nix-darwin/flake.nix` should only be a tiny bootstrap shim that forwards to this repo, not a second real config. Two competing flakes is how chaos gets tenure.

@@ -59,7 +59,7 @@ function yabai.init(LeftRightHotkey)
 	end)
 
 	-- Window states – original toggles (kept for compatibility)
-	hs.hotkey.bind({ "cmd", "shift" }, "c", function()
+	hs.hotkey.bind({ "cmd", "shift" }, "g", function()
 		hs.execute(bin .. " -m window --grid 6:6:1:1:4:4")
 	end)
 	hs.hotkey.bind({ "cmd", "shift" }, "f", function()

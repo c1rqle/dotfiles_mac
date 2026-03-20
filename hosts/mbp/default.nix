@@ -1,6 +1,21 @@
-{ pkgs, self, ... }:
+{ pkgs, self, user, ... }:
 {
-  imports = [ ./homebrew.nix ];
+  imports = [
+    ./borders.nix
+    ./homebrew.nix
+    ./yabai.nix
+  ];
+
+  nixpkgs.config.allowUnfree = true;
+
+  # Auto-start Hammerspoon
+  launchd.user.agents.hammerspoon = {
+    command = "/Applications/Hammerspoon.app/Contents/MacOS/Hammerspoon";
+    serviceConfig = {
+      KeepAlive = true;
+      RunAtLoad = true;
+    };
+  };
 
   environment.systemPackages = [
     pkgs.vim
@@ -14,12 +29,11 @@
 
   # Required for user-facing options (homebrew, etc.) since nix-darwin
   # now runs all system activation as root
-  system.primaryUser = "tb";
+  system.primaryUser = user;
 
   # Declare the user so Home Manager can find the home directory
-  users.users.tb = {
-    name = "tb";
-    home = "/Users/tb";
+  users.users.${user} = {
+    home = "/Users/${user}";
   };
 
   # Track which git commit this config was built from

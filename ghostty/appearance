@@ -8,8 +8,9 @@
 
 #___________________________
 # Visuals
-# theme = SeaShells
-  theme                       = Dracula
+  #theme                       = Dracula
+  #theme                       = SeaShells
+  theme                       = CarbonFox
   adjust-underline-thickness  = 2
   adjust-underline-position   = 2
   background-opacity          = 0.94

@@ -17,8 +17,6 @@
   alias brewS='brew install'
   alias brewi='brew info'
 
-  alias nix='nix --extra-experimental-features nix-command --extra-experimental-features flakes'
-
 # ___________________________ 
 # -X=sort by extension. F=classify type. t=Sort by time. r=reverse sort
   alias ls='lsd -X -tr -F'
@@ -31,3 +29,4 @@
   alias tl='lsd -X -A --tree -l -F'
   alias tr1='lsd -X -A --tree --depth 1 -F'
   alias tr2='lsd -X -A --tree --depth 2 -F'
+  alias tr3='lsd -X -A --tree --depth 3 -F'

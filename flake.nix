@@ -5,24 +5,37 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }:
-  {
-    darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
-      specialArgs = { inherit self; };
-      modules = [
-        ./hosts/mbp/default.nix
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "hm-bak";
-          home-manager.users.tb = import ./home/default.nix;
-        }
-      ];
+  outputs = inputs@{ self, nix-darwin, home-manager, ... }:
+    let
+      hostname = "mbp";
+      system = "aarch64-darwin";
+      user = "tb";
+    in
+    {
+      darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
+        inherit system;
+        specialArgs = {
+          inherit self inputs hostname system user;
+        };
+        modules = [
+          ./hosts/${hostname}
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "hm-bak";
+              extraSpecialArgs = {
+                inherit self inputs hostname system user;
+              };
+              users.${user} = import ./home;
+            };
+          }
+        ];
+      };
     };
-  };
 }

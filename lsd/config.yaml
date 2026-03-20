@@ -47,9 +47,6 @@ sorting:
 #_____________________________________
 # List view column items.
 blocks:
-  - permission
-  - group
-  - user
   - size
   - date
   - name

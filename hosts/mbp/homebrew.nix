@@ -37,10 +37,10 @@
       "ninja"
 
       # Rust
-      "rustup"
+      #"rustup"
 
       # Ruby
-      "ruby"
+      #"ruby"
 
       # Python
       "python@3.13"
@@ -48,22 +48,22 @@
       "pillow"
 
       # Perl
-      "perl"
+      #"perl"
 
       # Lua
       "lua"
       "luarocks"
 
       # Node / JS
-      "node"
-      "pnpm"
-      "yarn"
+      # "node"
+      # "pnpm"
+      # "yarn"
 
       # WebAssembly toolchain
-      "wasm-component-ld"
-      "wasm-micro-runtime"
-      "wasm-pack"
-      "wasm-tools"
+      #"wasm-component-ld"
+      #"wasm-micro-runtime"
+      #"wasm-pack"
+      #"wasm-tools"
 
       # Git
       "git"
@@ -78,23 +78,20 @@
       "jq"
       "ripgrep"
       "glow"          # markdown in terminal
-      "lsd"           # ls replacement
+      #"lsd"           # ls replacement
       "vivid"         # LS_COLORS generator
       "translate-shell"
 
       # File management
-      "nnn"
+      #"nnn"
 
       # Media
       "ffmpeg"
       "imagemagick"
       "yt-dlp"
 
-      # Multiplexer
-      "tmux"
-
       # Neovim
-      "neovim"
+      #"neovim"
 
       # Network
       "cloudflared"
@@ -126,7 +123,7 @@
       { name = "icu4c@77"; link = true; }
 
       # Tap formula
-      "felixkratz/formulae/borders"
+      #"felixkratz/formulae/borders"
     ];
 
     # ── Casks ─────────────────────────────────────────────────────────────────
@@ -141,23 +138,22 @@
       "font-symbols-only-nerd-font"
 
       # Terminal
-      "ghostty"
+      #"ghostty"
 
       # Browsers
       "ungoogled-chromium"
 
       # Dev tools
-      "vscodium"
 
       # AI tools
       "claude"
-      "claude-code"
-      "chatgpt"
+      # "claude-code"
+      # "chatgpt"
       "auto-claude"
 
       # Productivity
       "raycast"
-      "notion"
+      #"notion"
       "espanso"
       "hammerspoon"
       "bettertouchtool"
@@ -165,7 +161,7 @@
       "ubersicht"
 
       # Window / desktop management
-      "spaceid"
+      #"spaceid"
       "sf-symbols"
 
       # Mouse / input
@@ -174,7 +170,7 @@
       "logitech-g-hub"
 
       # Media / entertainment
-      "spotify"
+      #"spotify"
       "stolendata-mpv"
 
       # Utilities
@@ -185,19 +181,23 @@
       "surfshark"        # VPN
 
       # Communication
-      "discord"
+      #"discord"
       "tuta-mail"
     ];
 
     # ── Mac App Store ─────────────────────────────────────────────────────────
     masApps = {
-      "Amphetamine"        = 937984704;
-      "Bitwarden"          = 1352778147;
-      "darker"             = 1637413102;
-      "Dynamic Wallpaper"  = 1582358382;
-      "Notion Web Clipper" = 1559269364;
-      "uBlock Origin Lite" = 6745342698;
-      "Vimari"             = 1480933944;
+      "Dynamic Wallpaper"     = 1582358382;
+      "Amphetamine"           = 937984704;
+
+      # Safari extensions ↓
+      "Nightshift Dark Mode"  = 1561604170;
+      "uBlock Origin Lite"    = 6745342698;
+      "Notion Web Clipper"    = 1559269364;
+      "OKX Wallet"            = 6463797825;
+      "Bitwarden"             = 1352778147;
+      "darker"                = 1637413102;
+      "Vimari"                = 1480933944;
     };
   };
 }

@@ -79,7 +79,7 @@ export const data = {
   yabaiPath: {
     label: "yabai path",
     type: "text",
-    placeholder: "default: /Users/tb/.local/bin/yabai",
+    placeholder: "default: /run/current-system/sw/bin/yabai",
     fullWidth: true,
     title: "Configuration",
   },
