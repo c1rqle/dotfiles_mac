@@ -7,8 +7,9 @@
 #___________________________
 # Shell
   confirm-close-surface   = false
-  shell-integration       = zsh
-  term                    = xterm-ghostty
+  #shell-integration       = zsh
+  term                    = xterm-256color
+  command                 = /store/wqbx02g816c4gzmyrxhws878cgrnn90q-tmux-3.6a/bin/tmux tmux new-session -A -s main
 
 #___________________________
 # General settings

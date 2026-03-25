@@ -1,25 +1,18 @@
 # git commands
 
-  matches:
-
+matches:
   - trigger: "gits"
     replace: "git status"
 
-  - trigger: "gadd"
-    replace: "git add ."
+  - trigger: "git."
+    replace: "git add $|$ "
 
-  - trigger: "gcm"
+  - trigger: "gitm"
     replace: "git commit -m '$|$' "
 
-  - trigger: "gcup"
-    replace: "git commit -m 'update' "
-
-  - trigger: "gcfix"
-    replace: "git commit -m 'fix' "
-
-  - trigger: "gpush"
+  - trigger: "gitp"
     replace: "git push"
-  
+
   - trigger: "gitmain"
     replace: "git checkout main"
     word: true
@@ -27,4 +20,3 @@
   - trigger: "gittest"
     replace: "git checkout test"
     word: true
-

@@ -1,10 +1,7 @@
 #_________________________ 
   export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
   export PATH="/opt/homebrew/bin:$PATH >> ~/.zprofile && source ~/.zprofile"
-#  export PATH="/Users/tb/Library/Caches/.wasm-pack/.wasm-bindgen-cargo-install-0.2.106/bin"
   export ZSH="$HOME/.oh-my-zsh"
-  export PATH=/opt/homebrew/opt/rustup/bin:$PATH 
-  export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH
 
 #_____________________________________
 # Starship is handling the shell functionality. LS_COLORS and LSD are for bonus colours :)
@@ -12,7 +9,7 @@
 
 #_________________________ 
   if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
-  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+  source "$GHOSTTY_RESOURCES_DIR"/nix/store/06bibrqhch2r9kc88vwy6r1iyc9wxxp2-ghostty-bin-1.3.1-shell_integration/zsh/ghostty-integration
   fi
 
 #_____________________________________
@@ -47,15 +44,10 @@
   DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 #_____________________________________
-# ZSH plugins
+# ZSH plugins and aliases
   ZSH_CUSTOM=~/.config/zsh_custom
-  plugins=(git fzf starship colored-man-pages tmux zoxide)
-
-  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#_____________________________________
-# Loading my aliases
+  plugins=(git fzf starship colored-man-pages tmux zoxide zsh-autosuggestions zsh-syntax-highlighting)
+#______ 
   [ -f ~/.config/zsh_custom/aliases.zsh ] && source ~/.config/zsh_custom/aliases.zsh
 
 #_____________________________________
@@ -75,12 +67,9 @@
 #_____________________________________
 # Compilation flags
   export ARCHFLAGS="-arch $(uname -m)"
-  export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
-  export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 
 #_____________________________________
 # Activating Zoxide and Starship
   eval "$(zoxide init --cmd c zsh)"
   eval "$(starship init zsh)"
   export STARSHIP_CONFIG=~/.config/starship/starship.toml
-  eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
