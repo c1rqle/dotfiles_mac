@@ -28,7 +28,6 @@
       # Build tools
       "clang-format"
       "cmake"
-      #"gcc"
       "make"
       "ninja"
 
@@ -41,27 +40,8 @@
       "lua"
       "luarocks"
 
-      # Git
-      #"git"
-      #"git-filter-repo"
-
-      # GitHub
-      #"gh"
-
-      # Shell / terminal utilities
-      # "fd"
-      # "findutils"
-      # "jq"
-      # "ripgrep"
-      #"glow"          # markdown in terminal
-      #"lsd"           # ls replacement
-      #"vivid"         # LS_COLORS generator
-      #"translate-shell"
-
       # Media
       "ffmpeg"
-      #"imagemagick"
-      #"yt-dlp"
 
       # Network
       "cloudflared"
@@ -69,11 +49,10 @@
       "wireshark"
 
       # Docker (CLI only; Docker Desktop is the cask below)
-      #"docker"
-      #"docker-compose"
+      "docker"
+      "docker-compose"
 
       # System monitoring
-      #"fastfetch"
       "macmon"
 
       # Misc
@@ -84,8 +63,6 @@
       # Services
       { name = "ollama"; restart_service = "changed"; }
       "syncthing"
-
-      # AI dev tools
 
       # ICU (linked so native extensions can find it)
       { name = "icu4c@77"; link = true; }
@@ -106,8 +83,6 @@
       # Browsers
       #"ungoogled-chromium"
 
-      # Dev tools
-
       # AI tools
       "claude"
       "auto-claude"
@@ -121,7 +96,6 @@
       "ubersicht"
 
       # Window / desktop management
-      #"spaceid"
       "sf-symbols"
 
       # Mouse / input
@@ -129,14 +103,9 @@
       "logi-options+"
       "logitech-g-hub"
 
-      # Media / entertainment
-      #"stolendata-mpv"
-
       # Utilities
-      # "aldente"          # battery charge limiter
       "pearcleaner"      # app uninstaller
       "syncthing-app"    # Syncthing menu bar
-      #"termius"          # SSH client
       "surfshark"        # VPN
       "ungoogled-chromium"
 
