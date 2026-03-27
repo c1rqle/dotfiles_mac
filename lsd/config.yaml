@@ -14,7 +14,7 @@ icons:
 #_____________________________________
 # Whether to omit showing symlink targets
 no-symlink: false
-symlink-arrow: "􀉤 "
+symlink-arrow: "›› "
 hyperlink: always
 
 #_____________________________________
@@ -60,7 +60,7 @@ ignore-globs:
   - .bitwarden-ssh-agent.sock
   - .tldrc
   - .aspnet
-  #- .DS_Store
+  - .DS_Store
   - .zsh_history
   #- .rustup
   - .z

@@ -2,12 +2,8 @@
 #
 # Declarative Homebrew config via nix-darwin.
 #
-# NOTE: fzf, starship, zoxide, zsh-autosuggestions, zsh-syntax-highlighting
-# are intentionally omitted — they're managed by Home Manager (programs.*).
+# NOTE: Apps and utilities that isn't available in Nix for Mac yet. Or for some other reason needs brew.
 #
-# NOTE: cargo packages (cargo-generate, cargo-leptos, wasm-bindgen-cli,
-# wasm-pack) are not supported by this module — manage via `cargo install`
-# or migrate to pkgs.rustPlatform.buildRustPackage in the future.
 { ... }:
 {
   homebrew = {
@@ -32,66 +28,40 @@
       # Build tools
       "clang-format"
       "cmake"
-      "gcc"
+      #"gcc"
       "make"
       "ninja"
-
-      # Rust
-      #"rustup"
-
-      # Ruby
-      #"ruby"
 
       # Python
       "python@3.13"
       "python@3.14"
       "pillow"
 
-      # Perl
-      #"perl"
-
       # Lua
       "lua"
       "luarocks"
 
-      # Node / JS
-      # "node"
-      # "pnpm"
-      # "yarn"
-
-      # WebAssembly toolchain
-      #"wasm-component-ld"
-      #"wasm-micro-runtime"
-      #"wasm-pack"
-      #"wasm-tools"
-
       # Git
-      "git"
-      "git-filter-repo"
+      #"git"
+      #"git-filter-repo"
 
       # GitHub
-      "gh"
+      #"gh"
 
       # Shell / terminal utilities
-      "fd"
-      "findutils"
-      "jq"
-      "ripgrep"
-      "glow"          # markdown in terminal
+      # "fd"
+      # "findutils"
+      # "jq"
+      # "ripgrep"
+      #"glow"          # markdown in terminal
       #"lsd"           # ls replacement
-      "vivid"         # LS_COLORS generator
-      "translate-shell"
-
-      # File management
-      #"nnn"
+      #"vivid"         # LS_COLORS generator
+      #"translate-shell"
 
       # Media
       "ffmpeg"
-      "imagemagick"
-      "yt-dlp"
-
-      # Neovim
-      #"neovim"
+      #"imagemagick"
+      #"yt-dlp"
 
       # Network
       "cloudflared"
@@ -99,11 +69,11 @@
       "wireshark"
 
       # Docker (CLI only; Docker Desktop is the cask below)
-      "docker"
-      "docker-compose"
+      #"docker"
+      #"docker-compose"
 
       # System monitoring
-      "fastfetch"
+      #"fastfetch"
       "macmon"
 
       # Misc
@@ -116,14 +86,10 @@
       "syncthing"
 
       # AI dev tools
-      "claude-code-templates"
-      "claudekit"
 
       # ICU (linked so native extensions can find it)
       { name = "icu4c@77"; link = true; }
 
-      # Tap formula
-      #"felixkratz/formulae/borders"
     ];
 
     # ── Casks ─────────────────────────────────────────────────────────────────
@@ -137,23 +103,17 @@
       "font-sketchybar-app-font"
       "font-symbols-only-nerd-font"
 
-      # Terminal
-      #"ghostty"
-
       # Browsers
-      "ungoogled-chromium"
+      #"ungoogled-chromium"
 
       # Dev tools
 
       # AI tools
       "claude"
-      # "claude-code"
-      # "chatgpt"
       "auto-claude"
 
       # Productivity
-      "raycast"
-      #"notion"
+      #"raycast"
       "espanso"
       "hammerspoon"
       "bettertouchtool"
@@ -170,24 +130,23 @@
       "logitech-g-hub"
 
       # Media / entertainment
-      #"spotify"
-      "stolendata-mpv"
+      #"stolendata-mpv"
 
       # Utilities
-      "aldente"          # battery charge limiter
+      # "aldente"          # battery charge limiter
       "pearcleaner"      # app uninstaller
       "syncthing-app"    # Syncthing menu bar
-      "termius"          # SSH client
+      #"termius"          # SSH client
       "surfshark"        # VPN
+      "ungoogled-chromium"
 
       # Communication
-      #"discord"
       "tuta-mail"
     ];
 
     # ── Mac App Store ─────────────────────────────────────────────────────────
     masApps = {
-      "Dynamic Wallpaper"     = 1582358382;
+      #"Dynamic Wallpaper"     = 1582358382;
       "Amphetamine"           = 937984704;
 
       # Safari extensions ↓

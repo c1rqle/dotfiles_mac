@@ -11,7 +11,7 @@ local function toggleApp(appName)
 		hs.timer.doAfter(0.1, function()
 			-- Moves window to current space/display via Yabai
 			hs.execute(
-				"/Users/tb/.local/bin/yabai -m window --space mouse && /Users/tb/.local/bin/yabai -m window --display mouse"
+				"/run/current-system/sw/bin/yabai -m window --space mouse && /run/current-system/sw/bin/yabai -m window --display mouse"
 			)
 
 			local win = hs.window.focusedWindow()
@@ -25,7 +25,10 @@ end
 function apps.init()
 	-- App shortcuts
 	hs.hotkey.bind({ "cmd", "ctrl" }, "return", function()
-		toggleApp("Ghostty")
+		toggleApp("ghostty")
+	end)
+	hs.hotkey.bind({ "cmd", "alt" }, "return", function()
+		toggleApp("alacritty")
 	end)
 	hs.hotkey.bind({ "cmd", "ctrl" }, "f", function()
 		toggleApp("Finder")

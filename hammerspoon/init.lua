@@ -1,6 +1,6 @@
 -- Load Spoons
 hs.loadSpoon("ModalMgr", "HSKeybindings", "FnMate", "ReloadConfiguration", "fnutils")
-local MiddleClickDragScroll = hs.loadSpoon("MiddleClickDragScroll"):start()
+--local MiddleClickDragScroll = hs.loadSpoon("MiddleClickDragScroll"):start()
 local LeftRightHotkey = hs.loadSpoon("LeftRightHotkey"):start()
 
 -- Load Modules
@@ -22,5 +22,5 @@ local function reloadConfig(files)
 		end
 	end
 end
-myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
+myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "~/dotfiles_mac/hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")

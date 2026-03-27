@@ -40,8 +40,8 @@ function system.init()
 		end
 	end)
 
-	-- More sophisticated version
-	hs.hotkey.bind({ "cmd", "ctrl" }, "s", function()
+	--
+	hs.hotkey.bind({ "cmd", "ctrl" }, "j", function()
 		-- Store current mouse position to restore later if needed
 		local oldPos = hs.mouse.absolutePosition()
 
@@ -57,7 +57,7 @@ function system.init()
 			-- Calculate desktop preview position
 			-- The desktop previews are at the top, so we aim for the top center
 			local previewX = frame.x + (frame.w / 2)
-			local previewY = frame.y + 20 -- Adjust this value if needed
+			local previewY = frame.y + 10 -- Adjust this value if needed
 
 			-- Move to preview
 			hs.mouse.absolutePosition(hs.geometry.point(previewX, previewY))

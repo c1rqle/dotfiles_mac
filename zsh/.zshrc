@@ -2,16 +2,17 @@
   export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
   export PATH="/opt/homebrew/bin:$PATH >> ~/.zprofile && source ~/.zprofile"
   export ZSH="$HOME/.oh-my-zsh"
+  export alacritty=xterm
 
 #_____________________________________
 # Starship is handling the shell functionality. LS_COLORS and LSD are for bonus colours :)
-  export LS_COLORS="$(vivid generate tokyonight-night)"
+  export LS_COLORS="$(vivid generate ayu)"
 
-#_________________________ 
+#_____________________________________
+# Ghostty shell integration
   if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
-  source "$GHOSTTY_RESOURCES_DIR"/nix/store/06bibrqhch2r9kc88vwy6r1iyc9wxxp2-ghostty-bin-1.3.1-shell_integration/zsh/ghostty-integration
+      source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/
   fi
-
 #_____________________________________
   setopt autocd extendedglob nomatch notify
   unsetopt beep

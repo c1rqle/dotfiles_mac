@@ -1,5 +1,5 @@
 local yabai = {}
-local bin = "/Users/tb/.local/bin/yabai"
+local bin = "/run/current-system/sw/bin/yabai"
 
 -- Helper: Force a boolean window state to on (true) or off (false)
 -- Example states: "sticky", "float", "native-fullscreen", "zoom-fullscreen", "zoom-parent"

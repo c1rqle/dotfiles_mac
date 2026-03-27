@@ -7,13 +7,11 @@
   window-padding-y            = 5,8
 
 #___________________________
-# Visuals
-  #theme                       = Dracula
-  #theme                       = SeaShells
-  theme                       = CarbonFox
-  adjust-underline-thickness  = 2
-  adjust-underline-position   = 2
-  background-opacity          = 0.94
+# Visuals $Oxocarbon
+  theme                       = Sunset Drive
+  adjust-underline-thickness  = 1
+  adjust-underline-position   = 3
+  background-opacity          = 0.88
   background-blur             = true
   bold-is-bright              = true
   minimum-contrast            = 1
@@ -27,4 +25,4 @@
   cursor-style-blink          = true
   cursor-color                = #FFC7FF
   cursor-text                 = #2F092E
-  shell-integration-features = no-cursor
+  #shell-integration-features = no-cursor
