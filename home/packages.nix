@@ -4,14 +4,13 @@
   # Tools
     git
     git-filter-repo
-    docker
-    docker-compose
+    rustup
   # Applications 
-    ghostty-bin
-    alacritty
     bitwarden-desktop
+    ghostty-bin
     qbittorrent
     notion-app
+    alacritty
     spotify
     discord
     aldente
