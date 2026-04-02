@@ -12,30 +12,5 @@ matches:
   - trigger: ":uber"
     replace: "Übersicht"
 
-  # ____________________________________________
-  # Terminal
-  - trigger: ":logout"
-    replace: "loginctl kill-user tb"
-
-  - trigger: ":mkdir"
-    replace: "mkdir -p {{form1.folder}} && cd {{form1.folder}}"
-    vars:
-      - name: form1
-        type: form
-        params:
-          layout: "Folder name: [[folder]]"
-
-  - trigger: ":div"
-    replace: "<div>$|$</div> "
-
-  - trigger: ":grep"
-    replace: "| grep '$|$' "
-
-  - trigger: ":less"
-    replace: "| less "
-
-  - trigger: ":btctl"
-    replace: "bluetoothctl"
-
   - trigger: ":cht"
     replace: "curl cheat.sh/"

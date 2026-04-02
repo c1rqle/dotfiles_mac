@@ -1,9 +1,10 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
+
 require("config.lazy")
 
 vim.cmd([[set guicursor=n:hor100,v-c-i:ver100]])
 
--- Tmux window renaming for file buffers
+-- Tmux window renamiug for file buffers
 if vim.env.TMUX then
   local autocmd = vim.api.nvim_create_autocmd
   autocmd("BufEnter", {

@@ -6,7 +6,8 @@
 
 #_____________________________________
 # Starship is handling the shell functionality. LS_COLORS and LSD are for bonus colours :)
-  export LS_COLORS="$(vivid generate ayu)"
+ # export LS_COLORS="$(vivid generate ayu)"
+  ZSH_THEME=lambda-mod.zsh-theme
 
 #_____________________________________
 # Ghostty shell integration

@@ -1,17 +1,20 @@
 # git commands
 
 matches:
-  - trigger: "gits"
+  - trigger: "gstat"
     replace: "git status"
 
   - trigger: "git."
     replace: "git add $|$ "
 
-  - trigger: "gitm"
-    replace: "git commit -m '$|$' "
-
-  - trigger: "gitp"
+  - trigger: "gpush"
     replace: "git push"
+
+  - trigger: "gitc"
+    replace: "git commit -m '$|$'"
+
+  - trigger: "git.c"
+    replace: "git -C /Users/tb/dotfiles_mac add . && git -C /Users/tb/dotfiles_mac commit -m '$|$' "
 
   - trigger: "gitmain"
     replace: "git checkout main"

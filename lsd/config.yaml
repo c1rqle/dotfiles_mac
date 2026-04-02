@@ -50,9 +50,9 @@ blocks:
   - size
   - date
   - name
-#   - git
+  - git
 ignore-globs:
-  - .git
+  #- .git
   - .bashrc
   - .lesshst
   - .bash_profile
@@ -71,3 +71,4 @@ ignore-globs:
   - .zcompdump-mbp-5.9.zwc
   - .zcompdump-tb-mbp-5.9
   - .zcompdump-tb-mbp-5.9.zwc
+  - .zcompdump-mbp-5.9.mbp.local.14385

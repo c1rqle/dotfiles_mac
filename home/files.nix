@@ -3,11 +3,18 @@
   xdg.enable = true;
 
   xdg.configFile = {
+    "espanso/match/packages/html-utils-package/package.yml".source = ../espanso/match/packages/html-utils-package/package.yml;
+    "espanso/match/packages/quick-translate/package.yml".source = ../espanso/match/packages/quick-translate/package.yml;
+    "espanso/match/packages/html-colors/package.yml".source = ../espanso/match/packages/html-colors/package.yml;
+    "espanso/match/packages/sf-symbols/package.yml".source = ../espanso/match/packages/sf-symbols/package.yml;
     "espanso/match/packages/spelling/package.yml".source = ../espanso/match/packages/spelling/package.yml;
     "espanso/match/packages/terminal/package.yml".source = ../espanso/match/packages/terminal/package.yml;
     "espanso/match/packages/symbols/package.yml".source = ../espanso/match/packages/symbols/package.yml;
+    "espanso/match/packages/personal/package.yml".source = ../espanso/match/packages/personal/package.yml;
     "espanso/match/packages/emojis/package.yml".source = ../espanso/match/packages/emojis/package.yml;
     "espanso/match/packages/git/package.yml".source = ../espanso/match/packages/git/package.yml;
+    "espanso/match/packages/ssh/package.yml".source = ../espanso/match/packages/ssh/package.yml;
+    "espanso/match/packages/cht/package.yml".source = ../espanso/match/packages/cht/package.yml;
     "espanso/config/default.yml".source = ../espanso/config/default.yml;
     "espanso/match/base.yml".source = ../espanso/match/base.yml;
     "ghostty/appearance".source = ../ghostty/appearance;

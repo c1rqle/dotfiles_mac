@@ -4,9 +4,29 @@
   # Tools
     git
     git-filter-repo
-    rustup
+    translate-shell
+    jankyborders
+    imagemagick
+    findutils
+    fastfetch
+    lscolors
+    ripgrep
+    ffmpeg
+    neovim
+    yt-dlp
+    vivid
+    tmux
+    glow
+    gcc
+    lsd
+    nnn
+    gh
+    fd
   # Applications 
+    karabiner-elements
+    goku
     bitwarden-desktop
+    bitwarden-cli
     ghostty-bin
     qbittorrent
     notion-app
@@ -15,6 +35,7 @@
     discord
     aldente
     raycast
+    vncdo
     mpv
   # Ai tools
     chatgpt
@@ -28,28 +49,25 @@
     lazydocker
     lazyjournal
   # Terminal things
-    translate-shell
-    jankyborders
-    imagemagick
-    findutils
-    fastfetch
-    lscolors
-    ripgrep
-    neovim
-    yt-dlp
-    vivid
-    tmux
-    glow
-    gcc
-    lsd
-    nnn
-    gh
-    fd
-    jq
-  # Fonts (will finish install later)
-    #    #nerd-fonts-symbols-only
-    #    nerd-fonts-caskaydia-cove
-    #    texlivePackages-addliga
-    #    font-awesome
+    cloudflared
+    termshark
+    openssh
+    rustup
+    nodePackages_latest.nodejs
+    python314Packages.python
+    python314Packages.pillow
+    luajitPackages.luarocks
+    ninja_1_11
+    powerline-go
+    pipx
+    yarn
+    pnpm
+    lua
+    mas
+    man
+    macmon
+    sketchybar
+    sketchybar-app-font
+    sbarlua
   ];
 }
