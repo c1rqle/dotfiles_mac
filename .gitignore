@@ -1,7 +1,6 @@
 .DS_Store
 result
 espanso/match/packages/personal/package.yml
-espanso/match/packages/terminal/package.yml
 espanso/match/packages/ssh/package.yml
 .claude
 docs
