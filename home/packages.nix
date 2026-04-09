@@ -6,7 +6,6 @@
     git-filter-repo
     translate-shell
     jankyborders
-    imagemagick
     findutils
     fastfetch
     lscolors
@@ -16,15 +15,14 @@
     yt-dlp
     vivid
     tmux
-    glow
     gcc
     lsd
     nnn
     gh
     fd
   # Applications 
-    karabiner-elements
     goku
+    karabiner-elements
     bitwarden-desktop
     bitwarden-cli
     ghostty-bin
@@ -34,40 +32,25 @@
     spotify
     discord
     aldente
-    raycast
     vncdo
     mpv
-  # Ai tools
-    chatgpt
-    claude-code
-    claude-monitor
   # Lazyness
     lazyssh
-    lazynpm
     lazycli
     lazygit
-    lazydocker
     lazyjournal
   # Terminal things
     cloudflared
     termshark
     openssh
-    rustup
-    nodePackages_latest.nodejs
-    python314Packages.python
-    python314Packages.pillow
-    luajitPackages.luarocks
-    ninja_1_11
+    #python314Packages.python
+    #python314Packages.pillow
+  #  luajitPackages.luarocks
+  # ninja_1_11
     powerline-go
-    pipx
-    yarn
-    pnpm
-    lua
     mas
     man
     macmon
-    sketchybar
-    sketchybar-app-font
-    sbarlua
+    tealdeer
   ];
 }

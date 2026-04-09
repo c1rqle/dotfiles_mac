@@ -1,5 +1,7 @@
 # My Mac dotfiles
 
+##### Nix-Darwin with flakes and home-manager
+
 ---
 
 This is my recipe for adopting the look, feel and functionality of

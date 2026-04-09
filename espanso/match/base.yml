@@ -3,7 +3,7 @@
 matches:
   # ____________________
   # Android related
-  - trigger: ":scrcpy-sdk"
+  - trigger: ":scrcpy"
     replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display"
 
   - trigger: "ubersicht"

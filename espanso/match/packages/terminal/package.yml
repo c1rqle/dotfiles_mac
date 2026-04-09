@@ -1,0 +1,82 @@
+# Terminal
+matches:
+  # Nix things
+  - trigger: ":nixrundarwin"
+    replace: "sudo -H nix run nix-darwin"
+
+  - trigger: ":nixre"
+    replace: "sudo darwin-rebuild switch --flake 'path:/Users/tb/dotfiles_mac#mbp'"
+
+  - trigger: ":nixgc"
+    replace: "nix store gc"
+
+  - trigger: ":nixsource"
+    replace: "source /etc/profile.d/nix.sh"
+
+  - trigger: ":nixgarb"
+    replace: "nix-collect-garbage -d"
+
+  - trigger: ":nixopt"
+    replace: "nix store optimise"
+
+  - trigger: ":nixins"
+    replace: "nix-env -iA nixpkgs."
+
+  - trigger: ":nixenvq"
+    replace: "nix-env --query"
+
+  - trigger: ":pyvenv"
+    replace: "python3 -mvenv venv && source ./venv/bin/activate"
+
+  - trigger: "cdesp"
+    replace: "cd ~/dotfiles_mac/espanso/match/packages/"
+
+  - trigger: ":tm"
+    replace: "tmux attach; tmux"
+
+  - trigger: "esres"
+    replace: "espanso restart"
+
+  - trigger: ":whatsmyip"
+    replace: "curl -4 https://api.ipify.org && echo && curl -6 https://api64.ipify.org && echo"
+
+  - trigger: ":div"
+    replace: "<div>$|$</div> "
+
+  - trigger: ":ytdl"
+    replace: "yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' '$|$' "
+
+  # ____________________
+  # Ghostty related
+  - trigger: "gh-theme"
+    replace: "ghostty +list-themes"
+
+  - trigger: "gh-keys"
+    replace: "ghostty +list-keybinds | less"
+
+  - trigger: "gh-fonts"
+    replace: "ghostty +list-fonts | less"
+
+  - trigger: "gh-actions"
+    replace: "ghostty +list-actions | less"
+
+  # ____________________
+  #
+  - trigger: ":mkdir"
+    replace: "mkdir -p {{newfolder.folder}} && cd {{newfolder.folder}}"
+    vars:
+      - name: newfolder
+        type: form
+        params:
+          layout: "Folder name: [[folder]]"
+
+  - trigger: ":gr"
+    replace: "| grep '$|$' "
+    word: true
+
+  - trigger: ":le"
+    replace: "| less "
+    word: true
+
+  - trigger: ":icat"
+    replace: "kitty +kitten icat "

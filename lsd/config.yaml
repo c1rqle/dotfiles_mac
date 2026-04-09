@@ -47,12 +47,13 @@ sorting:
 #_____________________________________
 # List view column items.
 blocks:
+  - permission
   - size
   - date
   - name
-  - git
+  # - git
 ignore-globs:
-  #- .git
+  - .git
   - .bashrc
   - .lesshst
   - .bash_profile
@@ -62,8 +63,8 @@ ignore-globs:
   - .aspnet
   - .DS_Store
   - .zsh_history
-  #- .rustup
-  - .z
+  - .rustup
+  #- .z
   - .zcompdump
   - .zcompdump-MacBookPro-5.9
   - .zcompdump-MacBookPro-5.9.zwc
