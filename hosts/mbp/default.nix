@@ -1,7 +1,6 @@
 { pkgs, self, user, ... }:
 {
   imports = [
-    ./borders.nix
     ./homebrew.nix
     ./yabai.nix
   ];
@@ -11,6 +10,14 @@
   # Auto-start Hammerspoon
   launchd.user.agents.hammerspoon = {
     command = "/Applications/Hammerspoon.app/Contents/MacOS/Hammerspoon";
+    serviceConfig = {
+      KeepAlive = true;
+      RunAtLoad = true;
+    };
+  };
+  # Auto-start borders
+  launchd.user.agents.borders = {
+    command = "/bin/bash -lc /Users/${user}/.config/borders/bordersrc";
     serviceConfig = {
       KeepAlive = true;
       RunAtLoad = true;

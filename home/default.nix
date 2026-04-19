@@ -1,13 +1,15 @@
 { ... }:
 {
   imports = [
-    ./borders.nix
-    ./files.nix
-    ./hammerspoon.nix
-    ./git.nix
     ./packages.nix
-    ./zsh.nix
+    ./borders.nix
     ./tmux.nix
+    ./git.nix
+    ./zsh.nix
+    ./files.nix
+    ./nushell.nix
+    ./hammerspoon.nix
+    ./nvim.nix
   ];
 
   home.username = "tb";

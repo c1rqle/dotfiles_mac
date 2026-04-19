@@ -1,9 +1,8 @@
 # /Users/tb/dotfiles_mac/hosts/mbp/homebrew.nix
-#
-# Declarative Homebrew config via nix-darwin.
-#
+#     Declarative Homebrew config via nix-darwin.
+# //
 # NOTE: Apps and utilities that isn't available in Nix for Mac yet. Or for some other reason needs brew.
-#
+
 { ... }:
 {
   homebrew = {
@@ -26,37 +25,35 @@
     # ── Formulae ──────────────────────────────────────────────────────────────/sketch
     brews = [
       ## Tools
+      "gcc" # GNU compiler collection
       "glow" # Markdown in terminal
-      "ta-lib" # Trading related
+      "ta-lib" # crypto related
       "scrcpy" # Android screen sharing
-      "imagemagick" # dependency for ↓
-      "terminalimageviewer" # 
+      "carapace" # Multi-shell multi-command argument completer
+      "adb-enhanced" # Android tools
       "felixkratz/formulae/svim"
+      #  "tree-sitter"
+      #  "tree-sitter-cli"
+      #  "haskell-language-server"
       ## Py
       "python@3.14"
       "pyp"
       "pipx"
       "pip-tools"
       "virtualenv"
-      "python-lsp-server"
+      #"python-lsp-server"
       "python-markdown"
-      "tree-sitter-python"
       ## ruby
       "ruby"
       "ruby-lsp"
-      "tree-sitter-ruby"
-      ## rust 
       "rustup"
-      "rust-analyzer"
-      "languagetool-rust"
-      "haskell-language-server"
+      #"rust-analyzer"
       ##
       "go"
       "golangci-lint-langserver"
       ##
-      "lua@5.4" # To satify Neovim
-      "luarocks"
-      "lua-language-server"
+      #"lua@5.4" # To satisfy Neovim
+      #"luarocks"
       ## The makers and the builders
       "multimarkdown"
       "neocmakelsp"
@@ -66,20 +63,13 @@
       "ninja"
     ## Linting
       "markdownlint-cli"
-      "markdownlint-cli2"
       "golangci-lint"
       "cmake-lint"
       "pylint"
 
-      # Docker (CLI only; Docker Desktop is the cask below)
-      "docker"
-      "docker-compose"
-      "lazydocker"
-
       # Services
-      { name = "ollama"; restart_service = "changed"; }
-      "syncthing"
-      "adb-enhanced"
+      #{ name = "ollama"; restart_service = "changed"; }
+      { name = "syncthing"; restart_service = "changed"; }
       # ICU (linked so native extensions can find it)
       { name = "icu4c@77"; link = true; }
 
@@ -87,7 +77,6 @@
 
     # ── Casks ─────────────────────────────────────────────────────────────────
     casks = [
-      # Fonts (used by lsd, Starship, Ghostty, etc.)
       "font-awesome-terminal-fonts"
       "font-symbols-only-nerd-font"
       "font-powerline-symbols"
@@ -97,13 +86,25 @@
       "sf-symbols"
 
       # AI tools
-      "claude"        # app
-      "claude-code"   # claude for terminal
-      "auto-claude"
-      "chatgpt"
-      "codex-app"     # codex app
-      "codexbar"      # usage monitor for chatgpt and claude
-      "codex"         # codex for terminal
+      #"claude"        # App Claude
+      #"claude-code"   # Terminal Claude
+      #"chatgpt"       # App Chatgpt
+      #"codex-app"     # codex
+      # "codexbar"      # usage monitor for chatgpt and claude
+      #  "codex"         # codex for terminal
+
+      # Input
+      "karabiner-elements"      # Keyboard customiser
+      "logitech-g-hub"          # Gaming things
+      "logi-options+"           # Also gaming things
+      "linearmouse"             # Mouse customiser
+
+      # Utilities
+      "android-platform-tools"  # adb thingy - needed for scrcpy
+      "syncthing-app"           # Syncthing menu bar
+      "pearcleaner"             # app uninstaller
+      "surfshark"               # VPN
+      "raycast"                 # App starter etc
 
       # Productivity
       "espanso"
@@ -114,33 +115,19 @@
       "bettertouchtool"
       "markdown-service-tools"
       "ia-markdown-dictionary"
-
-      # Mouse / input
-      "linearmouse"
-      "logi-options+"
-      "logitech-g-hub"
-
-      # Utilities
-      "raycast"
-      "pearcleaner"             # app uninstaller
-      "syncthing-app"           # Syncthing menu bar
-      "surfshark"               # VPN
-      "android-platform-tools"  # adb 
     ];
 
     # ── Mac App Store ─────────────────────────────────────────────────────────
     masApps = {
-      #"Dynamic Wallpaper"     = 1582358382;
-      "Amphetamine"                 = 937984704;
+      "Dynamic Wallpaper"           = 1582358382; # Enables animated wallpaper 
+      "Amphetamine"                 = 937984704;  # Keep awake
 
       # Safari extensions ↓
-      "snap-screenshot-snip-paste"  = 1525349531;
       "Nightshift Dark Mode"        = 1561604170;
       "uBlock Origin Lite"          = 6745342698;
       "Notion Web Clipper"          = 1559269364;
-      "OKX Wallet"                  = 6463797825;
+      #"OKX Wallet"                  = 6463797825;
       "Bitwarden"                   = 1352778147;
-      "darker"                      = 1637413102;
       "Vimari"                      = 1480933944;
     };
   };

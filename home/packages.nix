@@ -2,55 +2,61 @@
 {
   home.packages = with pkgs; [
   # Tools
+    #    nushell
+    #    carapace
+    #    gcc
+    tmux
+    lsd
+    nnn
+    gh
+    #fd
     git
     git-filter-repo
     translate-shell
     jankyborders
     findutils
-    fastfetch
+    termimage
     lscolors
-    ripgrep
+    #ripgrep
     ffmpeg
-    neovim
     yt-dlp
     vivid
-    tmux
-    gcc
-    lsd
-    nnn
-    gh
-    fd
   # Applications 
-    goku
-    karabiner-elements
     bitwarden-desktop
     bitwarden-cli
     ghostty-bin
     qbittorrent
     notion-app
     alacritty
+    obsidian
     spotify
     discord
     aldente
     vncdo
+    goku
     mpv
   # Lazyness
+    basalt # Obsidian from the terminal
     lazyssh
     lazycli
     lazygit
+    lazydocker
     lazyjournal
   # Terminal things
+    docker
+    docker-gc
+    docker-ls
+    docker-compose
+    docker-color-output
+  # powerline-go
     cloudflared
     termshark
     openssh
-    #python314Packages.python
-    #python314Packages.pillow
-  #  luajitPackages.luarocks
-  # ninja_1_11
-    powerline-go
     mas
     man
     macmon
     tealdeer
+    fastfetch
+    rPackages.okxAPI
   ];
 }

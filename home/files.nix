@@ -14,16 +14,6 @@
     "ghostty/keybinds".source = ../ghostty/keybinds;
     "ghostty/config".source = ../ghostty/config;
     "ghostty/fonts".source = ../ghostty/fonts;
-# Neovim
-    "nvim/init.lua".source = ../nvim/init.lua;
-    "nvim/lazyvim.json".source = ../nvim/lazyvim.json;
-    "nvim/stylua.toml".source = ../nvim/lazyvim.json;
-    "nvim/lua/plugins/disabled.lua".source = ../nvim/lua/plugins/disabled.lua;
-    "nvim/lua/plugins/lsp.lua".source = ../nvim/lua/plugins/lsp.lua;
-    "nvim/lua/config/autocmds.lua".source = ../nvim/lua/config/autocmds.lua;
-    "nvim/lua/config/options.lua".source = ../nvim/lua/config/options.lua;
-    "nvim/lua/config/keymaps.lua".source = ../nvim/lua/config/keymaps.lua;
-    "nvim/lua/config/lazy.lua".source = ../nvim/lua/config/lazy.lua;
 # Espanso
     "espanso/match/base.yml".source = ../espanso/match/base.yml;
     "espanso/match/packages/spelling/package.yml".source = ../espanso/match/packages/spelling/package.yml;

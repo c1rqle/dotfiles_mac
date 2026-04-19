@@ -8,8 +8,8 @@
     ignores = [ ".DS_Store" ];
 
     settings = {
-      user.name = "tb";
-      user.email = "tb@cirqle.no";
+      user.name = "cirqle";
+      user.email = "dev@cirqle.no";
       init.defaultBranch = "main";
     };
   };
