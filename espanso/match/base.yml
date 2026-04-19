@@ -6,6 +6,9 @@ matches:
   - trigger: ":scrcpy"
     replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display"
 
+  - trigger: ":scrhd"
+    replace: "scrcpy --disable-screensaver --keyboard sdk --mouse sdk --new-display=1080x2640/420"
+
   - trigger: "ubersicht"
     replace: "Übersicht"
 

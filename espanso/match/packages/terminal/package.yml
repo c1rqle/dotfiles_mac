@@ -1,49 +1,46 @@
 # Terminal
 matches:
   # Nix things
-  - trigger: ":nixrundarwin"
+  - trigger: "n-rundarwin"
     replace: "sudo -H nix run nix-darwin"
 
-  - trigger: ":nixre"
+  - trigger: "n-rebuild"
     replace: "sudo darwin-rebuild switch --flake 'path:/Users/tb/dotfiles_mac#mbp'"
 
-  - trigger: ":nixgc"
+  - trigger: "n-gc"
     replace: "nix store gc"
 
-  - trigger: ":nixsource"
-    replace: "source /etc/profile.d/nix.sh"
-
-  - trigger: ":nixgarb"
+  - trigger: "n-garb"
     replace: "nix-collect-garbage -d"
 
-  - trigger: ":nixopt"
+  - trigger: "n-src"
+    replace: "source /etc/profile.d/nix.sh"
+
+  - trigger: "n-opt"
     replace: "nix store optimise"
 
-  - trigger: ":nixins"
-    replace: "nix-env -iA nixpkgs."
-
-  - trigger: ":nixenvq"
+  - trigger: "n-queue"
     replace: "nix-env --query"
 
-  - trigger: ":pyvenv"
+  - trigger: "pyvenv"
     replace: "python3 -mvenv venv && source ./venv/bin/activate"
 
   - trigger: "cdesp"
     replace: "cd ~/dotfiles_mac/espanso/match/packages/"
 
-  - trigger: ":tm"
-    replace: "tmux attach; tmux"
+  - trigger: "-tnew"
+    replace: "new -s #"
 
   - trigger: "esres"
     replace: "espanso restart"
 
-  - trigger: ":whatsmyip"
+  - trigger: "ipaddr"
     replace: "curl -4 https://api.ipify.org && echo && curl -6 https://api64.ipify.org && echo"
 
-  - trigger: ":div"
+  - trigger: "-div"
     replace: "<div>$|$</div> "
 
-  - trigger: ":ytdl"
+  - trigger: "-ytdl"
     replace: "yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' '$|$' "
 
   # ____________________
@@ -62,7 +59,7 @@ matches:
 
   # ____________________
   #
-  - trigger: ":mkdir"
+  - trigger: "-mkdir"
     replace: "mkdir -p {{newfolder.folder}} && cd {{newfolder.folder}}"
     vars:
       - name: newfolder
@@ -70,13 +67,13 @@ matches:
         params:
           layout: "Folder name: [[folder]]"
 
-  - trigger: ":gr"
+  - trigger: "-gr"
     replace: "| grep '$|$' "
-    word: true
+  # word: true
 
-  - trigger: ":le"
+  - trigger: "-le"
     replace: "| less "
-    word: true
+  # word: true
 
-  - trigger: ":icat"
+  - trigger: "-icat"
     replace: "kitty +kitten icat "
