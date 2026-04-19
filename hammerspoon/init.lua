@@ -1,6 +1,5 @@
 -- Load Spoons
 hs.loadSpoon("ModalMgr", "HSKeybindings", "FnMate", "ReloadConfiguration", "fnutils")
---local MiddleClickDragScroll = hs.loadSpoon("MiddleClickDragScroll"):start()
 local LeftRightHotkey = hs.loadSpoon("LeftRightHotkey"):start()
 
 -- Load Modules
