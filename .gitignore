@@ -1,6 +1,8 @@
 .DS_Store
+flake.lock
 result
 espanso/match/packages/personal/package.yml
 espanso/match/packages/ssh/package.yml
+home/nushell.nix
 .claude
 docs

@@ -6,7 +6,7 @@
 
 #___________________________
 # Shell
-  shell-integration = zsh
+  shell-integration = detect
   term              = xterm-ghostty
   command           = /etc/profiles/per-user/tb/bin/zsh -ic 'tmux new-session -A -s main'
 
