@@ -1,10 +1,5 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
---
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
+-- Options are automatically loaded before lazy.nvim startup.
+-- Add any custom options here; LazyVim sets sensible defaults.
 -- LazyVim auto format
 vim.g.autoformat = true
 
@@ -24,17 +19,6 @@ vim.g.lazyvim_picker = "fzf"
 -- enabled with `:LazyExtras`
 vim.g.lazyvim_cmp = "auto"
 
--- if the completion engine supports the AI source,
--- use that instead of inline suggestions
-vim.g.ai_cmp = true
-
--- LazyVim root dir detection
--- Each entry can be:
--- * the name of a detector function like `lsp` or `cwd`
--- * a pattern or array of patterns like `.git` or `lua`.
--- * a function with signature `function(buf) -> string|string[]`
-vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
-
 -- Optionally setup the terminal to use
 -- This sets `vim.o.shell` and does some additional configuration for:
 -- * pwsh
@@ -46,7 +30,7 @@ LazyVim.terminal.setup("zsh")
 vim.g.root_lsp_ignore = { "claudecode" }
 
 -- Hide deprecation warnings
-vim.g.deprecation_warnings = false
+vim.g.deprecation_warnings = true
 
 -- Show the current document symbols location from Trouble in lualine
 -- You can disable this for a buffer by setting `vim.b.trouble_lualine = false`
