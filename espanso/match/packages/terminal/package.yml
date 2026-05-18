@@ -19,7 +19,7 @@ matches:
   - trigger: "n-opt"
     replace: "nix store optimise"
 
-  - trigger: "n-queue"
+  - trigger: "n-que"
     replace: "nix-env --query"
 
   - trigger: "pyvenv"

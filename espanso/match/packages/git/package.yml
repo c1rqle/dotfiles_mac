@@ -10,11 +10,11 @@ matches:
   - trigger: "gitp"
     replace: "git push"
 
-  - trigger: "gitc"
+  - trigger: "gitm"
     replace: "git commit -m '$|$'"
     word: true
 
-  - trigger: "gitco"
+  - trigger: "gitcm"
     replace: "git -C /Users/tb/dotfiles_mac add . && git -C /Users/tb/dotfiles_mac commit -m '$|$' "
     word: true
 
