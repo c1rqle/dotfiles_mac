@@ -12,11 +12,9 @@ matches:
 
   - trigger: "gitm"
     replace: "git commit -m '$|$'"
-    word: true
 
   - trigger: "gitcm"
     replace: "git -C /Users/tb/dotfiles_mac add . && git -C /Users/tb/dotfiles_mac commit -m '$|$' "
-    word: true
 
   - trigger: "gitmain"
     replace: "git checkout main"
