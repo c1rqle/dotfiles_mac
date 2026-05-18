@@ -73,3 +73,5 @@ ignore-globs:
   - .zcompdump-tb-mbp-5.9
   - .zcompdump-tb-mbp-5.9.zwc
   - .zcompdump-mbp-5.9.mbp.local.14385
+  - .zcompdump.MacBookPro.home.23256
+  - .zcompdump-mbp-5.9.MacBookPro.home.77429

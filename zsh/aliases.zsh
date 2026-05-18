@@ -6,8 +6,11 @@
   alias ..='cd ..'
   alias .2='...'
   alias .3='....'
+  alias .4='.....'
 
 #____________________________
+  alias rs='rsync -avP'
+  alias rscp='rsync -avzP'
   alias mkdir='mkdir -p'
   alias vim='nvim'
 
@@ -15,7 +18,7 @@
   alias python="python3"
 
 #____________________________
-  alias brewup='brew update; brew upgrade'
+  alias brewup='brew update && brew upgrade'
   alias brewss='brew search'
   alias brewS='brew install'
   alias brewi='brew info'
