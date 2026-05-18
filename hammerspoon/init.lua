@@ -3,9 +3,9 @@ hs.loadSpoon("ModalMgr", "HSKeybindings", "FnMate", "ReloadConfiguration", "fnut
 local LeftRightHotkey = hs.loadSpoon("LeftRightHotkey"):start()
 
 -- Load Modules
-local apps = require("modules.apps")
-local yabai = require("modules.yabai")
 local system = require("modules.system")
+local yabai = require("modules.yabai")
+local apps = require("modules.apps")
 
 -- Initialize Modules
 apps.init()
