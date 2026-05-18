@@ -9,7 +9,7 @@
       enable = true;
 
       # fzf, starship, zoxide removed — each has its own programs.* block below
-      plugins = [ "git" "colored-man-pages" "tmux" "zsh-autopair" "zsh-syntax-highlighting" "zsh-autosuggestions" "python" ];
+      plugins = [ "git" "colored-man-pages" "tmux" "zsh-autopair" "zsh-syntax-highlighting" "python" ];
 
       # Points to user-managed custom plugins/aliases dir
       custom = "$HOME/.config/zsh_custom";

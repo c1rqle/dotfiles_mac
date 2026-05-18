@@ -31,7 +31,6 @@
       "scrcpy" # Android screen sharing
       "carapace" # Multi-shell multi-command argument completer
       "adb-enhanced" # Android tools
-      "felixkratz/formulae/svim"
       #  "tree-sitter"
       #  "tree-sitter-cli"
       #  "haskell-language-server"
@@ -66,10 +65,15 @@
       "golangci-lint"
       "cmake-lint"
       "pylint"
-
-      # Services
+    ## Docker
+      "colima"
+      "docker"
+      "docker-compose"
+      "docker-completion"
+      "lazydocker"
+    ## Services
       #{ name = "ollama"; restart_service = "changed"; }
-      { name = "syncthing"; restart_service = "changed"; }
+      #{ name = "syncthing"; restart_service = "changed"; }
       # ICU (linked so native extensions can find it)
       { name = "icu4c@77"; link = true; }
 
@@ -85,14 +89,6 @@
       "font-sf-pro"
       "sf-symbols"
 
-      # AI tools
-      #"claude"        # App Claude
-      #"claude-code"   # Terminal Claude
-      #"chatgpt"       # App Chatgpt
-      #"codex-app"     # codex
-      # "codexbar"      # usage monitor for chatgpt and claude
-      #  "codex"         # codex for terminal
-
       # Input
       "karabiner-elements"      # Keyboard customiser
       "logitech-g-hub"          # Gaming things
@@ -101,7 +97,8 @@
 
       # Utilities
       "android-platform-tools"  # adb thingy - needed for scrcpy
-      "syncthing-app"           # Syncthing menu bar
+      "wireshark-chmodbpf"
+      "google-drive"
       "pearcleaner"             # app uninstaller
       "surfshark"               # VPN
       "raycast"                 # App starter etc
