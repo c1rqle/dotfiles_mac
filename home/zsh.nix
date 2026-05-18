@@ -9,7 +9,7 @@
       enable = true;
 
       # fzf, starship, zoxide removed — each has its own programs.* block below
-      plugins = [ "git" "colored-man-pages" "tmux" "python" ];
+      plugins = [ "git" "colored-man-pages" "zsh-autosuggestions" "zsh-syntax-highlighting" "zsh-autopair" "zsh-vi-mode" "tmux" "python" ];
 
       # Points to user-managed custom plugins/aliases dir
       custom = "$HOME/.config/zsh_custom";
@@ -53,10 +53,7 @@
         export ARCHFLAGS="-arch $(uname -m)"
         [[ -f "$HOME/.config/zsh_custom/aliases" ]] && source "$HOME/.config/zsh_custom/aliases"
 
-        bindkey '^A' beginning-of-line
-        bindkey '^E' end-of-line
-
-        update-all() {
+        nixup() {
           cd /Users/tb/dotfiles_mac
           nix flake update
           brew update && brew upgrade
@@ -66,13 +63,6 @@
       ''
     ];
   };
-
-  home.packages = with pkgs; [
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-    zsh-nix-shell
-    zsh-autopair
-  ];
 
   # fzf — handles its own zsh integration
   programs.fzf = {
