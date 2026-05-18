@@ -9,7 +9,7 @@
       enable = true;
 
       # fzf, starship, zoxide removed — each has its own programs.* block below
-      plugins = [ "git" "colored-man-pages" "tmux" "zsh-autopair" "zsh-syntax-highlighting" "python" ];
+      plugins = [ "git" "colored-man-pages" "tmux" "python" ];
 
       # Points to user-managed custom plugins/aliases dir
       custom = "$HOME/.config/zsh_custom";
@@ -55,9 +55,24 @@
 
         bindkey '^A' beginning-of-line
         bindkey '^E' end-of-line
+
+        update-all() {
+          cd /Users/tb/dotfiles_mac
+          nix flake update
+          brew update && brew upgrade
+          sudo darwin-rebuild switch --flake 'path:/Users/tb/dotfiles_mac#mbp'
+        }
+
       ''
     ];
   };
+
+  home.packages = with pkgs; [
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-nix-shell
+    zsh-autopair
+  ];
 
   # fzf — handles its own zsh integration
   programs.fzf = {

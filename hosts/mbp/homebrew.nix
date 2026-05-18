@@ -31,9 +31,9 @@
       "scrcpy" # Android screen sharing
       "carapace" # Multi-shell multi-command argument completer
       "adb-enhanced" # Android tools
-      #  "tree-sitter"
-      #  "tree-sitter-cli"
-      #  "haskell-language-server"
+      "tree-sitter"
+      "tree-sitter-cli"
+      "haskell-language-server"
       ## Py
       "python@3.14"
       "pyp"
@@ -46,13 +46,13 @@
       "ruby"
       "ruby-lsp"
       "rustup"
-      #"rust-analyzer"
+      "rust-analyzer"
       ##
       "go"
       "golangci-lint-langserver"
       ##
-      #"lua@5.4" # To satisfy Neovim
-      #"luarocks"
+      "lua@5.4" # To satisfy Neovim
+      "luarocks"
       ## The makers and the builders
       "multimarkdown"
       "neocmakelsp"
@@ -73,7 +73,6 @@
       "lazydocker"
     ## Services
       #{ name = "ollama"; restart_service = "changed"; }
-      #{ name = "syncthing"; restart_service = "changed"; }
       # ICU (linked so native extensions can find it)
       { name = "icu4c@77"; link = true; }
 
