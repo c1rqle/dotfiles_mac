@@ -8,11 +8,11 @@
     oh-my-zsh = {
       enable = true;
 
+      # Points to user-managed custom plugins/aliases dir
+      custom = "$HOME/.config/zsh_custom/";
+
       # fzf, starship, zoxide removed — each has its own programs.* block below
       plugins = [ "git" "colored-man-pages" "zsh-autosuggestions" "zsh-syntax-highlighting" "zsh-autopair" "zsh-vi-mode" "tmux" "python" ];
-
-      # Points to user-managed custom plugins/aliases dir
-      custom = "$HOME/.config/zsh_custom";
 
       # Set before oh-my-zsh is sourced
       extraConfig = ''
@@ -52,13 +52,6 @@
 
         export ARCHFLAGS="-arch $(uname -m)"
         [[ -f "$HOME/.config/zsh_custom/aliases" ]] && source "$HOME/.config/zsh_custom/aliases"
-
-        nixup() {
-          cd /Users/tb/dotfiles_mac
-          nix flake update
-          brew update && brew upgrade
-          sudo darwin-rebuild switch --flake 'path:/Users/tb/dotfiles_mac#mbp'
-        }
 
       ''
     ];
